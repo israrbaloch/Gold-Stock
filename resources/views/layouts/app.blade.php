@@ -85,6 +85,7 @@
             @yield('content')
         </main>
     </div>
+    @include('components.popups')
 </body>
 
 </html>

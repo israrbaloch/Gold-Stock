@@ -373,4 +373,5 @@
             </div>
         </div>
     </div>
+    @include('components.popups')
 </body>
