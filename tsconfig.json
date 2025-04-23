@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./public/js",
+    "baseUrl": "./",
+  },
+  "include": [
+    "resources/ts/**/*",
+    "resources/ts/types.d.ts"
+  ]
+}

@@ -1,0 +1,673 @@
+body {
+  overflow-x: hidden;
+}
+
+.exchange-container {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container {
+    padding: 0px;
+  }
+}
+.exchange-container h1 {
+  margin-bottom: 0.5rem;
+  color: var(--black-1-e-2026, #1E2026);
+  font-family: SFPro;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.exchange-container table .option {
+  cursor: pointer;
+}
+.exchange-container .chart-container.desktop .metal-container {
+  padding: 1rem 0px;
+  display: flex;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container {
+    padding-bottom: 0px;
+    flex-wrap: wrap;
+    border-bottom: solid 1px #E6E6E6;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .coin-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .coin-container {
+    width: 100%;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .coin-container .image-container {
+  width: 40px;
+  height: 40px;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .coin-container .image-container {
+    width: 30px;
+    height: 30px;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .coin-container .image-container img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .coin-container .image-container img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .coin-container .description-container {
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .coin-container .description-container {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .coin-container .description-container .title {
+    display: flex;
+    align-items: center;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .coin-container .description-container .title select {
+  color: var(--black-1-e-2026, #1E2026);
+  font-family: SFPro;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  width: auto;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .coin-container .description-container .title select {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .coin-container .description-container .price {
+  font-size: 20px;
+  color: var(--green);
+  font-family: SFPro;
+  font-weight: 700;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .coin-container .description-container .price {
+    display: flex;
+    margin-left: auto;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .details-container {
+  margin-left: 2rem;
+  display: flex;
+  gap: 4rem;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .details-container {
+    width: 100%;
+    padding: 0px 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0px;
+    justify-content: center;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .details-container .detail {
+  display: flex;
+  flex-direction: column;
+}
+.exchange-container .chart-container.desktop .metal-container .details-container .detail .subtitle {
+  color: var(--grey-7-c-7-e-85, #7C7E85);
+  font-family: SFPro;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .details-container .detail .subtitle {
+    font-size: 11px;
+    line-height: 13.13px;
+    text-align: center;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .details-container .detail .title {
+  color: var(--black-1-e-2026, #1E2026);
+  font-family: SFPro;
+  font-size: 20px;
+  font-weight: 700;
+}
+@media screen and (max-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .details-container .detail .title {
+    line-height: 13.13px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 13.13px;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .options-container {
+  width: 100%;
+  display: flex;
+  background-color: var(--light-grey-e-6-e-6-e-6, #E6E6E6);
+  overflow-x: auto;
+}
+.exchange-container .chart-container.desktop .metal-container .options-container::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (min-width: 993px) {
+  .exchange-container .chart-container.desktop .metal-container .options-container {
+    display: none;
+  }
+}
+.exchange-container .chart-container.desktop .metal-container .options-container .option button {
+  font-family: SFPro;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--grey-7-c-7-e-85, #7C7E85);
+}
+.exchange-container .chart-container.desktop .metal-container .options-container .option button.active {
+  color: var(--black-1-e-2026, #1E2026);
+}
+.exchange-container .chart-container.desktop .section {
+  display: flex;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .metals,
+  .exchange-container .chart-container.desktop .section .currencies,
+  .exchange-container .chart-container.desktop .section .chart-container,
+  .exchange-container .chart-container.desktop .section .trade,
+  .exchange-container .chart-container.desktop .section .left-container,
+  .exchange-container .chart-container.desktop .section .right-container {
+    display: none;
+  }
+  .exchange-container .chart-container.desktop .section .metals.active,
+  .exchange-container .chart-container.desktop .section .currencies.active,
+  .exchange-container .chart-container.desktop .section .chart-container.active,
+  .exchange-container .chart-container.desktop .section .trade.active,
+  .exchange-container .chart-container.desktop .section .left-container.active,
+  .exchange-container .chart-container.desktop .section .right-container.active {
+    display: block;
+  }
+}
+@media screen and (min-width: 993px) {
+  .exchange-container .chart-container.desktop .section .chart-container {
+    border-right: solid 1px #E6E6E6;
+    border-left: solid 1px #E6E6E6;
+  }
+}
+@media screen and (min-width: 993px) {
+  .exchange-container .chart-container.desktop .section .right-container,
+  .exchange-container .chart-container.desktop .section .left-container {
+    max-width: 20%;
+  }
+}
+.exchange-container .chart-container.desktop .section .right-container,
+.exchange-container .chart-container.desktop .section .left-container,
+.exchange-container .chart-container.desktop .section .chart-container {
+  width: 100%;
+}
+.exchange-container .chart-container.desktop .section .right-container .group-container,
+.exchange-container .chart-container.desktop .section .left-container .group-container,
+.exchange-container .chart-container.desktop .section .chart-container .group-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .right-container .group-container,
+  .exchange-container .chart-container.desktop .section .left-container .group-container,
+  .exchange-container .chart-container.desktop .section .chart-container .group-container {
+    padding: 0px;
+  }
+}
+.exchange-container .chart-container.desktop .section .right-container .group-container .group-title,
+.exchange-container .chart-container.desktop .section .left-container .group-container .group-title,
+.exchange-container .chart-container.desktop .section .chart-container .group-container .group-title {
+  font-family: SFPro;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .right-container .group-container .group-title,
+  .exchange-container .chart-container.desktop .section .left-container .group-container .group-title,
+  .exchange-container .chart-container.desktop .section .chart-container .group-container .group-title {
+    display: none;
+  }
+}
+.exchange-container .chart-container.desktop .section .right-container .values,
+.exchange-container .chart-container.desktop .section .left-container .values,
+.exchange-container .chart-container.desktop .section .chart-container .values {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--grey-7-c-7-e-85, #7C7E85);
+  font-family: SFPro;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  text-align: left;
+}
+.exchange-container .chart-container.desktop .section .chart-container {
+  overflow: hidden;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-interval-container {
+  display: flex;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-interval-container button {
+  font-family: SFPro;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.71px;
+  text-align: left;
+  color: #7C7E85;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-interval-container button {
+    display: none;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-interval-container button.active {
+  color: var(--black-1-e-2026, #1E2026);
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-interval-container .chart-interval {
+  width: 100%;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  justify-content: flex-end;
+  font-weight: 700;
+  align-items: center;
+  font-family: SFPro;
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-interval-container .chart-interval {
+    display: flex;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-interval-container .chart-interval select {
+  padding-bottom: 0.15rem;
+  border: none;
+  outline: none;
+  text-align: right;
+  font-family: SFPro;
+  font-weight: 700;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart {
+  width: 100%;
+  height: 400px;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart {
+    padding: 0px 1rem;
+    height: 45dvh;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container {
+  display: flex;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container {
+    padding: 0px 1rem;
+    flex-direction: column;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-mobile-container {
+  width: 100%;
+  display: flex;
+  overflow-y: hidden;
+}
+@media screen and (min-width: 993px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-mobile-container {
+    display: none;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-mobile-container button {
+  flex-grow: 1;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-mobile-container button.button-buy {
+  background-color: var(--green, #00BF76);
+  color: white;
+  border-radius: 5px 0px 0px 5px;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-mobile-container button.button-sell {
+  background-color: var(--red, #E65764);
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container {
+  width: 100%;
+  display: flex;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container {
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    top: 100%;
+    left: 0px;
+    z-index: 5;
+    transition: all 0.3s;
+  }
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container.active {
+    top: 0px;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option {
+    width: 100%;
+    display: none;
+    height: 100%;
+  }
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option.active {
+    display: flex;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-back {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: right;
+  display: none;
+  font-family: SFPro;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.71px;
+  border-radius: 0px;
+  border-bottom: solid 1px #E6E6E6;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-back {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .title-container {
+  padding: 0px 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .title-container .title {
+  font-family: SFPro;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15.51px;
+  text-align: left;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .title-container .title-message {
+  font-family: SFPro;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.32px;
+  text-align: left;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form {
+  padding: 0px 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .control-container,
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .options-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .control-container label,
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .options-container label {
+  width: 30%;
+  font-family: SFPro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+  text-align: left;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .control-container .input,
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .options-container .input {
+  width: 100%;
+  max-width: 70%;
+  padding: 0.5rem;
+  border: 1px solid var(--light-grey-e-6-e-6-e-6, #E6E6E6);
+  border-radius: 5px;
+  font-family: SFPro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.71px;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .control-container .input-container,
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .options-container .input-container {
+  margin-bottom: 0px;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .control-container .input-container .input-unit,
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .options-container .input-container .input-unit {
+  white-space: nowrap;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .control-container .button-group,
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .options-container .button-group {
+  width: 100%;
+  max-width: 70%;
+  display: flex;
+  gap: 0.5rem;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .control-container .button-group .percentage-button,
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .options-container .button-group .percentage-button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--light-grey-e-6-e-6-e-6, #E6E6E6);
+  border-radius: 5px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .control-container .button-group .percentage-button,
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option form .options-container .button-group .percentage-button {
+    font-size: 12px;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-buy,
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-sell {
+  width: auto;
+  margin: 0px 1rem;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-buy,
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-sell {
+    margin-top: auto;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-buy {
+  background: var(--green, #00BF76);
+  color: white;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-buy:disabled {
+  cursor: not-allowed;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-sell {
+  background: var(--red, #E65764);
+  color: white;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .chart-trade-options-container .chart-trade-option .button-sell:disabled {
+  cursor: not-allowed;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .exchange-currencies-container {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .exchange-currencies-container {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .exchange-currencies-container button {
+  font-family: SFPro;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+  text-align: left;
+  border-radius: 0px;
+}
+.exchange-container .chart-container.desktop .section .chart-container .chart-trade-container .exchange-currencies-container button.active {
+  border-bottom: solid 2px var(--black-1-e-2026, #1E2026);
+}
+.exchange-container .chart-container.desktop .section .comparison-container,
+.exchange-container .chart-container.desktop .section .currencies-container,
+.exchange-container .chart-container.desktop .section .prices-history-table,
+.exchange-container .chart-container.desktop .section .trade-history {
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: SFPro;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  text-align: left;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .comparison-container,
+  .exchange-container .chart-container.desktop .section .currencies-container,
+  .exchange-container .chart-container.desktop .section .prices-history-table,
+  .exchange-container .chart-container.desktop .section .trade-history {
+    padding: 1rem;
+  }
+}
+.exchange-container .chart-container.desktop .section .comparison-container .comparison-buttons-container,
+.exchange-container .chart-container.desktop .section .currencies-container .comparison-buttons-container,
+.exchange-container .chart-container.desktop .section .prices-history-table .comparison-buttons-container,
+.exchange-container .chart-container.desktop .section .trade-history .comparison-buttons-container {
+  display: flex;
+  align-items: center;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .comparison-buttons-container .comparison-buttons,
+.exchange-container .chart-container.desktop .section .currencies-container .comparison-buttons-container .comparison-buttons,
+.exchange-container .chart-container.desktop .section .prices-history-table .comparison-buttons-container .comparison-buttons,
+.exchange-container .chart-container.desktop .section .trade-history .comparison-buttons-container .comparison-buttons {
+  display: flex;
+  margin-left: auto;
+}
+@media screen and (max-width: 992px) {
+  .exchange-container .chart-container.desktop .section .comparison-container .comparison-buttons-container .comparison-buttons,
+  .exchange-container .chart-container.desktop .section .currencies-container .comparison-buttons-container .comparison-buttons,
+  .exchange-container .chart-container.desktop .section .prices-history-table .comparison-buttons-container .comparison-buttons,
+  .exchange-container .chart-container.desktop .section .trade-history .comparison-buttons-container .comparison-buttons {
+    overflow-x: auto;
+  }
+}
+.exchange-container .chart-container.desktop .section .comparison-container .comparison-buttons-container .comparison-buttons button,
+.exchange-container .chart-container.desktop .section .currencies-container .comparison-buttons-container .comparison-buttons button,
+.exchange-container .chart-container.desktop .section .prices-history-table .comparison-buttons-container .comparison-buttons button,
+.exchange-container .chart-container.desktop .section .trade-history .comparison-buttons-container .comparison-buttons button {
+  padding: 0px 0.5rem;
+  font-family: SFPro;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.71px;
+  color: #7C7E85;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .comparison-buttons-container .comparison-buttons button.active,
+.exchange-container .chart-container.desktop .section .currencies-container .comparison-buttons-container .comparison-buttons button.active,
+.exchange-container .chart-container.desktop .section .prices-history-table .comparison-buttons-container .comparison-buttons button.active,
+.exchange-container .chart-container.desktop .section .trade-history .comparison-buttons-container .comparison-buttons button.active {
+  color: var(--black-1-e-2026, #1E2026);
+}
+.exchange-container .chart-container.desktop .section .comparison-container .comparison-group,
+.exchange-container .chart-container.desktop .section .currencies-container .comparison-group,
+.exchange-container .chart-container.desktop .section .prices-history-table .comparison-group,
+.exchange-container .chart-container.desktop .section .trade-history .comparison-group {
+  display: none;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .comparison-group.active,
+.exchange-container .chart-container.desktop .section .currencies-container .comparison-group.active,
+.exchange-container .chart-container.desktop .section .prices-history-table .comparison-group.active,
+.exchange-container .chart-container.desktop .section .trade-history .comparison-group.active {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .comparison-group .comparison,
+.exchange-container .chart-container.desktop .section .currencies-container .comparison-group .comparison,
+.exchange-container .chart-container.desktop .section .prices-history-table .comparison-group .comparison,
+.exchange-container .chart-container.desktop .section .trade-history .comparison-group .comparison {
+  display: flex;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .comparison-group .comparison div,
+.exchange-container .chart-container.desktop .section .currencies-container .comparison-group .comparison div,
+.exchange-container .chart-container.desktop .section .prices-history-table .comparison-group .comparison div,
+.exchange-container .chart-container.desktop .section .trade-history .comparison-group .comparison div {
+  flex: 1;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .currencies-group,
+.exchange-container .chart-container.desktop .section .currencies-container .currencies-group,
+.exchange-container .chart-container.desktop .section .prices-history-table .currencies-group,
+.exchange-container .chart-container.desktop .section .trade-history .currencies-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .currencies-group .currencies,
+.exchange-container .chart-container.desktop .section .currencies-container .currencies-group .currencies,
+.exchange-container .chart-container.desktop .section .prices-history-table .currencies-group .currencies,
+.exchange-container .chart-container.desktop .section .trade-history .currencies-group .currencies {
+  display: flex;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .currencies-group .currencies div,
+.exchange-container .chart-container.desktop .section .currencies-container .currencies-group .currencies div,
+.exchange-container .chart-container.desktop .section .prices-history-table .currencies-group .currencies div,
+.exchange-container .chart-container.desktop .section .trade-history .currencies-group .currencies div {
+  flex: 1;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .trade-container,
+.exchange-container .chart-container.desktop .section .currencies-container .trade-container,
+.exchange-container .chart-container.desktop .section .prices-history-table .trade-container,
+.exchange-container .chart-container.desktop .section .trade-history .trade-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.exchange-container .chart-container.desktop .section .comparison-container .trade-container .ask,
+.exchange-container .chart-container.desktop .section .currencies-container .trade-container .ask,
+.exchange-container .chart-container.desktop .section .prices-history-table .trade-container .ask,
+.exchange-container .chart-container.desktop .section .trade-history .trade-container .ask {
+  color: var(--green, #00BF76);
+}
+.exchange-container .chart-container.desktop .section .comparison-container .trade-container .bid,
+.exchange-container .chart-container.desktop .section .currencies-container .trade-container .bid,
+.exchange-container .chart-container.desktop .section .prices-history-table .trade-container .bid,
+.exchange-container .chart-container.desktop .section .trade-history .trade-container .bid {
+  color: var(--red, #E65764);
+}
+.exchange-container .chart-container.desktop .section .comparison-container .trade-container .text-right,
+.exchange-container .chart-container.desktop .section .currencies-container .trade-container .text-right,
+.exchange-container .chart-container.desktop .section .prices-history-table .trade-container .text-right,
+.exchange-container .chart-container.desktop .section .trade-history .trade-container .text-right {
+  margin-left: auto;
+  text-align: right;
+}
+
+/*# sourceMappingURL=exchange.css.map*/

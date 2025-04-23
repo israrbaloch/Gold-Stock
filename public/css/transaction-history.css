@@ -1,0 +1,420 @@
+/* #tab-desk-details div.row {
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+} */
+
+.coins-container .coin-container,
+.currencies-container .currency-container {
+    border-bottom: 1px solid gray;
+    padding: 10px 0;
+}
+
+.coins-container .list-group-item.active,
+.currencies-container .list-group-item.active {
+    background-image: url(../../img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    border-color: transparent;
+}
+
+.coins-container .coin-container .coin-name {
+    color: gray;
+}
+
+.links .material-icons {
+    position: absolute;
+}
+
+.coins-table tbody td,
+.coins-table thead th {
+    text-align: center;
+}
+
+.coin-img img {
+    width: 20px;
+}
+
+.mobile-coin-table {
+    width: 100%;
+}
+
+.mobile-coin-table th {
+    background-image: url(../../img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    border: none !important;
+    color: white;
+    padding: 2px;
+    line-height: 1.5em;
+}
+
+.mobile-coin-table td {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.mobile-coin-table .order-type {
+    color: white;
+    padding: 3px 1px 3px 5px;
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+
+.mobile-coin-table .order-type.sell {
+    background-color: red;
+}
+
+.mobile-coin-table .order-type.buy {
+    background-color: darkgreen;
+}
+
+.mobile-coin-table .order-date {
+    margin-top: 10px;
+    color: gray;
+}
+
+.desktop-version .coins-table th {
+    background-image: url(../../img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    border: none !important;
+}
+
+
+.desktop-version .order-type.sell {
+    color: red;
+}
+
+.desktop-version .order-type.buy {
+    color: darkgreen;
+}
+
+#mobile-history-link {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#mobile-history-link a {
+    color: #000000;
+    font-weight: bold;
+}
+
+#mobile-history-link .active {
+    border-bottom: none !important;
+}
+
+#mobile-history-link .active a {
+    color: #F3A30C;
+}
+
+.mobile-deposit-container .row,
+.mobile-withdrawal-container .row {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.mobile-deposit-container .deposit-date,
+.mobile-withdrawal-container .deposit-date {
+    font-size: 12px;
+    color: darkslategray;
+}
+
+.mobile-deposit-container .deposit-status,
+.mobile-withdrawal-container .deposit-status {
+    padding-top: 6px;
+    color: #F3A30C;
+}
+
+.desktop-version .transaction-btn.active {
+    background-image: url(../../img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    border: none !important;
+    color: white;
+}
+
+.page-container {
+    padding-top: 0px;
+}
+
+.thumby {
+    width: 100%;
+    padding: 11px 5px 0 0;
+}
+
+.thumby-big {
+    width: 50px;
+    padding: 0 15px 0 10px;
+}
+
+.details {
+    margin: 0;
+    padding: 10px 0 10px 50px;
+    font-size: 1.1em;
+}
+
+.toogle-details {
+    cursor: pointer;
+}
+
+/* .highlight {
+    background-color: #D3C69A !important;
+} */
+
+.details div {
+    margin-bottom: 10px;
+}
+
+/*new style*/
+.desktop-version .coins-table th {
+    background-image: url(../../img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    border: none !important;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.table .toogle-details th,
+.table .toogle-details td {
+    padding: 20px 0;
+    vertical-align: top;
+    border-top: none !important;
+    background-color: #F8F8F8;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #4F4F4F;
+}
+
+.title-page-1 {
+    font-size: 4em;
+    margin: 0 0 20px 0;
+    color: #35571A;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.details-title {
+    font-size: 1.2em;
+}
+
+.order-details td {
+    border-top: none;
+}
+
+.desktop-version .order-type.sell {
+    color: #4F4F4F;
+    ;
+}
+
+.desktop-version .order-type.buy {
+    color: #4F4F4F;
+    ;
+}
+
+.gray-space {
+    display: inline-block;
+    height: 70px;
+    background-color: #F8F8F8;
+}
+
+.tabs-change {
+    width: 100%;
+    background-color: #F8F8F8;
+    margin-bottom: 10px;
+}
+
+.tabs-change .tab-change {
+    display: inline-block;
+    padding: 1em 6.5vw;
+    background-color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* .tabs-change .tab-change.active{
+    background-image: url(../../img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
+} */
+
+.load-more-dp,
+.load-more-wd {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    color: mediumblue;
+    font-size: 1.2em;
+}
+
+.text-cap {
+    text-transform: uppercase;
+}
+
+.simple-order-details {
+    padding-top: 0 !important;
+}
+
+.simple-order-details .row {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.toogle-details:nth-of-type(odd),
+.toogle-details:nth-of-type(odd) * {
+    /* background-color: #EDF5F8 !important; */
+    background-color: #FAFAFA !important;
+}
+
+.toogle-details:nth-of-type(even),
+.toogle-details:nth-of-type(even) * {
+    /* background-color: #fff !important; */
+    background-color: #FAFAFA !important;
+}
+
+.simple-order-details {
+    border: solid 1px #AD954B;
+    padding-top: 20px !important;
+    color: #34461f !important;
+}
+
+#tab-conversion-details .simple-order-details .row {
+    margin: auto 0 !important;
+}
+
+#tab-conversion-details div.row {
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+@media (max-width: 767px) {
+    .mobile-coin-table th {
+        background-image: url(../../img/gold-texture.jpg);
+        background-repeat: repeat;
+        background-size: 100% 100%;
+        background-color: #F3A30C;
+        border: none;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-coin-table {
+        border: none !important;
+    }
+
+    .mobile-deposit-container .row,
+    .mobile-withdrawal-container .row {
+        padding: 10px;
+        border-bottom: none;
+        background-color: #F8F8F8;
+        font-size: 0.9em;
+    }
+
+    .mobile-coin-table .order-type {
+        color: initial;
+        padding: 3px 1px 3px 5px;
+        margin-right: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .mobile-coin-table .order-type.sell {
+        background-color: transparent;
+        color: red;
+    }
+
+    .mobile-coin-table .order-type.buy {
+        background-color: transparent;
+        color: green;
+    }
+
+    .order-date {
+        font-size: 0.9em;
+    }
+
+    .transaction-details {
+        background-color: transparent;
+    }
+
+    .transaction-details .details {
+        margin: 0;
+        padding: 10px;
+        font-size: 1em;
+        background-color: transparent;
+    }
+
+    #mobile-history-link .active {
+        border-bottom: none;
+        background-image: url(../../img/gold-texture.jpg);
+        background-repeat: repeat;
+        background-size: 100% 100%;
+        color: white !important;
+    }
+
+    #mobile-history-link .active a {
+        color: white !important;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+
+    #mobile-history-link div {
+        padding: 10px;
+    }
+
+    #mobile-history-link {
+        margin-bottom: 10px;
+    }
+
+    .mobile-deposit-container .deposit-status,
+    .mobile-withdrawal-container .deposit-status {
+        padding-top: 6px;
+        color: #4F4F4F;
+    }
+
+    .title-page-1 {
+        margin-bottom: 40px;
+    }
+
+    .simple-order-details {
+        font-size: 0.8em;
+    }
+
+    #mobile-history-link {
+        margin: auto 0 !important;
+    }
+
+    #tab-mobile-details-deposit .simple-order-details .row,
+    #tab-mobile-details-withdraw .simple-order-details .row {
+        margin: auto 0 !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .mobile-coin-table td {
+        padding: 10px;
+        border-bottom: none;
+        background-color: #F8F8F8;
+        font-size: 0.7em;
+    }
+
+    #mobile-history-link .active a {
+        font-size: 1em;
+    }
+
+    .title-page-1 {
+        font-size: 1.7em !important;
+    }
+}
+
+.simple-order-details {
+    background-color: #ffffff;
+}

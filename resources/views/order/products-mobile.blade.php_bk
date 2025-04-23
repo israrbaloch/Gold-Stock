@@ -1,0 +1,70 @@
+<table class="products-table-mobile" id="products-table" cellspacing="5">
+    <tbody>
+        @foreach ($products as $item)
+            <tr>
+                <th>Product</th>
+
+                {{-- Thumbnail --}}
+                <td class="product-thumbnail">
+                    <div class="thumbnail-container">
+                        @php
+                            $images = json_decode($item->images);
+
+                            // Check if the decoded value is an array
+                            if (is_array($images)) {
+                                // Replace backslashes with forward slashes in the image path and prepend the 'storage/' directory
+                                foreach ($images as $i => $image) {
+                                    $images[$i] = '/storage/' . str_replace('\\', '/', $image);
+                                }
+                            } else {
+                                // Assume the decoded value is a comma-separated list of image paths
+                                $images = explode(',', $item->images);
+                            }
+                            $thumbnail = $images[0];
+                        @endphp
+                        <img src="{{ $thumbnail }}" alt="{{ $item->name }}" width="100">
+                        <a href="/product/{{ $item->id }}">
+                            <span class="product-name" data-title="Name">
+                                {{ $item->name }}
+                            </span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                {{-- Price --}}
+                <td class="product-price" data-title="Price">
+                    <span>
+                        ${{ number_format($item->price, 2) }}
+                        {{-- {{ $item->attributes->currency }} --}}
+                    </span>
+                </td>
+            </tr>
+            <tr class="the-cart-item-mobile" data-id="{{ $item->id }}">
+                <th>Quantity</th>
+                {{-- Quantity --}}
+                <td class="product-quantity" data-title="Quantity">
+                    <div class="quantity">
+                        <input value="{{ $item->quantity }}" disabled>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Item Total</th>
+                {{-- Total --}}
+                <td class="product-subtotal" data-title="Total">
+                    <span>
+                        ${{ number_format($item->price * $item->quantity, 2) }} {{ $order->currency }}
+                    </span>
+                </td>
+            </tr>
+        @endforeach
+        {{-- <tr>
+            <td colspan="6" class="actions">
+                <button id="refresh-cart" class="button btn btn-desktop refresh-cart makeup-btn-dark-green">Update
+                    cart</button>
+            </td>
+        </tr> --}}
+    </tbody>
+</table>

@@ -1,0 +1,334 @@
+body {
+    font-size: 0.9em;
+}
+
+table {
+    font-size: 0.9em;
+}
+
+.back-to-history{
+    cursor: pointer;
+}
+
+.back-to-history a{
+    text-decoration: none;
+}
+.only-mobile table {
+    font-size: 1em;
+}
+
+.metals-container .metal-container,
+.currencies-container .currency-container{
+    border-bottom: 1px solid gray;
+    padding: 10px 0;
+}
+
+.metals-container .list-group-item.active,
+.currencies-container .list-group-item.active {
+    background-image: url(/img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    border-color: transparent;
+}
+
+.metals-container .metal-container .metal-name {
+    color: gray;
+}
+
+/* .links .material-icons {
+    position: absolute;
+} */
+
+.metals-table tbody td,
+.metals-table thead th {
+    text-align: center;
+}
+
+.metal-img img {
+    width: 20px;
+}
+
+.mobile-metal-table {
+    width: 100%;
+}
+
+.mobile-metal-table th {
+    background-image: url(/img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    border: none !important;
+    color: white;
+    padding: 2px;
+    line-height: 1.5em;
+}
+
+.mobile-metal-table td {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.mobile-metal-table .order-type {
+    color: white;
+    padding: 3px 1px 3px 5px;
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+
+.mobile-metal-table .order-type.sell {
+    background-color: red;
+}
+
+.mobile-metal-table .order-type.buy {
+    background-color: darkgreen;
+}
+
+.mobile-metal-table .order-date {
+    margin-top: 10px;
+    color: gray;
+}
+
+.desktop-version .metals-table th {
+    background-image: url(/img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    border: none !important;
+}
+
+.tab-mobile-order-details,
+.tab-order-details{
+    border: solid 1px #AD954B;
+    padding: 0 0.8rem !important;
+    color: #34461f !important;
+    background-color: #ffffff;
+}
+.tab-mobile-order-details .row,
+.tab-order-details .row {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    color: #34461f !important;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.tab-order-details .total{
+    border-top: solid 1px #AD954B;
+}
+.tab-mobile-order-details .title,
+.tab-order-details .title {
+    border-bottom: solid 1px #AD954B;
+    padding: 1.2rem 0.5rem !important;
+}
+.simple-order-details .row {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+}
+.product-rows{
+    border: none !important;
+}
+.payments-title,
+.product-rows{
+    border-bottom: solid 1px #AD954B;
+}
+.content.row .row{
+    padding: 0 !important;
+}
+.payments-order .row{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.desktop-version .order-type.sell {
+    color: red;
+}
+
+.desktop-version .order-type.buy {
+    color: darkgreen;
+}
+.page-container {
+    padding-top: 0px;
+}
+
+.details {
+    margin: 0;
+    padding: 10px 0 10px 50px;
+    font-size: 1.1em;
+}
+
+.toogle-details {
+    cursor: pointer;
+}
+
+/* .highlight {
+    background-color: #D3C69A !important;
+} */
+
+/*new style*/
+.desktop-version .metals-table th {
+    background-image: url(/img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    border: none !important;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.table .toogle-details th, .table .toogle-details td {
+    padding: 20px 0;
+    vertical-align: top;
+    border-top: none !important;
+    background-color: #F8F8F8;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #4F4F4F;
+}
+
+.title-page-1 {
+    font-size: 4em;
+    margin: 0 0 20px 0;
+    color: #35571A;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.details-title {
+    font-size: 1.2em;
+}
+
+.order-details td {
+    border-top: none;
+}
+
+.gray-space {
+    height: 70px;
+    background-color: #F8F8F8;
+}
+
+.load-more {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    color: mediumblue;
+    font-size: 1.2em;
+}
+
+.simple-order-details {
+    padding-top: 0 !important;
+}
+
+
+.toogle-details:nth-of-type(odd) *{
+    background-color:#EDF5F8 !important;
+}
+
+.toogle-details:nth-of-type(even) *{
+    background-color:#fff !important;
+}
+
+.mobile-toogle-details:nth-of-type(odd) *{
+    background-color:#EDF5F8 !important;
+}
+
+.mobile-toogle-details:nth-of-type(even) *{
+    background-color:#fff !important;
+}
+
+@media (max-width: 767px) {
+    .mobile-metal-table th {
+        background-image: url(/img/gold-texture.jpg);
+        background-repeat: repeat;
+        background-size: 100% 100%;
+        border: none;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .mobile-metal-table {
+        border: none !important;
+    }
+    
+    .mobile-metal-table td {
+        padding: 10px;
+        border-bottom: none;
+        background-color: #F8F8F8;
+        font-size: 0.9em;
+    }
+
+    .mobile-metal-table .order-type {
+        color: initial;
+        padding: 3px 1px 3px 5px;
+        margin-right: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .mobile-metal-table .order-type.sell {
+        background-color: transparent;
+        color: red;
+    }
+
+    .mobile-metal-table .order-type.buy {
+        background-color: transparent;
+        color: green;
+    }
+
+    .order-date {
+        font-size: 0.9em;
+    }
+
+    .mobile-order-details {
+        background-color: transparent;
+    }
+
+    .mobile-order-details .details {
+        margin: 0;
+        font-size: 1.1em;
+    }
+
+    .simple-order-details {
+        font-size: 0.9em;
+    }
+
+}
+
+@media (max-width: 350px) {
+    .mobile-metal-table td {
+        padding: 10px;
+        border-bottom: none;
+        background-color: #F8F8F8;
+        font-size: 0.7em;
+    }
+}
+
+.tab-link {
+    margin-bottom: 10px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-decoration: none !important;
+}
+
+.tab-link .active{
+    border-bottom: none;
+    color: white !important;
+    background-image: url(/img/gold-texture.jpg);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+}
+
+.tab-link a{
+    text-decoration: none !important;
+}
+.tab-link .active a{
+    color: white !important;
+}
+
+.tab-link .active {
+    border-bottom: none !important;
+}
+
+.tab-link div {
+    padding: 10px;
+}
+
+.simple-order-details {
+    background-color: #ffffff;
+}

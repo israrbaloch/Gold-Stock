@@ -1,0 +1,52 @@
+.button {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+
+  color: var(--black);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: SFPro;
+
+  outline: 0 !important;
+  cursor: pointer;
+  box-shadow: none;
+  border-radius: 5px;
+  background-color: var(--primary);
+
+  // Sizes
+  &.small {
+    padding: 0.5rem 1.5rem;
+  }
+
+  &.semi-medium {
+    padding: 1rem 3rem;
+  }
+
+  &.medium {
+    padding: 0.5rem 3rem;
+  }
+
+  &.disabled-btn {
+    cursor:not-allowed;
+    background: var(--light-grey-e-6-e-6-e-6, #e6e6e6);
+  }
+
+  // Colors
+  &.gray {
+    background: var(--light-grey-e-6-e-6-e-6, #e6e6e6);
+  }
+
+  // Styles
+  &.clean {
+    background: transparent;
+    color: var(--black);
+    border: none;
+  }
+}

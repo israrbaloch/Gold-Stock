@@ -1,0 +1,193 @@
+<script type="text/javascript" src="{{ asset('js/footer.js') }}"></script>
+
+<footer>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-col">
+                <h3>Main</h3>
+                <ul>
+                    <li>
+                        <a href="/exchange">
+                            Exchange
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/shop">
+                            Shop
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/news">
+                            News
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/blog">
+                            Blog
+                        </a>
+                    </li>
+                    {{-- <li>
+                        <a href="/live-prices">
+                            Live Prices
+                        </a>
+                    </li> --}}
+                    <li>
+                        <a href="/refining">
+                            Refining
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-col">
+                <h3>Help</h3>
+                <ul>
+                    <li>
+                        <a href="/contact">
+                            Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/faq">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/policy/sales">
+                            Sales and Refunds Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/policy/cookies">
+                            Cookies Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/policy/ecommerce">
+                            E-Commerce Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/policy/disclaimer">
+                            Legal Disclaimer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/policy/terms">
+                            Terms and Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/policy/use">
+                            Terms of Use
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/policy/privacy">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>
+                        <a href="tel:1-844-504-4653">
+                            1-844-504-4653
+                        </a>
+                    </li>
+                    <li>
+                        3rd Floor - 55 Dundas St East
+                        <br>
+                        Toronto, Ontario M5B-1C6
+                    </li>
+                    <li>
+                        Monday - Friday
+                        <br>
+                        9am - 6pm
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-section right-side">
+                <div class="nav-section-top">
+                    <h3>Subscribe</h3>
+                    <p>Get the latest news and offers!</p>
+                    <form id="subscription-form" action="/subscription" method="POST">
+                        @csrf
+                        <div class="input-container" data-field="email">
+                            <input class="input" type="email" name="email" placeholder="example@mail.com">
+                        </div>
+                        <button type="submit" class="button">Subscribe</button>
+                    </form>
+                </div>
+                <div class="nav-section-bottom">
+                    <div class="nav-col">
+                        <h3>Payment Options</h3>
+                        <ul class="payments">
+                            <li>
+                                <img src="/img/icons/visa.png">
+                            </li>
+                            <li>
+                                <img src="/img/icons/mastercard.png">
+                            </li>
+                            <li>
+                                <img src="/img/icons/american-express.png">
+                            </li>
+                            <li>
+                                <img src="/img/icons/discover.png">
+                            </li>
+                            <li>
+                                <span>
+                                    Cash <br>
+                                    in Store
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    Bank <br>
+                                    Payment
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    Cheque
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    E-Transfer
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-col">
+                        <h3>Delivery Partners</h3>
+                        <ul class="delivery">
+                            <li>
+                                <img src="/img/icons/fedex.png">
+                            </li>
+                            <li>
+                                <img src="/img/icons/ups.png">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="rights">
+        <div class="container">
+            <img src="/img/main-logo-grey.png" alt="">
+            <div>
+                Shipping: Canada
+            </div>
+            <div>
+                &#169;GoldStockCanada 2023 All rights reserved
+            </div>
+        </div>
+    </div>
+</footer>

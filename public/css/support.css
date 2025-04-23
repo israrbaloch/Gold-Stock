@@ -1,0 +1,50 @@
+body {
+  background: #ffffff !important;
+}
+
+.supp-img {
+  width: 100%;
+  margin: 0 0;
+}
+
+.supp-form .label {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.supp-form .supp-input {
+  width: 100%;
+  border: solid 1px #AAAAAA;
+  color: #4F4F4F !important;
+  background: #ffffff !important;
+  margin: 0 0 10px 0;
+  padding: 8px;
+}
+
+.send-message {
+  cursor: pointer;
+  width: 240px;
+  display: block;
+  margin: 30px auto 0 auto;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+      margin-top: 50px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+      background: #ffffff !important;
+  }
+}
+
+#send-message {
+  background-image: url("/img/support/send-message-button.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 2em !important;
+  width: 10em !important;
+  border: none !important;
+}

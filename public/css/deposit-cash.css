@@ -1,0 +1,242 @@
+#deposit-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#account-number-box {
+    /* display: none; */
+}
+
+#confirmation-modal {
+    z-index: 1041 !important;
+    padding: 0;
+    max-width: none;
+    position: absolute;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    bottom: auto;
+    top: 200px;
+}
+
+#store-pickup-box,
+#bank-transfer-box
+{
+    margin-top: -15px !important;
+    display: none;
+}
+
+#bank-transfer-box .input-group {
+    margin-top: 10px;
+}
+
+/* #imaginary_container,
+#bank-transfer-box,
+#store-pickup-box {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+} */
+
+/* .main-cont * {
+    color: #34461F !important;
+} */
+
+/* .makeup-input {
+    width: 100%;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px #AD954B !important;
+    background: none !important;
+    box-shadow: inset 0 -1px 0 #AD954B !important;
+    border-radius: 0px !important;
+    color: #34461F !important;
+    margin: 15px 0;
+} */
+
+/* label {
+    margin: 30px 0 0 0;
+    font-weight: bold !important;
+} */
+
+.img-cont img{
+    width: 100%;
+    height: auto;
+}
+
+.makeup-button {
+    background-color: #AD954B !important;
+    border-radius: 0 !important;
+    width: 100%;
+    color: #fff !important;
+    margin: 15px 0;
+}
+
+.bg-row {
+    background-image: url(/img/balance-bg.jpg);
+    /* background-size: cover; */
+    background-size: 100% 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .bg-row {
+        font-size: 1em !important;
+    }
+}
+
+.ext-pad {
+    padding-top: 2px;
+}
+
+/*new style*/
+
+.main-cont {
+    padding-top: 50px;
+    width: 100%;
+    min-height: 500px;
+}
+
+.title-page-1 {
+    font-size: 4em;
+    margin: 0 0 20px 0;
+    color: #35571A;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.balance-title  {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-top: 150px;
+    right: 14px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.balance-total  {
+    text-transform: uppercase;
+    font-size: 1.7em;
+    margin-right: 5px;
+    right: 14px;
+    margin-top: 10px;
+    padding-right: 50px;
+}
+
+.makeup-btn-dark-green {
+    border-radius: 10px;
+    background-color: #35571A;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    min-width: 110px;
+    margin-top: -7px;
+}
+
+.makeup-input {
+    width: 100%;
+    border: solid 1px #4F4F4F !important;
+    background: none !important;
+    border-radius: 10px !important;
+    color: #4F4F4F !important;
+    margin: 15px 0;
+}
+
+.makeup-input-clear {
+    width: 100%;
+    border: none !important;
+    background: none !important;
+    border-radius: 6px !important;
+    color: #4F4F4F !important;
+    margin: 15px 0;
+}
+
+label {
+    margin: 21px 0 0 0;
+}
+
+@media (max-width: 767px) {
+    .main-cont{
+        background: #F8F8F8 !important;
+    }
+
+    .main-cont {
+        padding-top: 10px;
+    }
+
+    .title-page-1 {
+        margin-top: 20px !important;
+    }
+
+    .sp-style {
+        font-size: 10px !important;
+    }
+
+    #deposit-btn {
+        position: absolute;
+        width: 88vw;
+        margin-left: calc(-48vw + 50%);
+        height: auto;
+    }
+
+    .main-cont {
+        min-height: initial;
+    }
+
+    .mobile-title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .balance-title-mobile  {
+        text-transform: uppercase;
+        font-size: 1.1em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .balance-total-mobile  {
+        text-transform: uppercase;
+        font-size: 1.1em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .additional-listing {
+        width: 100%;
+    }
+
+    /* .additional-listing strong {
+        float: left;
+    }
+
+    .additional-listing span {
+        float: right;
+    } */
+
+}
+
+@media (max-width: 350px) {
+    .balance-title-mobile  {
+        font-size: 0.9em;
+    }
+    
+    .balance-total-mobile  {
+        font-size: 0.9em;
+    }
+}
+
+.text-bold {
+    font-weight: bold;
+}
+.color-dark-green {
+    color: #35571A;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}

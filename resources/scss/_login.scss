@@ -1,0 +1,88 @@
+label.required:after {
+    content: "*";
+    color: #1E2026;
+}
+
+#loginModal, .alertModal {
+    font-family: SFPro !important;
+    .modal-dialog {
+        max-width: 550px;
+        .modal-content {
+            padding: 40px;
+            @media (max-width: 768px) {
+                padding: 40px 20px;
+            }
+            a{
+                color: #1E2026;
+                text-decoration: underline !important;
+            }
+            label {
+                font-size: 16px;
+                font-weight: 400;
+                color: #1E2026;
+            }
+            .modal-title {
+                font-size: 36px;
+                font-weight: 600;
+                color: #1E2026;
+            }
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                color: #1E2026;
+            }
+            .form-control {
+                font-size: 16px;
+                font-weight: 400;
+                color: #1E2026;
+                border-radius: 5px;
+                padding-left: 10px;
+                border: 1px solid #E6E6E6;
+                line-height: 19px;
+                height: 49px;
+            }
+            // focus
+            .form-control:focus {
+                border-color: #FFD805;
+                box-shadow: 0 0 0 0.03rem rgba(255, 216, 5, 0.25);
+            }
+            .form-control::placeholder {
+                font-size: 16px;
+                font-weight: 400;
+                color: #c6c6c6;
+            }
+            // error
+            .form-control.is-invalid  {
+                border-color: #FF0000;
+            }
+            .error-message {
+                font-size: 14px;
+                font-weight: 400;
+                color: #FF0000;
+            }
+            .form-check-input {
+                width: 16px;
+                height: 16px;
+                border-radius: 4px;
+                border: 1px solid #FFD805;
+                box-shadow: none !important;
+                display: block !important;
+            }
+            .form-check-input:checked {
+                background-color: #FFD805;
+            }
+            button{
+                font-size: 16px;
+                font-weight: 500;
+                color: #FFFFFF;
+                color: #2E3139;
+                background-color: #FFD805;
+                border-radius: 5px;
+                padding: 15px 51px;
+                border: none;
+                margin-top: 20px;
+                line-height: 19px;
+            }
+        }
+    }
+}

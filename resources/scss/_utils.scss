@@ -1,0 +1,11 @@
+:root {
+    --desktop: 1440px;
+}
+
+hr {
+    &.vertical {
+        width: 1px;
+        height: 100% !important;
+    }
+}
+

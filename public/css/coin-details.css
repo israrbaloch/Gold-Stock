@@ -1,0 +1,250 @@
+.go-x {
+    display: inline-block;
+    background: #AC944A;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: solid 1px lightgray;
+    max-height: 47px !important;
+}
+
+.dps-button {
+    width: 70%;
+}
+
+/* .marked {
+    border: solid 1px #E3DBBF;
+    background-color: #E2DBBF;
+} */
+
+.marked .col-6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.helper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btn-info {
+    background-color: #D33D22 !important;
+    border-color: #D33D22;
+    width: 100%;
+    color: #fff;
+    border-radius: 0px !important;
+    margin-top: 12px;
+    padding: 8px 4px; 
+}
+
+.btn-info.dep {
+    background-color: #34461f !important;
+    border-color: #34461f;
+}
+
+/* .btn-info:hover {
+    background-color: #D3C69A;
+    border-color: red;
+    color: red;
+    border-radius: 0px !important;
+    margin-top: 12px;
+    padding: 8px 4px;
+} */
+
+/* .desktop {
+    margin-left: 15%;
+    margin-right: 15%;
+} */
+
+.go-to-txt {
+    font-size: 1.4em;
+}
+
+.upper-block, .upper-block-sec {
+    position: relative;
+}
+
+.upper-block .image {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+
+.upper-block .title-block {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 115px;
+    width: 250px;
+    background-color: #fff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.upper-shadow {
+    height: 160px;
+}
+
+.upper-block-sec .image {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+
+/* .upper-block-sec .title-block {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 70px;
+    width: 250px;
+    background-color: #fff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+} */
+
+.upper-shadow-sec {
+    height: 110px;
+}
+
+.coin-title {
+    padding-top: 20px;
+    font-size: 1.4em;
+    color: #34461F !important;
+    padding-left: 0 !important;
+}
+
+.coin-img {
+    padding-top: 10px;
+}
+
+@media (max-width: 376px) {
+    .upper-block .image {
+        max-height: 140px;
+        top: 0;
+    }
+
+    .upper-block-sec .image {
+        top: 0;
+    }
+
+    .page-container {
+        padding-top: 0 !important;
+    }
+
+    .upper-block .title-block {
+        top: 60px;
+        width: 240px;
+    }
+
+    .upper-block-sec .title-block {
+        top: 18px;
+        width: 240px;
+    }
+
+    .go-x {
+        padding: 10px 2px;
+        cursor: pointer;
+    }
+}
+
+/*new style*/
+
+.title-page-1 {
+    font-size: 4em;
+    margin: 0 0 20px 0;
+    color: #35571A;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.title-page-2 {
+    font-size: 2em;
+    margin: 0 0 0 0;
+    color: #4F4F4F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.makeup-btn-dark-green {
+    border-radius: 10px !important;
+    background-color: #35571A !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: none;
+    outline: 0 !important;
+}
+
+.makeup-btn-red {
+    border-radius: 10px !important;
+    background-color: #FF2D2E !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: none;
+    outline: 0 !important;
+}
+
+.makeup-btn-dark-gold {
+    border-radius: 10px !important;
+    background-color: #A9954C !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: none;
+    outline: 0 !important;
+    border: none;
+}
+
+.marked {
+    background-color: #F8F8F8;
+    padding: 40px;
+}
+
+.new-package {
+    background-color: #F8F8F8;
+    padding: 40px 20px 20px 20px;
+}
+
+.col-sp-1 {
+    width: 48%;
+    margin-right: 2% ;
+}
+
+.col-sp-2 {
+    width: 48%;
+    margin-left: 2% ;
+}
+
+@media (max-width: 767px) {
+    .marked {
+        padding: 20px 10px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .go-x {
+        font-size: 0.8em;
+    }
+}
+
+.btn-holding {
+    width: 100% !important;
+    max-width: initial !important;
+}

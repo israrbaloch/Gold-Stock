@@ -1,0 +1,438 @@
+.new-profile-title .title {
+    font-size: 4em;
+    margin: 10px 0 40px 0;
+}
+
+.new-profile .main-col.col-7 {
+    max-width: 56.5%;
+}
+.new-profile .main-col {
+    background-color: #F8F8F8;
+    font-size: 1.1em;
+}
+
+.new-profile .main-col .row{
+    /* background-color: #F8F8F8; */
+    margin-bottom: 10px;
+}
+
+.new-profile .main-col.left {
+    background-color: #F8F8F8;
+    margin-right: 10px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.new-profile .main-col.right {
+    background-color: #F8F8F8;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.new-profile .profile-img {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+.makeup-btn-gold {
+    border-radius: 10px;
+    background-color: #A9954B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    min-width: 160px;
+}
+
+.makeup-btn-dark-green {
+    border-radius: 10px;
+    background-color: #35571A;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    min-width: 160px;
+}
+
+.makeup-btn-gray {
+    border-radius: 10px;
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    min-width: 160px;
+}
+
+input:checked + .slider {
+    background-color: #35571A !important;
+}
+
+.profile-lvl-img {
+    display: block;
+    margin: 15px auto;
+    width: 60px;
+}
+
+.profile-lvl-title {
+    font-weight: normal; 
+}
+
+.profile-lvl-line {
+    display: block;
+    margin: 10px auto;
+    width: 1px;
+    background-color: #CCCCCC;
+    height: 70px;
+}
+
+.profile-lvl-link {
+    color: #35571A !important;
+    font-weight: normal;
+    margin-top: 15px;
+    text-decoration: underline !important;
+}
+
+.identify-btn {
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.my-account-modal {
+    position: fixed !important;
+    z-index: 999999 !important;
+    width: 560px !important;
+    max-width: 560px !important;
+    height: 650px;
+    top: 40%;
+    left: 50%;
+    margin-top: -240px; /* Negative half of height. */
+    margin-left: -280px; /* Negative half of width. */
+    padding: 0 !important;
+}
+
+.my-account-modal .modal-dialog{
+    margin: 0 !important;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.my-account-modal .modal-dialog .modal-content{
+    min-width: 500px;
+    border: none !important;
+    padding: 15px;
+}
+
+#auth-container-disable {
+    top: 55%;
+    height: 360px;
+}
+
+#auth-container-email {
+    top: 55%;
+    height: 360px;
+}
+
+#auth-container-email-disable {
+    top: 55%;
+    height: 360px;
+}
+
+.identify-show-content-desk {
+    top: 50%;
+    height: 450px;
+}
+
+
+.my-account-modal-mobile {
+    position: fixed !important;
+    z-index: 999999 !important;
+    width: 96% !important;
+    max-width: 100% !important;
+    height: 600px;
+    top: 40%;
+    left: 2%;
+    margin-top: -240px; /* Negative half of height. */
+    padding: 0 !important;
+}
+
+.my-account-modal-mobile .modal-dialog{
+    margin: 0 !important;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.my-account-modal-mobile .modal-dialog .modal-content{
+    /* min-width: 500px; */
+    border: none !important;
+    padding: 15px;
+}
+
+#mobile-auth-container-disable {
+    top: 55%;
+    height: 400px;
+}
+
+#mobile-auth-container-email {
+    top: 55%;
+    height: 360px;
+}
+
+#mobile-auth-container-email-disable {
+    top: 55%;
+    height: 360px;
+}
+
+.identify-show-content-mobile {
+    top: 50%;
+    height: 450px;
+}
+
+@media (max-width: 767px) {
+    .lg-btn {
+        width: 92%;
+        margin: 10px 0;
+    }
+
+    #user-info-section {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        background-color: transparent !important;
+        background-image: url("/img/dashboard_mobile.jpg"); 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    #user-img-container {
+        padding-top: 6px;
+    }
+
+    .padding-help-1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .padding-help-2 img{
+        padding-left: 10px;
+        width: 30px;
+    }
+
+    .padding-help-3 div{
+        padding-right: 10px;
+        padding-bottom: 4px;
+    }
+
+    .bordered-box {
+        border: 1px solid #C4C4C4 !important;
+    }
+
+    .bottom-border {
+        border-bottom: 1px solid #C4C4C4 !important;
+        margin-bottom: 10px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    a {
+        color: #4F4F4F;
+    }
+
+    .my-account-show-content {
+        line-height: 28px;
+    }
+
+    .title-page-1 {
+        text-align: center;
+        font-size: 2em;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    #mobile-second-step-google-enable h5 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 350px) {
+    .my-account-show-content {
+        font-size: 0.8em;
+    }
+
+    .user-option {
+        font-size: 0.8em;
+    }
+}
+
+.gold-color {
+    color: #F3A30C;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    padding: 15px;
+    background-color: #92a0ad;
+    border-width: 0;
+    color: #fff;
+    background-color: #92a0ad;
+    text-align: center;
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+    padding: 15px;
+}
+
+a {
+    color: #F3A30C;
+}
+
+#whole-login-container {
+    padding: 30px;
+    background-color: white;
+}
+
+.input-group-prepend .input-group-text {
+    border-right: none;
+}
+
+body:not(.login) .txt-bg {
+    background-color: #35451E;
+    padding: 40px;
+}
+
+body:not(.login) .txt-title, body:not(.login) .txt-text {
+    color: #ffffff;
+}
+
+.button-1 {
+    background-color: #D33D22 !important;
+}
+
+.button-2 {
+    background-color: #AD954B !important;
+}
+
+.button-1, .button-2 {
+    border-radius: 0 !important;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.email-input, .password-input {
+    width: 100%;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px #AD954B !important;
+    background: none !important;
+    box-shadow: inset 0 -1px 0 #AD954B !important;
+}
+
+.username-error, .password-error, .email-error, .terms-error {
+    font-size: 0.8em;
+    color: #D33D22;
+}
+
+.border-limit {
+    border-top: solid 1px #DCDEC8;
+    border-bottom: solid 1px #DCDEC8;
+    border-right: solid 1px #DCDEC8;
+}
+
+.border-limit-mobile {
+    border-top: solid 1px #DCDEC8;
+    border-left: solid 1px #DCDEC8;
+    background: #ffffff;
+    border-right: solid 1px #DCDEC8;
+}
+
+.txt-bg-mobile {
+    background-color: #35451E;
+    padding: 20px;
+}
+
+.qr-login, #auth-container {
+    /* max-width: 500px;
+    display: block;
+    margin: 0 auto; */
+}
+
+.qr-img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 43%;
+    height: auto;
+}
+
+.modal-content .btn-close{
+    left: 0.25em;
+    top: 0.25em;
+    position: absolute;
+}
+
+.form-check {
+    display: inline-block;
+}
+.main-logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-light-blue {
+    color: #1D62A9;
+}
+
+.profile-value {
+    line-height: 26px;
+    font-size: 1.1em;
+}
+
+.bottom-border-light {
+    border-bottom: 1px solid #C4C4C4 !important;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+    .profile-value {
+        line-height: 22px;
+    }
+    
+    #auth-container .modal-content, #auth-container-disable .modal-content{
+        min-width: 0 !important;
+        width: 66% !important;
+        margin: auto;
+    }
+}
+
+.mt-16{
+    margin-top: 8em;
+}
+
+.twofaemail .logo-container{
+    border: none;
+    background-image: url(../img/header/header-01.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+

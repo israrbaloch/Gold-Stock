@@ -1,0 +1,76 @@
+@extends('header.index')
+
+@section('extratitle')
+    News
+@endsection
+
+@php
+    $prev_img = 0;
+@endphp
+
+@push('styles')
+    <link href="{{ URL::to('/') }}/css/style-new.css?ver=1.2.0" rel="stylesheet">
+@endpush
+
+@section('content')
+    <div class="page-container container news-container">
+
+        @if (count($news) != 0)
+            <h1 class="text-center">Explore the Latest News in Gold Refining</h1>
+            <div class="list-container">
+                @foreach ($news as $i => $new)
+                    <a class="new-container" href="/news/{{ $new->slug }}">
+                        <div class="col-12">
+                            <div class="img-container">
+                                <img class="news-img-n" src="{{ asset('storage/' . $new->image) }}"
+                                    alt="{{ strip_tags($new->title) }}">
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h2 class="new-title text-bold">
+                                {{ $new->title }}
+                            </h2>
+                            @if (strlen($new->description))
+                                <p class="">
+                                    @php
+                                        $text = strip_tags($new->description);
+
+                                        $text_only_spaces = preg_replace('/\s+/', ' ', $text);
+
+                                        // truncates the text
+                                        $text_truncated =
+                                            strlen($text) > 180
+                                                ? mb_substr(
+                                                    $text_only_spaces,
+                                                    0,
+                                                    mb_strpos($text_only_spaces, ' ', 180),
+                                                )
+                                                : $text;
+
+                                        // prevents last word truncation
+                                        $desc =
+                                            strlen($text) > 180
+                                                ? trim(
+                                                        mb_substr($text_truncated, 0, mb_strrpos($text_truncated, ' ')),
+                                                    ) . '...'
+                                                : $text;
+                                        echo $desc;
+                                    @endphp
+                                </p>
+                            @else
+                                <br>
+                                <br>
+                            @endif
+                        </div>
+                    </a>
+                @endforeach
+            </div>
+        @else
+            <div class="no-available">
+                <span>No news Available</span>
+            </div>
+        @endif
+
+    </div>
+
+@endsection

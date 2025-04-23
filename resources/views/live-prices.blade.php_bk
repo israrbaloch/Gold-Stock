@@ -1,0 +1,189 @@
+@extends('header.index')
+
+@section('extratitle')
+    Live Prices
+@endsection
+
+@push('styles')
+    <link href="{{ URL::to('/') }}/css/liveprices.css?ver=1.2.0" rel="stylesheet">
+@endpush
+
+@push('scripts')
+    <script type="text/javascript" src="{{ URL::to('/') }}/js/liveprices.js?ver=1.2.0"></script>
+@endpush
+
+@php
+    $data = [];
+    $asset_code_array = ['gold', 'silver', 'platinum', 'palladium'];
+    $last_refreshed = date('h:i:sa') . ' ' . date('Y/m/d');
+    $possibleImgs = ['CAD' => 'CAD.png', 'USD' => 'USA.png', 'EUR' => 'EUR.png'];
+    $currencies = ['CAD', 'USD', 'EUR'];
+@endphp
+
+@section('content')
+    <br>
+    <br class="only-desktop">
+    <br class="only-desktop">
+
+    <h2 class="section-title text-center">
+        Live Prices
+    </h2>
+    
+    <div class="container page-container">
+        <div class="row head-info color-white">
+            <div class="col-12 col-md-6 text-center">
+                <div class="row g-0 last-refreshed-cont">
+                    <div class="col-5 col-md-4 text-left">
+                        Last Refreshed at:
+                    </div>
+                    <div class="col-7 text-right text-md-left">
+                        <span class="last-refreshed text-bold"><?= $last_refreshed ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row g-0 flags-list">
+                    <div class="col-8 col-md-6 offset-md-3 text-left text-md-right pe-1 align-self-center">
+                        Click on Flag to Change Currency:
+                    </div>
+                    <div class="col-4 col-md-3 text-right">
+                        <div class="row g-0">
+                            @foreach ($currencies as $c)
+                                <div class="col-4 align-items-center">
+                                    <a href="#" class="currency-trigger cursor pointer align-items-center"
+                                        data-currency="<?= $c ?>" data-src="<?= '/img/' . $possibleImgs[$c] ?>"><img
+                                            src="<?= '/img/' . $possibleImgs[$c] ?>" alt="flag" /></a>
+                                </div>
+                            @endforeach
+                            <input type="hidden" id="active-currency" name="active-currency" value="<?= $currencies[0] ?>">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row head-info color-white">
+            <div class="col-12 col-md-4 text-center">
+                <div class="row g-0">
+                    <div class="col-6 text-right">
+                        US Rate:
+                    </div>
+                    <div class="col-6 text-left">
+                        &nbsp;&nbsp;<span class="us-rate-value"><?= $rate->us_rate ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <div class="row g-0">
+                    <div class="col-6 text-right">
+                        CAD Rate:
+                    </div>
+                    <div class="col-6 text-left">
+                        &nbsp;&nbsp;<span class="cad-rate-value"><?= $rate->cad_rate ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <div class="row g-0">
+                    <div class="col-6 text-right">
+                        EUR Rate:
+                    </div>
+                    <div class="col-6 text-left">
+                        &nbsp;&nbsp;<span class="eur-rate-value"><?= $rate->eur_rate ?></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-0">
+            @php
+                $prefixes = [
+                    'palladium' => 'Palladium',
+                    'platinum' => 'Platinum',
+                    'gold' => 'Gold',
+                    'silver' => 'Silver',
+                ];
+            @endphp
+            @foreach ($prices as $key => $info)
+                <div class="col-12 col-md-3">
+                    <div class="col-12 <?= $key ?>-title metal-title text-bold color-table-<?= strtolower($key) ?>">
+                        <div class="row g-0">
+                            <div class="col-8 d-flex align-center">
+                                <?= $prefixes[$key] ?> Price (<span class="active-currency"><?= $currencies[0] ?></span>)
+                            </div>
+                            <div class="col-4">
+                                <img class="currency-flag pointer" src="<?= '/img/' . $possibleImgs['CAD'] ?>"
+                                    alt="flag" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 metal-content color-table-1">
+                        <div class="row g-0">
+                            <div class="col-8">
+                                <?= $prefixes[$key] ?> Spot Bid
+                            </div>
+                            <div class="col-4">
+                                $<span class="<?= $key ?>-bid"><?= number_format($info['bid'], 2) ?></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 metal-content ">
+                        <div class="row g-0">
+                            <div class="col-8">
+                                <?= $prefixes[$key] ?> Spot Ask
+                            </div>
+                            <div class="col-4">
+                                $<span class="<?= $key ?>-ask"><?= number_format($info['ask'], 2) ?></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 metal-content color-table-1">
+                        <div class="row g-0">
+                            <div class="col-8">
+                                Selling <?= $prefixes[$key] ?> Ounce
+                            </div>
+                            <div class="col-4">
+                                $<span
+                                    class="<?= $key ?>-selling-ounce"><?= number_format($info['sellingounce'], 2) ?></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 metal-content">
+                        <div class="row g-0">
+                            <div class="col-8">
+                                Buying <?= $prefixes[$key] ?> Ounce
+                            </div>
+                            <div class="col-4">
+                                $<span class="<?= $key ?>-buying-ounce"><?= number_format($info['buyingounce'], 2) ?></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 metal-content color-table-1">
+                        <div class="row g-0">
+                            <div class="col-8">
+                                Seling <?= $prefixes[$key] ?> Kilo
+                            </div>
+                            <div class="col-4">
+                                $<span class="<?= $key ?>-selling-kilo"><?= number_format($info['sellingkilo'], 2) ?></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 metal-content">
+                        <div class="row g-0">
+                            <div class="col-8">
+                                Buying <?= $prefixes[$key] ?> Kilo
+                            </div>
+                            <div class="col-4">
+                                $<span class="<?= $key ?>-buying-kilo"><?= number_format($info['buyingkilo'], 2) ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            @endforeach
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+@endsection

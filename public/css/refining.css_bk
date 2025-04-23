@@ -1,0 +1,164 @@
+body {
+  background: #ffffff !important;
+}
+
+.shadow-box {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  padding: 30px;
+  height: 100%;
+}
+
+.text-box .title {
+  font-size: 2em;
+  color: #A9954C;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.text-box .title.white {
+  color: #ffffff;
+}
+
+.text-box .text {
+  font-size: 1.4em;
+}
+
+.text-box .text.white {
+  color: #ffffff;
+}
+
+.text-box img {
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.list-item img{
+  margin-right: 15px;
+  width: 15px;
+}
+
+.full-img {
+  width: 100%;
+  height: auto;
+}
+
+.sep {
+  margin-top: 40px;
+}
+
+.page-container.container.main {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: none !important;
+  margin-right: none !important;
+  margin-top: -55px !important;
+}
+
+.full-img img{
+  width: 100%;
+}
+
+.refining-white-line {
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.bg-b {
+  background-repeat: no-repeat; 
+  background-size: 100% auto;
+}
+
+@media (min-width: 768px) {
+  .text-box.right {
+      padding: 80px 20% 0 6%;
+  }
+  
+  .text-box.left {
+      padding: 80px 6% 0 20%;
+  }
+
+  .refining-white-line {
+      margin: 30px 10% 30px 10%;
+  }
+
+  .bg-b {
+      background-image: url(../img/refining/refining-background.jpg);
+  }
+
+  .bg-1 {
+      background-color: #F4F4F4;
+  }
+
+  .help-text {
+      padding-left: 10%;
+      margin-top: 80px;
+  }
+}
+
+@media (max-width: 1400px) {
+  body {
+      background: #ffffff !important;
+  }
+
+  .text-box .text {
+      font-size: 1.1em;
+  }
+
+  .text-box .title {
+      font-size: 1.3em;
+  }
+
+}
+
+@media (max-width: 767px) {
+  body {
+      background: #ffffff !important;
+  }
+
+  .text-box .text {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 1em;
+  }
+
+  .text-box .title {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 1.1em;
+  }
+
+  .bg-b {
+      background-image: url(../img/refining/mobile/refining.jpg);
+      background-repeat: repeat;
+  }
+
+  .text-box.right {
+      padding: 30px 0;
+  }
+  
+  .text-box.left {
+      padding: 30px 0;
+  }
+
+  .help-text {
+      margin-top: 30px;
+  }
+
+  .mobile-title {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-size: 1.3em;
+  }
+
+  .refining-white-line {
+      margin: 30px 15px 30px 15px;
+  }
+
+}

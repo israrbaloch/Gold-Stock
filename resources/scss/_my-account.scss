@@ -1,0 +1,135 @@
+.my-account-container {
+    padding-bottom: 100px;
+
+    h1 {
+        margin-bottom: 2rem;
+        font-size: 36px;
+        font-family: SFPro;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .avatar-container {
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 1rem;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .name {
+                font-size: 24px;
+                font-family: SFPro;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            .unverified,
+            .verified {
+                width: fit-content;
+                padding: 10px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                span {
+                    font-size: 16px;
+                    font-family: SFPro;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+
+            .unverified {
+                background: var(--light-yellow, #FEF6D8);
+
+                span {
+                    color: var(--dark-yellow, #B28100);
+                }
+            }
+
+            .verified {
+                background: var(--light-green, #DFF9EA);
+
+                span {
+                    color: var(--dark-green, #009A64);
+                }
+            }
+        }
+    }
+
+    .new-profile {
+        display: flex;
+        gap: 1rem;
+
+        .profile-container {
+            width: 100%;
+            border-radius: 5px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            background: var(--white-fafafa, #FAFAFA);
+
+            hr {
+                margin: 2rem 0px;
+            }
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1;
+
+            h2 {
+                color: var(--black-1-e-2026, #1E2026);
+                font-size: 20px;
+                font-family: SFPro;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            .button-container {
+                margin-top: auto;
+
+                .button {
+                    width: 100%;
+                }
+            }
+        }
+
+        .profile-value {
+            color: var(--grey-7-c-7-e-85, #7C7E85);
+            font-size: 16px;
+            font-family: SFPro;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: flex;
+            justify-content: space-between;
+
+            .title {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                .image-container {
+                    width: 30px;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            .value {
+                color: var(--black-1-e-2026, #1E2026);
+            }
+        }
+    }
+}

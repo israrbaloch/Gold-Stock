@@ -1,0 +1,230 @@
+@media (max-width: 768px){
+    .app-container .side-body .container-fluid,
+    .panel-container,
+    .panel.panel-bordered,
+    .col-sm-12{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    table div{
+        font-size: 11px !important;
+        padding: 5px !important;
+    }
+    .panel-body{
+        padding: 5px 10px !important;
+    }
+    body, html{
+        font-size: 12px !important;
+    }
+    .page-title {
+        padding: 15px 20px;
+        text-align: center;
+    }
+    .dataTables_length,
+    .dataTables_filter{
+        font-size: 10px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .col-2{
+        width: 16.666666% !important;
+    }
+    .col-3{
+        width: 25% !important;
+    }
+    .col-4{
+        width: 33.333333% !important;
+    }
+    .col-5{
+        width: 41.666666% !important;
+    }
+    .col-6{
+        width: 50% !important;
+    }
+    .col-7{
+        width: 58.333333% !important;
+    }
+    .col-8{
+        width: 66.666666% !important;
+    }
+    .col-12{
+        width: 100% !important;
+    }
+    .row>[class*=col-] {
+        margin-bottom: 10px;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+    .row{
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0 !important;
+    }
+    body *{
+        max-width: 100%;
+    }
+    #dataTable_wrapper .row:nth-child(3) .col-sm-6{
+        width: 100% !important;
+    }
+    #dataTable_wrapper .row:nth-child(3) > .col-sm-6:nth-child(1){
+        display: none;
+    }
+}
+@media (min-width: 768px){
+    .d-md-block{
+        display: block !important;
+    }
+    .p-md-6{
+        padding: 1.5rem !important;
+    }
+    .d-md-none{
+        display: none !important;
+    }
+    .w-md-50{
+        width: 50% !important;
+    } 
+}
+.f-right{
+    float: right;
+}
+.w-90{
+    width: 90%;
+}
+.w-98{
+    width: 98%;
+}
+.pending-order-item{
+    border: solid 1px aqua;
+    border-radius: 10px;
+}
+.center{
+    text-align: center;
+    align-items: center;
+}
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 50%;
+    float: left;
+}
+.m-0{
+    margin: 0 !important;
+}
+.m-2{
+    margin: 0.5rem !important;
+}
+.my-4{
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+.m-4{
+    margin: 1rem !important;
+}
+.p-2{
+    padding: 0.5rem !important;
+}
+.p-4{
+    padding: 1rem !important;
+}
+.p-6{
+    padding: 1.5rem !important;
+}
+.py-2{
+    padding-bottom: 0.5rem !important;
+    padding-top: 0.5rem !important;
+}
+.d-none{
+    display: none;
+}
+.d-tablerow{
+    display: table-row;
+}
+table .row>[class*=col-] {
+    margin-bottom: 0 !important;
+}
+.d-flex{
+    display: flex !important;
+}
+table *{
+    vertical-align: middle;
+}
+[class*=col-sm]{
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+table [class*=col-]{
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+.col-sm-6{
+    width: 50%;
+}
+.col-md-7 {
+    width: 58.33333333%;
+}
+.col-md-3 {
+    width: 25%;
+}
+.col-md-2 {
+    width: 16.66666666%;
+}
+.col-md-5 {
+    width: 41.666666666%;
+}
+.col-md-12 {
+    width: 100%;
+}
+d{
+    font-weight: 400;
+    color: #333;
+}
+#dataTable{
+    width: 100%;
+}
+table tbody td{
+    border-color: #E0FFFF !important;
+}
+table .odd{
+    background-color: #fff !important;
+}
+table .even{
+    background-color: #F0F8FF !important;
+}
+#dataTable tbody tr{
+    cursor: pointer;
+}
+#dataTable.collapsed div:not(.pb-2){
+    padding: 0 !important;
+}
+#dataTable.collapsed #tab-order-details{
+    padding: 5px !important;
+}
+#dataTable.collapsed h4{
+    font-size: 12px !important;
+}
+.text-cap{
+    text-transform: uppercase;
+}
+.text-bold{
+    font-weight: 600;
+}
+.recent-orders tbody tr {
+    cursor: default !important;    
+}
+.f-none{
+    float: none !important;
+}
+.d-block{
+    display: block;
+}
+.table-responsive{
+    overflow-x: hidden;
+}

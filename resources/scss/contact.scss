@@ -1,0 +1,181 @@
+// Colors
+$background-dark: #1c1e26;
+$white: #fff;
+$yellow: #ffd700;
+$yellow-hover: #e5c800;
+$text-dark: #000;
+
+// @media (min-width: 768px) {
+    .reverse {
+        flex-direction: row-reverse;
+    }
+// }
+
+.head {
+    font-family: SFPro;
+    text-align: center;
+    h2{
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 43px;
+        color: #1E2026;
+    }
+
+    p{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        color: #4F4F4F;
+    }
+}
+
+// Left Panel Styles
+.left-panel {
+    background-color: $background-dark;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    font-family: SFPro;
+
+    h2 {
+        text-align: left;
+        margin-bottom: 1rem;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+    }
+
+    img {
+        width: 219px;
+    }
+
+    p {
+        margin-top: 1rem;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+}
+
+// Form Container Styles
+.form-container {
+    background-color: $white;
+    padding: 30px;
+    border-radius: 8px;
+    font-family: SFPro;
+    border: 1px solid #E6E6E6;
+
+    label {
+        font-size: 16px;
+        font-weight: 400;
+        color: #1E2026;
+    }
+
+    h2 {
+        text-align: left;
+        margin-bottom: 1rem;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+    }
+
+    // Button Styles
+    .btn-primary {
+        background-color: $yellow;
+        border-color: $yellow;
+        color: $background-dark;
+
+        &:hover {
+            background-color: $yellow-hover;
+            border-color: $yellow-hover;
+        }
+    }
+
+    input.form-control {
+        font-size: 16px;
+        font-weight: 400;
+        color: #1E2026;
+        border-radius: 5px;
+        padding-left: 10px;
+        border: 1px solid #E6E6E6;
+        line-height: 19px;
+        height: 49px;
+    }
+    // focus
+    .form-control:focus {
+        border-color: #FFD805;
+        box-shadow: 0 0 0 0.03rem rgba(255, 216, 5, 0.25);
+    }
+    .form-control::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        color: #c6c6c6;
+    }
+    // error
+    .form-control.is-invalid  {
+        border-color: #FF0000;
+    }
+    .error-message {
+        font-size: 14px;
+        font-weight: 400;
+        color: #FF0000;
+    }
+    button{
+        font-size: 16px;
+        font-weight: 500;
+        color: #FFFFFF;
+        color: #2E3139;
+        background-color: #FFD805;
+        border-radius: 5px;
+        padding: 15px 51px;
+        border: none;
+        margin-top: 20px;
+        line-height: 19px;
+    }
+}
+
+// Tabs Styles
+.tabs {
+    .nav-link {
+        color: $text-dark;
+        border: none;
+        color: #7C7E85;
+        font-size: 16px;
+
+        &.active {
+            border-bottom: 2px solid $text-dark;
+            font-weight: 600;
+            color: $text-dark;
+        }
+    }
+}
+
+// Form Text
+.form-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #4F4F4F;
+    font-family: SFPro;
+    margin: 2.5rem 0;
+}
+.form-text a {
+    color: #4F4F4F;
+    text-decoration: underline !important;
+}
+
+// Container Customization
+.container-fluid-custom {
+    max-width: 1050px;
+    margin: 40px auto;
+
+    .row {
+        background-color: $white;
+    }
+}
+
+.cover-container {
+    background-color: #FAFAFA !important;
+}

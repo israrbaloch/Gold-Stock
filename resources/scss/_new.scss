@@ -1,0 +1,57 @@
+.new-container.page-container {
+  margin-bottom: 8rem;
+
+  .header-image {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 4rem;
+    object-fit: cover;
+  }
+
+  h1 {
+    color: #1e2026;
+    font-size: 36px;
+    font-family: SFPro;
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+  .date {
+    margin-bottom: 2rem;
+    color: #7c7e85;
+    font-size: 16px;
+    font-family: SFPro;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+
+  .content {
+    color: #4f4f4f;
+    font-size: 22px;
+    font-family: SFPro;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+
+  #shareButton {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+
+    // Share
+    color: #7c7e85;
+    font-size: 16px;
+    font-family: SFPro;
+    font-weight: 500;
+    word-wrap: break-word;
+
+    img {
+      width: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+    &:focus {
+      outline: 2px solid #7c7e85;
+      border-radius: 0.25rem;
+    }
+  }
+}

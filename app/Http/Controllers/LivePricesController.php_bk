@@ -1,0 +1,89 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\AjaxPricesController;
+use App\Models\HomeNew;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+use Cookie;
+use Illuminate\Http\Request;
+
+class LivePricesController extends Controller {
+    function getView() {
+        $currency = Cookie::get('currency');
+        $rate = DB::table('ic_historical_rate')->orderBy('id', 'desc')->first();
+        $controller = new AjaxPricesController();
+        $prices = $controller->getPrices();
+        $prices = $controller->getMetalInfo($prices, $currency);
+
+        // dd($prices);
+        $oldGoldPrice = DB::table('ht_gold_1d')->orderBy('timestamp_id', 'desc')->first();
+        $oldGoldPrice = $oldGoldPrice->close;
+        $oldSilverPrice= DB::table('ht_silver_1d')->orderBy('timestamp_id', 'desc')->first();
+        $oldSilverPrice = $oldSilverPrice->close;
+
+        $oldRatio = $oldGoldPrice / $oldSilverPrice;
+
+        $nowGoldPrice = $prices['gold']['ask'];
+        $oneWeekAgoGoldPrice = DB::table('ic_historical_price_gold')->where('timestamp', Carbon::now()->subWeek()->timestamp)->first();
+        $oneMonthAgoGoldPrice = DB::table('ic_historical_price_gold')->where('timestamp', Carbon::now()->subMonth()->timestamp)->first();
+        $oneYearAgoGoldPrice = DB::table('ic_historical_price_gold')->where('timestamp', Carbon::now()->subYear()->timestamp)->first();
+
+        $goldSeries = json_encode(array_reverse([
+            $nowGoldPrice,
+            $oneWeekAgoGoldPrice ? $oneWeekAgoGoldPrice->current_value : 0,
+            $oneMonthAgoGoldPrice ? $oneMonthAgoGoldPrice->current_value : 0,
+            $oneYearAgoGoldPrice ? $oneYearAgoGoldPrice->current_value : 0
+        ]));
+
+        $nowSilverPrice = $prices['silver']['ask'];
+        $oneWeekAgoSilverPrice = DB::table('ic_historical_price_silver')->where('timestamp', Carbon::now()->subWeek()->timestamp)->first();
+        $oneMonthAgoSilverPrice = DB::table('ic_historical_price_silver')->where('timestamp', Carbon::now()->subMonth()->timestamp)->first();
+        $oneYearAgoSilverPrice = DB::table('ic_historical_price_silver')->where('timestamp', Carbon::now()->subYear()->timestamp)->first();
+
+        $silverSeries = json_encode(array_reverse([
+            $nowSilverPrice,
+            $oneWeekAgoSilverPrice ? $oneWeekAgoSilverPrice->current_value : 0,
+            $oneMonthAgoSilverPrice ? $oneMonthAgoSilverPrice->current_value : 0,
+            $oneYearAgoSilverPrice ? $oneYearAgoSilverPrice->current_value : 0
+        ]));
+
+
+        // platinum
+        $nowPlatinumPrice = $prices['platinum']['ask'];
+        $oneWeekAgoPlatinumPrice = DB::table('ic_historical_price_plat')->where('timestamp', Carbon::now()->subWeek()->timestamp)->first();
+        $oneMonthAgoPlatinumPrice = DB::table('ic_historical_price_plat')->where('timestamp', Carbon::now()->subMonth()->timestamp)->first();
+        $oneYearAgoPlatinumPrice = DB::table('ic_historical_price_plat')->where('timestamp', Carbon::now()->subYear()->timestamp)->first();
+
+
+        $platinumSeries = json_encode(array_reverse([
+            $nowPlatinumPrice,
+            $oneWeekAgoPlatinumPrice ? $oneWeekAgoPlatinumPrice->current_value : 0,
+            $oneMonthAgoPlatinumPrice ? $oneMonthAgoPlatinumPrice->current_value : 0,
+            $oneYearAgoPlatinumPrice ? $oneYearAgoPlatinumPrice->current_value : 0
+        ]));
+
+        // palladium
+        $nowPalladiumPrice = $prices['palladium']['ask'];
+        $oneWeekAgoPalladiumPrice = DB::table('ic_historical_price_pall')->where('timestamp', Carbon::now()->subWeek()->timestamp)->first();
+        $oneMonthAgoPalladiumPrice = DB::table('ic_historical_price_pall')->where('timestamp', Carbon::now()->subMonth()->timestamp)->first();
+        $oneYearAgoPalladiumPrice = DB::table('ic_historical_price_pall')->where('timestamp', Carbon::now()->subYear()->timestamp)->first();
+
+        $palladiumSeries = json_encode(array_reverse([
+            $nowPalladiumPrice,
+            $oneWeekAgoPalladiumPrice ? $oneWeekAgoPalladiumPrice->current_value : 0,
+            $oneMonthAgoPalladiumPrice ? $oneMonthAgoPalladiumPrice->current_value : 0,
+            $oneYearAgoPalladiumPrice ? $oneYearAgoPalladiumPrice->current_value : 0
+        ]));
+
+
+        $news = HomeNew::orderBy('id', 'desc')
+        ->limit(6)
+        ->get();
+
+
+
+        return view('live-prices')->with('prices', $prices)->with('rate', $rate)->with('oldRatio', $oldRatio)->with('goldSeries', $goldSeries)->with('silverSeries', $silverSeries)->with('platinumSeries', $platinumSeries)->with('palladiumSeries', $palladiumSeries)->with('news', $news);
+    }
+}

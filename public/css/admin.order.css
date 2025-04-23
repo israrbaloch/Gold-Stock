@@ -1,0 +1,23 @@
+.product-container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.product-container .form-group {
+  width: 100%;
+}
+
+.product-details {
+  display: flex;
+  gap: 1rem;
+}
+
+#products-table tr td {
+  vertical-align: middle;
+}
+
+#add-product {
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=admin.order.css.map*/

@@ -1,0 +1,516 @@
+@extends('header.index')
+
+@section('extratitle')
+    FAQ
+@endsection
+
+@push('links')
+    <link href="{{ URL::to('/') }}/css/faq.css?ver=1.2.0" rel="stylesheet">
+@endpush
+@push('scripts')
+    <script type="text/javascript" src="{{ URL::to('/') }}/js/faq.js?ver=1.2.0"></script>
+@endpush
+
+
+@section('content')
+    <div class="header-slider-like d-none d-md-flex">
+        <img class="header-img-slider-like" src="{{ URL::to('/') }}/img/faq/main-banner.jpg" alt="main banner">
+    </div>
+
+    <div class="page-container container">
+
+        <div class="row">
+            <div class="col-12 col-md-5 ">
+                <div class="questions-box">
+                    <div class="question-category toggle-questions" data-id="1">
+                        <img class="bullet bullet-on" src="{{ URL::to('/') }}/img/faq/on-icon.png" alt="bullet on"
+                            style="display:none">
+                        <img class="bullet bullet-off" src="{{ URL::to('/') }}/img/faq/off-icon.png" alt="bullet off">
+                        Account Functions
+                    </div>
+                    <div id="questions-1" class="questions" style="display: none;">
+                        <div class="question toggle-answer" data-id="1">
+                            How to register
+                        </div>
+                        <div class="question toggle-answer" data-id="2">
+                            Identity Verification
+                        </div>
+                        <div class="question toggle-answer" data-id="3">
+                            2 Factor Verification
+                        </div>
+                        <div class="question toggle-answer" data-id="4">
+                            Email Issues
+                        </div>
+                    </div>
+
+                    <div class="question-category toggle-questions" data-id="2">
+                        <img class="bullet bullet-on" src="{{ URL::to('/') }}/img/faq/on-icon.png" alt="bullet on"
+                            style="display:none">
+                        <img class="bullet bullet-off" src="{{ URL::to('/') }}/img/faq/off-icon.png" alt="bullet off">
+                        Deposit/Withdrawal
+                    </div>
+                    <div id="questions-2" class="questions" style="display: none;">
+                        <div class="question toggle-answer" data-id="5">
+                            Deposit
+                        </div>
+                        <div class="question toggle-answer" data-id="6">
+                            Withdrawal
+                        </div>
+                    </div>
+
+                    <div class="question-category toggle-questions" data-id="3">
+                        <img class="bullet bullet-on" src="{{ URL::to('/') }}/img/faq/on-icon.png" alt="bullet on"
+                            style="display:none">
+                        <img class="bullet bullet-off" src="{{ URL::to('/') }}/img/faq/off-icon.png" alt="bullet off">
+                        Exchange
+                    </div>
+                    <div id="questions-3" class="questions" style="display: none;">
+                        <div class="question toggle-answer" data-id="7">
+                            Buy
+                        </div>
+                        <div class="question toggle-answer" data-id="8">
+                            Sell
+                        </div>
+                    </div>
+
+                    <div class="question-category toggle-questions" data-id="4">
+                        <img class="bullet bullet-on" src="{{ URL::to('/') }}/img/faq/on-icon.png" alt="bullet on"
+                            style="display:none">
+                        <img class="bullet bullet-off" src="{{ URL::to('/') }}/img/faq/off-icon.png" alt="bullet off">
+                        Refining
+                    </div>
+                    <div id="questions-4" class="questions" style="display: none;">
+                        <div class="question toggle-answer" data-id="9">
+                            Refinery Services
+                        </div>
+                        <div class="question toggle-answer" data-id="10">
+                            What we refine
+                        </div>
+                        <div class="question toggle-answer" data-id="11">
+                            What we don't refin
+                        </div>
+                    </div>
+
+                    <div class="question-category toggle-questions" data-id="5">
+                        <img class="bullet bullet-on" src="{{ URL::to('/') }}/img/faq/on-icon.png" alt="bullet on"
+                            style="display:none">
+                        <img class="bullet bullet-off" src="{{ URL::to('/') }}/img/faq/off-icon.png" alt="bullet off">
+                        Finance
+                    </div>
+                    <div id="questions-5" class="questions" style="display: none;">
+                        <div class="question toggle-answer" data-id="12">
+                            Funds
+                        </div>
+                        <div class="question toggle-answer" data-id="13">
+                            Payments
+                        </div>
+                    </div>
+
+                    <div class="question-category toggle-questions" data-id="6">
+                        <img class="bullet bullet-on" src="{{ URL::to('/') }}/img/faq/on-icon.png" alt="bullet on"
+                            style="display:none">
+                        <img class="bullet bullet-off" src="{{ URL::to('/') }}/img/faq/off-icon.png" alt="bullet off">
+                        Security
+                    </div>
+                    <div id="questions-6" class="questions" style="display: none;">
+                        <div class="question toggle-answer" data-id="14">
+                            Security Tips
+                        </div>
+                    </div>
+
+                    <div class="question-category toggle-questions" data-id="7">
+                        <img class="bullet bullet-on" src="{{ URL::to('/') }}/img/faq/on-icon.png" alt="bullet on"
+                            style="display:none">
+                        <img class="bullet bullet-off" src="{{ URL::to('/') }}/img/faq/off-icon.png" alt="bullet off">
+                        Terms of Use
+                    </div>
+                    <div id="questions-7" class="questions" style="display: none;">
+                        <div class="question toggle-answer" data-id="15">
+                            GoldStock Canada terms of Use
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+                        --------------
+                        Answers
+                        --------------
+                        -->
+            <div id="show-answer" class="col-12 col-md-7 min-h">
+                <div id="answer-1" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>How to register on GoldStockCanada</h2>
+                    </div>
+                    <div class="text">
+                        1. Open the GoldStockCanada website and click on [Register] at the top right-hand corner.
+                        <br><br>
+                        2. Follow the instructions and insert the email address and password you’ll use for your account.
+                        After reading carefully the Terms of Use, click on [Register].
+                    </div>
+                </div>
+
+                <div id="answer-2" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>How to Complete Identity Verification</h2>
+                    </div>
+                    <div class="text">
+                        1. Open the GoldStockCanada website and click on My Account.
+                        <br><br>
+                        2. Click on [identify authentication].
+                        <br><br>
+                        <b>NOTE: </b>
+                        <br><br>
+                        <h3>Please upload pictures of your ID documents. Depending on the country where your ID documents
+                            were issued please choose a valid ID type. For most users, choose a passport, ID card, or
+                            driver’s license.</h3>
+                    </div>
+                </div>
+
+                <div id="answer-3" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>How to Enable Google 2FA</h2>
+                    </div>
+                    <div class="text">
+                        1. Log in to your account. Go to your account center and click the switch in Two Steps
+                        Authentication using Google Authenticator.
+                        <br><br>
+                        2. Install Google Authenticator.
+                        <br><br>
+                        <b>NOTE: </b>
+                        <br><br>
+                        Download and install the Google Authenticator in App Store (for iOS) or Google Play (for Android).
+                        <br><br>
+                        3. A QR will be shown on the page. Open your Google Authenticator app, click the symbol【+】on the top
+                        right-hand side to scan the QR code.
+                        <br><br>
+                        4. enter the code shown in the app and verify.
+                        <br><br>
+                        5. Make sure to keep the access in your Google Authenticator app.
+                    </div>
+                </div>
+
+                <div id="answer-4" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>If you are unable to receive email from GoldStock Canada, please kindly follow the instructions
+                            below:</h2>
+                    </div>
+                    <div class="text">
+                        1. Please ensure you have logged in to the correct email address which you used for your account
+                        registration on GoldStock Canada.
+                        <br><br>
+                        2. Please check the spam folder in your email inbox.
+                        <br><br>
+                        3. Whitelist GoldStock Canada email addresses
+                        <br><br>
+                        4. Ensure that your email client or service provider works normally.
+                        <br><br>
+                        5. Select common email domain if possible.
+                    </div>
+                </div>
+
+                <div id="answer-5" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>How to Deposit Metals or Money to GoldStock Canada</h2>
+                    </div>
+                    <div class="text">
+                        <h3>Physical Precious Metals deposit</h3>
+                        <br>
+                        <p>
+                            You may deposit physical precious metals to your account by shipping them into our facility or
+                            dropping them off at our downtown, Toronto Facility.
+                        </p>
+                        <p class="indent">
+                            <span><b>To note:</b></span>
+                            Physical precious metals are credited on your account upon verification of goods, and may take a
+                            few days to authenticate
+                            the weight and purity before a credit is reflected on your account.
+                        </p>
+                        <br><br>
+                        <h3>Cash Deposits</h3>
+                        <br>
+                        <p>
+                            You may deposit cash into your account by credit card, debit card, bank transfer & wire, or cash
+                            deposit in-store at a Gold stock location.
+                        </p>
+                        <p>
+                            Simply Go to your <a class="text-decoration-none" href="{{ URL::to('/') }}/funds"
+                                target="_blank">funds</a> and click deposit, from dropdown menu select deposit method of
+                            choice, upon selecting, a new window will provide deposit instructions.
+                        </p>
+                        <p class="indent">
+                            *Initial bank deposits are held for a minimum of 5 busiesss before you are able to use funds to
+                            purchase physical or non-deliverable products. Processing time decreases after your first five
+                            succesful deposits.
+                        </p>
+                        <h4>Cash deposits in store are available in your account immediately.</h4>
+                    </div>
+                </div>
+
+                <div id="answer-6" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>How to Withdraw Metals or Money from GoldStock Canada</h2>
+                    </div>
+                    <div class="text">
+                        <h3>To withdraw cash:</h3>
+                        <br>
+                        <p>
+                            Simply go to <a class="text-decoration-none" href="{{ URL::to('/') }}/funds"
+                                target="_blank">funds</a> and click Withdraw, enter the amount you would like to withdraw
+                            and then select payment method.
+                        </p>
+                        <br><br>
+                        <p class="indent">
+                            <span><b>Bank Wire:</b></span> Enter your exact account details as listed on your bank account,
+                            having errors may delay payment. Once you request is sent, It may take up to 48 hours or more
+                            for payments to reflect in your bank account.
+                        </p>
+                        <br>
+                        <p class="indent">
+                            <span><b>Cash:</b></span> Pick up in store at one of our locations, simply walk in to a Gold
+                            Stock branch and withdraw cash, up to $3000 per day.
+                        </p>
+                        <br><br>
+                        <h3>To withdraw Metal:</h3>
+                        <br>
+                        <p>
+                            <span><b>Physical settlement of GoldX or other PM contracts:</b></span> Go to your <a
+                                class="text-decoration-none" href="{{ URL::to('/') }}/funds" target="_blank">funds</a>,
+                            select the metal you would like to withdraw,
+                            You will be redirected to a new window to enter the exact amount of gold you will like to settle
+                            in oz increments
+                        </p>
+                        <br>
+                        <p class="indent">
+                            <span><b>For Example,</b></span> if you have 0.50/oz in a GoldX contract and would like to
+                            withdraw 5 grams worth of gold, simply take the weight you would like to withdraw and divide it
+                            by 31.105 troy oz.
+                        </p>
+                        <br>
+                        <p>
+                            5.00 Grams divided by 31.105 Troy oz = 0.16075 oz
+                        </p>
+                        <p>
+                            In your withdrawal request of 5 grams, you would convert 5 grams into troy oz. In our example,
+                            it would be, 0.16075.
+                        </p>
+                        <p>
+                            Upon selecting the weight in oz, the window will expand a catalog of products that you can chose
+                            from, they will include all products that are under weight, but up to 5 grams or 0.16075 oz.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="answer-7" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>Buying in GoldStock Canada</h2>
+                    </div>
+                    <div class="text">
+                        <p>
+                            In the <a class="text-decoration-none" href="{{ URL::to('/') }}/exchange"
+                                target="_blank">exchange</a> page, you can buy or sell precious metal-Future contracts,
+                            these contracts are as liquid as physical metal, and can be converted to physical metal at any
+                            point. They follow the price of gold with a 1:1 ratio. GoldX contracts allow you to purchase
+                            fractions of gold, silver, platinum or palladium, in increments as small as $1 worth or
+                            0.001/oz, making them an affordable solution for those starting precious metal investments.
+                        </p>
+                        <br>
+                        <p class="indent">
+                            <span><b>Buying:</b></span> Select precious metal you would like to purchase, click “Buy”.
+                        </p>
+                        <p>
+                            Here the window will display the current price to buy 1oz, you may enter total dollar value
+                            worth of gold you would like to purchase or enter the amount
+                            of OZ’s you would like to purchase. you can enter as little as $10, and the window will
+                            automatically calcute and display how much oz you will be credited,
+                            or you may enter in oz, as small as 0.01/oz, and the window will automatically display the
+                            dollar value of the quantity you’ve entered.
+                        </p>
+                        <p>
+                            *Ensure the currency you would like to purchase in is correct, to change the currency simply
+                            look to the top menu, you will see a flag, each reflecting the associated currency, Canadian
+                            Dollars, American dollars or European Euros.
+                        </p>
+                        <p>
+                            Once selected, simply hit buy and the order will be added to your cart.
+                        </p>
+                        <p>
+                            All orders without a balance on account, are subject to a 10% deposit, you can pay using your
+                            credit card, and your order will be locked in. The contract will not be credited in yours <a
+                                class="text-decoration-none" href="{{ URL::to('/') }}/funds" target="_blank">funds</a>
+                            until the remaining 90% of the payment is complete. Once complete, the system will automatically
+                            credit the appropriate metal in your account.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="answer-8" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>Selling in GoldStock Canada</h2>
+                    </div>
+                    <div class="text">
+                        <p>
+                            In the <a class="text-decoration-none" href="{{ URL::to('/') }}/exchange"
+                                target="_blank">exchange</a> page, you can buy or sell precious metal-Future contracts,
+                            these contracts are as liquid as physical metal, and can be converted to physical metal at any
+                            point. They follow the price of gold with a 1:1 ratio. GoldX contracts allow you to purchase
+                            fractions of gold, silver, platinum or palladium, in increments as small as $1 worth or
+                            0.001/oz, making them an affordable solution for those starting precious metal investments.
+                        </p>
+                        <br>
+                        <p class="indent">
+                            <span><b>Selling X contract:</b></span> Select the precious metal you would like to sell.
+                        </p>
+                        <p>
+                            Here the window will display the current price to sell 1oz, you may enter a total dollar value
+                            worth of metal, or enter the amount of oz you would
+                            like to sell, you can chose to liquidate at once or in increments as small as $10 or 0.001/oz.
+                            upon the method you chose, the window will automatically
+                            display the equivalent dollar value or oz, enter the exact amount you wish to sell and hit
+                            submit, once the order has filled, you can review details in
+                            <a class="text-decoration-none" href="{{ route('orderHistory') }}" target="_blank">order
+                                history</a> and have a fiat value credited to your
+                            <a class="text-decoration-none" href="{{ URL::to('/') }}/funds" target="_blank">funds</a>.
+                            Which you can either withdraw to your bank or purchase physical
+                            precious metals from the shop page.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="answer-9" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>Refinery Services:</h2>
+                    </div>
+                    <div class="text">
+                        We have highly liquid pool accounts. Our trading partners include Canadian and global bullion banks,
+                        major bullion traders, mutual and hedge funds and other
+                        investment houses. We receive deposits from various sources in North America including
+                        mines, jewellery manufacturers, scrap dealers and pawn shops,
+                        and high-grade industrial scrap dealers.
+                        <br><br>
+                        Over our next 100 years of history-making, we will continue to build on our achievements and
+                        entrench our position as a truly global industry leader.
+                        Going forward, we will strive harder and further – expanding our expertise exponentially, adding
+                        value beyond measure, exploring new and untapped markets and
+                        establishing key global partnerships and alliances.
+                        <br><br>
+                        We refine all Precious Metals and offer you the highest returns for your Gold
+                        <br><br>
+                        Silver, Platinum, and Palladium scrap/jewelry/dental/mine/gold nuggets/dust/ and more
+                    </div>
+                </div>
+
+                <div id="answer-10" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>What we refine:</h2>
+                    </div>
+                    <div class="text">
+                        Gold / Silver / Platinum Jewelry
+                        <br><br>
+                        Mine
+                        <br><br>
+                        Gold Nuggets
+                        <br><br>
+                        Dental / Fillings
+                        <br><br>
+                        Silver antique cutlery
+                        <br><br>
+                        Indian Jewelry
+                        <br><br>
+                        Silver 1 Dollar Coins ( before 1967)
+                        <br><br>
+                        Bench sweeps
+                        <br><br>
+                        Floor sweeps
+                        <br><br>
+                        Polishing dust
+                        <br><br>
+                        Casting scrap
+                        <br><br>
+                        Grindings
+                    </div>
+                </div>
+
+                <div id="answer-11" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>What we don't refin:</h2>
+                    </div>
+                    <div class="text">
+                        Steel or other non precious metals
+                    </div>
+                </div>
+
+                <div id="answer-12" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>Funds</h2>
+                    </div>
+                    <div class="text">
+                        Your Funds are the quantity of money or metal that you have inside our site and can be used to
+                        purchase or trade.
+                    </div>
+                </div>
+
+                <div id="answer-13" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>Payment</h2>
+                    </div>
+                    <div class="text">
+                        You can use credit card using our site, for the initial 10% of your order.
+                        <br><br>
+                        after that, you can use bank transfer or drop in store to complete the transaction.
+                        <br><br>
+                        The balance in your account is always prioritized for payment.
+                    </div>
+                </div>
+
+                <div id="answer-14" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>Security Tips</h2>
+                    </div>
+                    <div class="text">
+                        1. DO NOT give your password to anyone!
+                        <br><br>
+                        2. DO NOT call any phone number of someone claiming to be Gold Stock employee or from Support team！
+                        <br><br>
+                        3. DO NOT send any money to anyone claiming to be a member of Gold Stock.
+                        <br><br>
+                        4. Enable Two Factor Authentication！(either Google Authenticator or SMS Authentication)
+                        <br><br>
+                    </div>
+                </div>
+
+                <div id="answer-15" class="answer-box answer" style="display: none">
+                    <div class="title">
+                        <img src="{{ URL::to('/') }}/img/faq/support-icon.png" alt="support icon">
+                        <h2>Fee Structure on Goldstock Canada</h2>
+                    </div>
+                    <div class="text">
+                        Deposit Fees are Free. There are no fees for deposits.
+                        <br><br>
+                        Our withdrawal fees are dynamic and automatically adjust based on the status of the market.
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br class="d-md-none">
+        <br class="d-md-none">
+
+    </div>
+@endsection

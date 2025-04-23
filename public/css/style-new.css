@@ -1,0 +1,77 @@
+body {
+  background: #ffffff !important;
+}
+
+.supp-img {
+  width: 100%;
+  margin: 0 0;
+}
+
+.supp-form .label {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.supp-form .supp-input {
+  width: 100%;
+  border: solid 1px #AAAAAA;
+  color: #4F4F4F !important;
+  background: #ffffff !important;
+  margin: 0 0 10px 0;
+  padding: 8px;
+}
+
+.send-message {
+  cursor: pointer;
+  width: 240px;
+  display: block;
+  margin: 30px auto 0 auto;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+      margin-top: 50px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+      background: #ffffff !important;
+  }
+}
+
+.makeup-btn-dark-green {
+  border-radius: 10px !important;
+  background-color: #35571A !important;
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  min-width: 160px;
+  max-width: 180px;
+  float: right;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: none;
+  outline: 0 !important;
+  border: none !important;
+}
+
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  cursor: crosshair;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+  /*Set the size of the magnifier glass:*/
+  width: 140px;
+  height: 140px;
+}
+
+.thumb-container{
+    cursor: zoom-in;
+}

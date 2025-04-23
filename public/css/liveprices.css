@@ -1,0 +1,143 @@
+.live-prices-section{
+  padding: 100px 0;
+}
+.currency-switcher{
+  font-family: SFPro;
+  margin-left: auto;
+}
+
+img.table-metal{
+    width: 40px;
+    height: 40px;
+}
+
+.desktop th, #ratioTable th{
+  align-items: left;
+  text-align: left;
+  background-color: #E6E6E6 !important;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/* first td */
+.live-prices-section td:first-child{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+td{
+  padding: 10px !important;
+  font-size: 16px;
+  font-weight: 400;
+  align-items: left;
+  text-align: left !important;
+}
+
+/* odd tr td */
+.live-prices-section tr:nth-child(odd) td{
+  background-color: #FFFFFF !important;
+}
+
+/* even tr td */
+.live-prices-section tr:nth-child(even) td{
+  background-color: #FAFAFA !important;
+}
+
+.arrow {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.arrow.up {
+  color: #00C48C;
+}
+.arrow.up::after {
+  content: '\25B2';
+}
+
+.arrow.down {
+  color: #FF5C5C;
+}
+
+.arrow.down::after {
+  content: '\25BC';
+}
+
+.currency-trigger{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  color: #7C7E85;
+  cursor: pointer;
+}
+
+.currency-trigger:hover{
+  color: #FFD805;
+}
+
+.currency-trigger.active{
+  color: #FFD805 !important;
+}
+
+.gold-silver-ratio{
+  padding: 100px 0;
+}
+
+.portfolio-calculator{
+  padding: 100px 0;
+  background-color: #FAFAFA;
+  font-family: SFPro;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio-calculator p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #1E2026;
+}
+
+.portfolio-calculator label{
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1E2026;
+}
+
+.form-container .form-control, .form-container .form-select {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1E2026;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: 1px solid #E6E6E6;
+  line-height: 19px;
+  height: 49px;
+}
+.form-container .form-control:focus, .form-container .form-select:focus {
+  border-color: #FFD805;
+  box-shadow: 0 0 0 0.03rem rgba(255, 216, 5, 0.25);
+}
+.form-container .form-control::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #c6c6c6;
+}
+.form-container .form-control::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #c6c6c6;
+}
+
+.chart-section{
+  padding: 100px 0;
+  background: #FAFAFA;
+}

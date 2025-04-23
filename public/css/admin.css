@@ -1,0 +1,22 @@
+.form-data-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.25rem 1rem;
+}
+@media (max-width: 768px) {
+  .form-data-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .form-data-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+}
+
+/*# sourceMappingURL=admin.css.map*/

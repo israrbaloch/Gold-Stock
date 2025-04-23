@@ -1,0 +1,168 @@
+.container {
+    max-width: 80% !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.head-info {
+    background-color: #3C3C3C;
+    font-size: 1.1em;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #fff;
+}
+
+.currency-trigger, .currency-flag {
+    width: 30px;
+    margin: 0 4px;
+}
+
+.metal-title {
+    /* background-color: #F8F8F8; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1em;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    border-right: solid 1px #F8F7F7;
+    border-left: solid 1px #F8F7F7;
+}
+
+.metal-content {
+    /* border-bottom: solid 1px lightgray; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    white-space: nowrap;
+    border-right: solid 1px #F8F7F7;
+    border-left: solid 1px #F8F7F7;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.color-table-1 {
+    background-color: #EDF5F8;
+}
+
+.page-container {
+    /* border: 1px solid #adadad; */
+    /* padding: 8px; */
+}
+
+.color-table-gold {
+    background-color: #F0D194;
+}
+
+.color-table-silver {
+    background-color: #D3D3D3;
+}
+
+.color-table-plat {
+    background-color: #97CFE2;
+}
+
+.color-table-pall {
+    background-color: #8DD5C6;
+}
+
+
+@media (max-width: 767px) {
+    .head-info {
+        font-size: 1.2em;
+    }
+
+    .metal-title {
+        font-size: 1.1em;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    
+    .metal-content {
+        font-size: 1em;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .last-refreshed-cont {
+        font-size: 0.8em;
+    }
+
+    .flags-list {
+        margin-top: 10px;
+        font-size: 0.7em;
+    }
+
+    .currency-trigger, .currency-flag {
+        width: 22px;
+        margin: 0 4px;
+    }
+    
+    .page-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+        border: none;
+    }
+    
+    .container {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+    
+    body.live-prices #header .container{
+        margin: 0 !important;
+    }
+    
+    .new-logo-container{
+        width: 100% !important;
+        display: flex !important;
+    }
+    
+    .new-logo-container a{
+        float: left;
+        width: 70% !important;
+    }
+    
+    #user-account-links {
+        float: right;
+        width: 30% !important;
+        right: auto !important;
+        top: auto !important;
+        position: unset;
+        margin-top: -12px !important;
+    }
+}
+
+body.live-prices .head-info{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.currency-trigger{
+    border: none !important;
+    background: none !important;
+    height: auto;
+    width: auto;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 0.08em;
+    margin: auto;
+    text-align: center;
+}
+
+.currency-trigger img{
+    width: 100%;
+    height: auto;
+}
+
+.metal-title{
+    height: 3em;
+}

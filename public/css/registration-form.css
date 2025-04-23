@@ -1,0 +1,184 @@
+.orange-bar {
+    background-color: rgba(243,163,12,0.9);
+    border-color: #F3A30C;
+    color: white;
+    padding: 10px;
+}
+
+.form-container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+form {
+    width: 100%;
+}
+
+.orange-btn {
+    padding: 10px 20px;
+    background-color: rgba(243,163,12,0.9);
+    border-color: #F3A30C;
+    color: white;
+}
+
+#page-change-password #ic-currency-flags-mobile {
+    display: none;
+}
+
+#page-change-password .page-container {
+    padding-top: 0px;
+}
+
+#page-change-password .user-links-mobile {
+    display: none;
+}
+
+/*new style*/
+
+/*new style*/
+
+.main-cont {
+    padding-top: 10px;
+    width: 100%;
+    min-height: 500px;
+}
+
+.title-page-1 {
+    font-size: 4em;
+    margin: 0 0 20px 0;
+    color: #35571A;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.makeup-btn-dark-green {
+    border-radius: 10px !important;
+    background-color: #35571A !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+    width: 100%;
+}
+
+.makeup-btn-yellow {
+    border-radius: 10px !important;
+    background-color: #F3A30C !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    min-width: 110px;
+    max-width: 180px;
+}
+
+.makeup-input {
+    width: 100%;
+    border: solid 1px #4F4F4F !important;
+    background: none !important;
+    border-radius: 10px !important;
+    color: #4F4F4F !important;
+    margin: 15px 0;
+}
+
+.txt-title {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.txt-text {
+    font-size: 1em;
+    text-align: justify;
+}
+
+.txt-bg {
+    padding: 50px 40px 0 0;
+}
+
+.help-margin {
+    margin-left: 4%;
+}
+
+.extra-margin-top {
+    margin-top: 100px;
+}
+
+
+@media (max-width: 767px) {
+    .main-cont{
+        background: #F8F8F8 !important;
+    }
+
+    .main-cont {
+        padding-top: 10px;
+    }
+
+    .title-page-1 {
+        margin-top: 20px !important;
+    }
+
+    .sp-style {
+        font-size: 10px !important;
+    }
+
+    #deposit-btn {
+        position: absolute;
+        width: 88vw;
+        margin-left: calc(-48vw + 50%);
+        height: auto;
+    }
+
+    .main-cont {
+        min-height: initial;
+    }
+
+    .mobile-title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .balance-title-mobile  {
+        text-transform: uppercase;
+        font-size: 1.1em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .balance-total-mobile  {
+        text-transform: uppercase;
+        font-size: 1.1em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .additional-listing {
+        width: 100%;
+    }
+
+    /* .additional-listing strong {
+        float: left;
+    }
+
+    .additional-listing span {
+        float: right;
+    } */
+
+    .extra-margin-top {
+        margin-top: 0px;
+    }
+
+    .makeup-btn-dark-green {
+        margin-top: 40px;
+    }
+
+
+}
+
+@media (max-width: 350px) {
+    .balance-title-mobile  {
+        font-size: 0.9em;
+    }
+    
+    .balance-total-mobile  {
+        font-size: 0.9em;
+    }
+}

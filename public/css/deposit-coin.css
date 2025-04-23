@@ -1,0 +1,209 @@
+#withdraw-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#confirmation-modal {
+    z-index: 1041 !important;
+    padding: 0;
+    width: 100%;
+    max-width: none;
+}
+
+
+
+.orange-box {
+    padding: 10px 0;
+    /*text-decoration: underline;*/
+    border: 1px solid #007bff;
+}
+
+
+#action-buttons {
+    margin-top: 20px;
+}
+
+#imaginary_container {
+    margin-top: 10px;
+}
+
+#address-modal {
+    z-index: 10000;
+    width: 100%;
+    padding: 15px 15px;
+    max-width: 100%;
+}
+
+#address-modal .modal-header {
+    padding: 0px;
+    border-bottom: none;
+}
+
+.scan-message {
+    font-size: 1.1em;
+}
+
+#address-modal .modal-body {
+    padding: 0;
+}
+
+#address-modal .copy-address {
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    color: #F3A30C;
+    border-color: #F3A30C;
+}
+
+#address-modal .save-qr {
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    background-color: rgba(243,163,12,0.9);
+    border-color: #F3A30C;
+}
+
+.qr-container {
+    text-align: center;
+}
+
+.page-container {
+    padding-top: 0px;
+}
+
+
+
+.upper-block {
+    position: relative;
+}
+
+.upper-block .image {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+
+.upper-block .title-block {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 170px;
+    width: 270px;
+    background-color: #fff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.upper-shadow {
+    height: 280px;
+}
+
+.coin-title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.2em;
+    color: #34461F !important;
+    padding-left: 0 !important;
+}
+
+.coin-img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.orange-box {
+    color: #F3A30C;
+    border: outset 3px #F3A30C;
+}
+
+.orange-box a {
+    color: #34461F !important;
+}
+
+.makeup-input {
+    width: 100%;
+    border: outset 3px #F3A30C !important;
+    background: none !important;
+    box-shadow: inset 0 -1px 0 #AD954B !important;
+    border-radius: 0px !important;
+    color: #34461F !important;
+    margin: 15px 0;
+    font-size: 1.2em !important;
+    padding: 37px;
+}
+
+@media (max-width: 376px) {
+    .upper-shadow {
+        height: 160px;
+    }
+
+    .upper-block .image {
+        max-height: 140px;
+        top: 0;
+    }
+
+    .page-container {
+        padding-top: 0 !important;
+    }
+
+    .upper-block .title-block {
+        top: 60px;
+        width: 240px;
+    }
+}
+
+/*new style*/
+
+.makeup-input-super {
+    color: #F3A30C;
+    background: #F8F8F8;
+    width: 100%;
+    height: 300px;
+    font-weight: bold;
+    font-size: 2.2em;
+    border: none;
+}
+
+.over-title {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    font-size: 1.2em;
+}
+
+.makeup-btn-dark-green {
+    border-radius: 10px !important;
+    background-color: #35571A !important;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+    width: 100%;
+    padding: 10px;
+}
+
+.bg-section {
+    background-color: #e9ecef;
+    padding: 30px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .makeup-input-super {
+        font-size: 1.5em;
+        height: 200px;
+    }
+    
+    .makeup-btn-dark-green {
+        margin-bottom: 14px;
+    }
+
+    .bg-section {
+        padding: 30px;
+    }
+}

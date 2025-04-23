@@ -1,0 +1,403 @@
+body {
+    font-family: SFPro;
+}
+
+.calculator-section {
+    padding: 60px 0;
+
+    @media (max-width: 768px) {
+        padding: 40px 0;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 44px;
+        margin-bottom: 20px;
+        font-weight: 600;
+
+        @media (max-width: 768px) {
+            font-size: 35px;
+        }
+    }
+
+    p {
+        text-align: left;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .calculator-container {
+        background: linear-gradient(90deg, #FBF5E8 0%, rgba(219, 175, 62, 0.7) 100%);
+        padding: 80px 50px;
+        border-radius: 30px;
+        margin-top: 40px;
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            @media (max-width: 768px) {
+                font-size: 25px;
+            }
+        }
+
+        label {
+            margin-bottom: 6px;
+        }
+
+        hr {
+            margin: 60px 0;
+            background-color: #826929;
+
+            @media (max-width: 768px) {
+                margin: 40px 0 20px 0;
+            }
+        }
+
+        button {
+            background: #C39E3D;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none !important;
+            cursor: pointer;
+            min-width: 160px;
+        }
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 0px;
+            font-weight: 400;
+            white-space: nowrap;
+
+            @media (max-width: 768px) {
+                margin-top: 30px;
+            }
+
+            span {
+                margin-left: 15px;
+                border: 1px dashed #826929;
+                color: #000000;
+                padding: 10px 10px;
+                min-width: auto;
+                display: inline-block;
+                text-align: end;
+            }
+        }
+    }
+}
+
+.info-section {
+    background: #DBAF3E2E;
+    padding: 60px 0;
+
+    h3 {
+        font-size: 30px;
+        margin-bottom: 40px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .scrap-prices {
+        max-width: 300px;
+        margin: 0 auto;
+
+        .scrap-title {
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        .scrap-date {
+            font-style: italic;
+            color: #826929;
+            margin: 10px 0 20px 0;
+            font-size: 16px;
+        }
+
+        .price-table {
+            border: 1px solid #ddd;
+            overflow: hidden;
+
+            .price-row {
+                background: #f8f8f8;
+                font-size: 16px;
+                font-weight: bold;
+                border-bottom: 1px solid #ddd;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .metal {
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-weight: bold;
+                    padding: 5px 10px;
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                .price {
+                    height: 60px;
+                    display: block;
+                    padding: 10px;
+                }
+            }
+
+            .gold .metal {
+                background: #b68c4a;
+            }
+
+            .silver .metal {
+                background: #717b81;
+            }
+
+            .platinum .metal {
+                background: #707070;
+            }
+
+            .palladium .metal {
+                background: #707070;
+            }
+        }
+    }
+}
+
+.purity-section {
+    padding: 80px 0;
+
+    img {
+        @media (min-width: 768px) {
+            width: 80%;
+            margin-left: auto;
+            margin-top: 0;
+        }
+        margin-top: 40px;
+
+    }
+
+    h3 {
+        font-size: 30px;
+        margin-bottom: 40px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+.additional-services {
+    background: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+
+    h3 {
+        font-size: 30px;
+        margin-bottom: 50px;
+        font-weight: 700;
+    }
+
+    .row {
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            gap: 25px;
+        }
+    }
+
+    .service-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 320px;
+        margin: auto;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+
+            h4 {
+                margin-top: 40%;
+                font-size: 18px;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.faq-section {
+    padding: 60px 0;
+    text-align: center;
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .accordion {
+        max-width: 700px;
+        margin: auto;
+
+        .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+            background: transparent;
+
+            .accordion-header {
+                margin-bottom: 0;
+                .accordion-button {
+                    background: transparent;
+                    font-size: 24px;
+                    font-weight: 400;
+                    color: #121212;
+                    padding: 15px 20px;
+                    box-shadow: none;
+                    transition: all 0.3s ease;
+                    border-radius: 0;
+
+                    &:not(.collapsed){
+                        color: #d48951;
+                    }
+
+                    &:not(.collapsed)::after {
+                        transform: rotate(180deg);
+                        filter: hue-rotate(171deg);
+                    }
+
+                    &:hover {
+                        color: #d48951;
+                    }
+                }
+            }
+
+            .accordion-collapse {
+                .accordion-body {
+                    font-size: 18px;
+                    text-align: left;
+                    padding: 0px 20px 15px 20px;
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+
+.purity-info-section {
+    padding: 60px 0;
+    background: #f8f8f8;
+    text-align: center;
+
+    h3{
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .nav-tabs {
+        border-bottom: none;
+
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: #555;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: #e0e0e0;
+            transition: 0.3s ease;
+            margin: 0 5px;
+            min-width: 150px;
+
+            &.active {
+                background: #c49b48;
+                color: white;
+            }
+
+            &:hover {
+                background: #b68c4a;
+                color: white;
+            }
+        }
+    }
+
+    .table {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 20px;
+        min-width: 650px;
+        @media (max-width: 768px) {
+            min-width: auto;
+        }
+        width: auto;
+        margin: auto;
+    }
+
+    th {
+        background: #c49b48;
+        color: white;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px !important;
+    }
+}
+
+
+
+.price-card {
+    background: #c49b48;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-section {
+    background: linear-gradient(to right, #c49b48, #f0e3c3);
+    color: white;
+    border-radius: 10px;
+}

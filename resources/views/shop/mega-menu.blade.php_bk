@@ -1,0 +1,382 @@
+<style>
+    /* General Styles */
+.filter-section {
+    background-color: #fafafa;
+    padding: 20px;
+  }
+  .filter-section .toggle-btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 15px;
+  }
+ 
+  /* .filter-section .menu-header .toggle-btn::after {
+    content: "\f078";
+  } */
+  .filter-section .toggle-btn::after {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f054";
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    transition: transform 0.2s ease-in-out;
+  }
+  .filter-section .toggle-btn[aria-expanded="true"]::after {
+    content: "\f078";
+  }
+  .filter-section .menu-header {
+    display: flex !important;
+    align-items: center;
+  }
+  .filter-section .icon img {
+    width: 35px;
+    height: 35px;
+  }
+  .filter-category h3 {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    color: #333;
+  }
+  .filter-category .icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  .filter-category .menu-group {
+    padding: 0 10px;
+    margin: 10px 0 0 0;
+    position: relative;
+  }
+  .filter-category .menu-item {
+    padding: 8px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    position: relative;
+  }
+  .filter-category input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  @media (max-width: 1024px) {
+    .filter-section {
+      flex-direction: column;
+    }
+    .filter-category {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  .filter-section .form-check-input {
+    display: block !important;
+  }
+  
+  /* First-Level Submenu CSS */
+  .filter-category .submenu.first {
+    display: none;
+    position: absolute;
+    top: 100%; /* directly below the header */
+    left: 50%;   /* aligned with the header */
+    background: #fafafa;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 1000;
+    width: auto;
+  }
+  .filter-category .menu-item:hover > .submenu.first {
+    display: block !important;
+  }
+  
+  /* Second-Level Submenu CSS */
+  .filter-category .submenu.second {
+    display: none;
+    position: absolute;
+    top: 10px;     /* aligned with the parent item */
+    left: 100%; /* appears to the right of the parent submenu */
+    background: #fafafa;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 1000;
+    width: auto;
+    min-width: 200px;
+  }
+  .filter-category .menu-item:hover > .submenu.second {
+    display: block !important;
+  }
+</style>
+
+<div class="container- mb-4 d-lg-block d-none">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 filter-section px-5- container mx-auto">
+      <!-- Shop by Metal Section -->
+      <div class="col px-0">
+        <div class="filter-category">
+          <h3>
+            <span class="icon">
+              <img src="{{asset('img/mega-1.png')}}" alt="Metal Type">
+            </span> 
+            Shop by Metal
+          </h3>
+          <div class="menu-group">
+            <!-- Gold Section -->
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="metal-gold" class="form-check-input" data-metal="gold">
+                <label for="metal-gold" class="fw-bold toggle-btn" data-bs-toggle="collapse" data-bs-target="#goldSubmenu">Gold</label>
+              </div>
+              <div id="goldSubmenu" class="collapse submenu first">
+                <!-- Bars (Second-Level Submenu) -->
+                <div class="menu-item">
+                  <div class="menu-header">
+                    <input type="checkbox" id="gold-bars" class="form-check-input" data-category="gold-bars">
+                    <label for="gold-bars" class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#goldBars">Bars</label>
+                  </div>
+                  <div id="goldBars" class="collapse submenu second">
+                    <div class="menu-item">
+                      <input type="checkbox" id="gold-bars-1oz" class="form-check-input" data-weight="gold-bars-1oz">
+                      <label for="gold-bars-1oz">1oz</label>
+                    </div>
+                    <div class="menu-item">
+                      <input type="checkbox" id="gold-bars-10oz" class="form-check-input" data-weight="gold-bars-10oz">
+                      <label for="gold-bars-10oz">10oz</label>
+                    </div>
+                    <div class="menu-item">
+                      <input type="checkbox" id="gold-bars-100oz" class="form-check-input" data-weight="gold-bars-100oz">
+                      <label for="gold-bars-100oz">100oz</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Coins (Second-Level Submenu) -->
+                <div class="menu-item">
+                  <div class="menu-header">
+                    <input type="checkbox" id="gold-coins" class="form-check-input" data-category="gold-coins">
+                    <label for="gold-coins" class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#goldCoins">Coins</label>
+                  </div>
+                  <div id="goldCoins" class="collapse submenu second">
+                    <div class="menu-item">
+                      <input type="checkbox" id="gold-coins-1oz" class="form-check-input" data-weight="gold-coins-1oz">
+                      <label for="gold-coins-1oz">1oz</label>
+                    </div>
+                    <div class="menu-item">
+                      <input type="checkbox" id="gold-coins-10oz" class="form-check-input" data-weight="gold-coins-10oz">
+                      <label for="gold-coins-10oz">10oz</label>
+                    </div>
+                    <div class="menu-item">
+                      <input type="checkbox" id="gold-coins-100oz" class="form-check-input" data-weight="gold-coins-100oz">
+                      <label for="gold-coins-100oz">100oz</label>
+                    </div>
+                    <div class="menu-item">
+                      <input type="checkbox" id="gold-coins-1g" class="form-check-input" data-weight="gold-coins-1g">
+                      <label for="gold-coins-1g">1 gram</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Rounds (No submenu) -->
+                <div class="menu-item">
+                  <div class="menu-header">
+                    <input type="checkbox" id="gold-rounds" class="form-check-input" data-category="gold-rounds">
+                    <label for="gold-rounds" class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#goldRounds">Rounds</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Silver Section (structure similar to Gold) -->
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="metal-silver" class="form-check-input" data-metal="silver">
+                <label for="metal-silver" class="fw-bold toggle-btn" data-bs-toggle="collapse" data-bs-target="#silverSubmenu">Silver</label>
+              </div>
+              <div id="silverSubmenu" class="collapse submenu first">
+                <div class="menu-item">
+                  <div class="menu-header">
+                    <input type="checkbox" id="silver-bars" class="form-check-input" data-category="silver-bars">
+                    <label for="silver-bars" class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#silverBars">Bars</label>
+                  </div>
+                  <div id="silverBars" class="collapse submenu second">
+                    <div class="menu-item">
+                      <input type="checkbox" id="silver-bars-1oz" class="form-check-input" data-weight="silver-bars-1oz">
+                      <label for="silver-bars-1oz">1oz</label>
+                    </div>
+                    <div class="menu-item">
+                      <input type="checkbox" id="silver-bars-10oz" class="form-check-input" data-weight="silver-bars-10oz">
+                      <label for="silver-bars-10oz">10oz</label>
+                    </div>
+                    <div class="menu-item">
+                      <input type="checkbox" id="silver-bars-100oz" class="form-check-input" data-weight="silver-bars-100oz">
+                      <label for="silver-bars-100oz">100oz</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-header">
+                    <input type="checkbox" id="silver-coins" class="form-check-input" data-category="silver-coins">
+                    <label for="silver-coins" class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#silverCoins">Coins</label>
+                  </div>
+                  <div id="silverCoins" class="collapse submenu second">
+                    <div class="menu-item">
+                      <input type="checkbox" id="silver-coins-1oz" class="form-check-input" data-weight="silver-coins-1oz">
+                      <label for="silver-coins-1oz">1oz</label>
+                    </div>
+                    <div class="menu-item">
+                      <input type="checkbox" id="silver-coins-10oz" class="form-check-input" data-weight="silver-coins-10oz">
+                      <label for="silver-coins-10oz">10oz</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Platinum Section (structure similar to above) -->
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="metal-platinum" class="form-check-input" data-metal="platinum">
+                <label for="metal-platinum" class="fw-bold toggle-btn" data-bs-toggle="collapse" data-bs-target="#platinumSubmenu">Platinum</label>
+              </div>
+              <div id="platinumSubmenu" class="collapse submenu first">
+                <div class="menu-item">
+                  <div class="menu-header">
+                    <input type="checkbox" id="platinum-bars" class="form-check-input" data-category="platinum-bars">
+                    <label for="platinum-bars" class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#platinumBars">Bars</label>
+                  </div>
+                  <div id="platinumBars" class="collapse submenu second">
+                    <div class="menu-item">
+                      <input type="checkbox" id="platinum-bars-1oz" class="form-check-input" data-weight="platinum-bars-1oz">
+                      <label for="platinum-bars-1oz">1oz</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Palladium Section (structure similar to above) -->
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="metal-palladium" class="form-check-input" data-metal="palladium">
+                <label for="metal-palladium" class="fw-bold toggle-btn" data-bs-toggle="collapse" data-bs-target="#palladiumSubmenu">Palladium</label>
+              </div>
+              <div id="palladiumSubmenu" class="collapse submenu first">
+                <div class="menu-item">
+                  <div class="menu-header">
+                    <input type="checkbox" id="palladium-bars" class="form-check-input" data-category="palladium-bars">
+                    <label for="palladium-bars" class="toggle-btn" data-bs-toggle="collapse" data-bs-target="#palladiumBars">Bars</label>
+                  </div>
+                  <div id="palladiumBars" class="collapse submenu second">
+                    <div class="menu-item">
+                      <input type="checkbox" id="palladium-bars-1oz" class="form-check-input" data-weight="palladium-bars-1oz">
+                      <label for="palladium-bars-1oz">1oz</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Best Deals & Brands Section -->
+      <div class="col px-0">
+        <div class="filter-category">
+          <h3>
+            <span class="icon">
+              <img src="{{asset('img/mega-2.png')}}" alt="Best Deals & Brands">
+            </span> 
+            Best Deals & Brands
+          </h3>
+          <div class="menu-group">
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="best-deals" class="form-check-input">
+                <label for="best-deals">Top Deals & Low Premium Bullion</label>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="wholesale" class="form-check-input">
+                <label for="wholesale">Wholesale & Bulk Discount</label>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="brands" class="form-check-input">
+                <label for="brands"><p class="mb-0"><strong>Brands</strong> (Royal Canadian Mint, PAMP Suisse, Valcambi, etc.)</p></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Investment & Collectibles Section -->
+      <div class="col px-0">
+        <div class="filter-category">
+          <h3>
+            <span class="icon">
+              <img src="{{asset('img/mega-3.png')}}" alt="Investment & Collectibles">
+            </span> 
+            Investment & Collectibles
+          </h3>
+          <div class="menu-group">
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="investment-best-seller" class="form-check-input">
+                <label for="investment-best-seller">Best Seller & New Arrivals</label>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="investment-popular-weight" class="form-check-input">
+                <label for="investment-popular-weight">Popular Weight Options (1oz, 10oz, 100oz)</label>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="investment-rare" class="form-check-input">
+                <label for="investment-rare">Rare & Numismatic Coins</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Market Data & Resources Section -->
+      <div class="col px-0">
+        <div class="filter-category">
+          <h3>
+            <span class="icon">
+              <img src="{{asset('img/mega-4.png')}}" alt="Market Data & Resources">
+            </span> 
+            Market Data & Resources
+          </h3>
+          <div class="menu-group">
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="market-live-metal" class="form-check-input">
+                <label for="market-live-metal">Live metal price (Gold, Silver, Platinum, Palladium)</label>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="how-to-buy" class="form-check-input">
+                <label for="how-to-buy">How to Buy Precious Metals</label>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="investing-guides" class="form-check-input">
+                <label for="investing-guides">Investing Guides & Secure Storage</label>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-header">
+                <input type="checkbox" id="accessories" class="form-check-input">
+                <label for="accessories"><p class="mb-0"><strong>Accessories</strong> (Coins Capsules, Storage Boxes, Testing Kit)</p></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,120 @@
+.container {
+    /* max-width: 80% !important; */
+    width: 99%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.head-info {
+    background-color: #3C3C3C;
+    font-size: 1.1em;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #fff;
+}
+
+.currency-trigger, .currency-flag {
+    width: 30px;
+    margin: 0 4px;
+}
+
+.metal-title {
+    /* background-color: #F8F8F8; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    border-right: solid 1px #FFF;
+    border-left: solid 1px #FFF;
+}
+
+.metal-title-2 {
+    /* background-color: #F8F8F8; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1em;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    border-right: solid 1px #FFF;
+    border-left: solid 1px #FFF;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.metal-content {
+    /* border-bottom: solid 1px lightgray; */
+    padding-top: 4px;
+    /* padding-bottom: 10px; */
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    white-space: nowrap;
+    border-right: solid 1px #FFF;
+    border-left: solid 1px #FFF;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.color-table-1 {
+    background-color: #EDF5F8;
+}
+
+.page-container {
+    border: 1px solid #adadad;
+    padding: 8px;
+}
+
+.color-table-gold {
+    background-color: #F0D194;
+}
+
+.color-table-silver {
+    background-color: #D3D3D3;
+}
+
+.color-table-platinum {
+    background-color: #97CFE2;
+}
+
+.color-table-palladium {
+    background-color: #8DD5C6;
+}
+
+
+@media (max-width: 767px) {
+    .head-info {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+
+    .metal-title, .metal-title-2{
+        font-size: 0.8em;
+    }
+
+    .metal-content {
+        font-size: 0.7em;
+    }
+
+    .container {
+        margin-bottom: 40px;
+    }
+}
+
+.makeup-input-clear {
+    width: 100%;
+    border: none !important;
+    background: none !important;
+    border-radius: 6px !important;
+    color: #4F4F4F !important;
+    text-align: center !important;
+}

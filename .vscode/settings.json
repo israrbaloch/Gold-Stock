@@ -1,0 +1,30 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always"
+    },
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/CVS/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/.history/**",
+    ],
+    "intelephense.environment.includePaths": [
+        "${workspaceFolder}/vendor/**",
+    ],
+    "php.version": "7.3",
+    "cSpell.words": [
+        "currencydatafeed",
+        "EEST",
+        "ilike",
+        "laravel",
+        "Moneris",
+        "seos",
+        "Spatie",
+        "websockets"
+    ],
+    "files.autoSave": "off",
+}

@@ -1,0 +1,363 @@
+body {
+  font-family: SFPro;
+}
+
+.calculator-section {
+  padding: 60px 0;
+}
+@media (max-width: 768px) {
+  .calculator-section {
+    padding: 40px 0;
+  }
+}
+.calculator-section h1 {
+  text-align: left;
+  font-size: 44px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .calculator-section h1 {
+    font-size: 35px;
+  }
+}
+.calculator-section p {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.calculator-section .calculator-container {
+  background: linear-gradient(90deg, #FBF5E8 0%, rgba(219, 175, 62, 0.7) 100%);
+  padding: 80px 50px;
+  border-radius: 30px;
+  margin-top: 40px;
+}
+.calculator-section .calculator-container h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .calculator-section .calculator-container h2 {
+    font-size: 25px;
+  }
+}
+.calculator-section .calculator-container label {
+  margin-bottom: 6px;
+}
+.calculator-section .calculator-container hr {
+  margin: 60px 0;
+  background-color: #826929;
+}
+@media (max-width: 768px) {
+  .calculator-section .calculator-container hr {
+    margin: 40px 0 20px 0;
+  }
+}
+.calculator-section .calculator-container button {
+  background: #C39E3D;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none !important;
+  cursor: pointer;
+  min-width: 160px;
+}
+.calculator-section .calculator-container h4 {
+  font-size: 18px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .calculator-section .calculator-container h4 {
+    margin-top: 30px;
+  }
+}
+.calculator-section .calculator-container h4 span {
+  margin-left: 15px;
+  border: 1px dashed #826929;
+  color: #000000;
+  padding: 10px 10px;
+  min-width: auto;
+  display: inline-block;
+  text-align: end;
+}
+
+.info-section {
+  background: rgba(219, 175, 62, 0.1803921569);
+  padding: 60px 0;
+}
+.info-section h3 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+.info-section p {
+  font-size: 1.2rem;
+}
+.info-section .scrap-prices {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.info-section .scrap-prices .scrap-title {
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.info-section .scrap-prices .scrap-date {
+  font-style: italic;
+  color: #826929;
+  margin: 10px 0 20px 0;
+  font-size: 16px;
+}
+.info-section .scrap-prices .price-table {
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.info-section .scrap-prices .price-table .price-row {
+  background: #f8f8f8;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+.info-section .scrap-prices .price-table .price-row:last-child {
+  border-bottom: none;
+}
+.info-section .scrap-prices .price-table .price-row .metal {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: inline-block;
+  width: 100%;
+}
+.info-section .scrap-prices .price-table .price-row .price {
+  height: 60px;
+  display: block;
+  padding: 10px;
+}
+.info-section .scrap-prices .price-table .gold .metal {
+  background: #b68c4a;
+}
+.info-section .scrap-prices .price-table .silver .metal {
+  background: #717b81;
+}
+.info-section .scrap-prices .price-table .platinum .metal {
+  background: #707070;
+}
+.info-section .scrap-prices .price-table .palladium .metal {
+  background: #707070;
+}
+
+.purity-section {
+  padding: 80px 0;
+}
+.purity-section img {
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
+  .purity-section img {
+    width: 80%;
+    margin-left: auto;
+    margin-top: 0;
+  }
+}
+.purity-section h3 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+.purity-section p {
+  font-size: 1.2rem;
+}
+
+.additional-services {
+  background: #f4f4f4;
+  padding: 60px 0;
+  text-align: center;
+}
+.additional-services h3 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+.additional-services .row {
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .additional-services .row {
+    gap: 25px;
+  }
+}
+.additional-services .service-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 320px;
+  margin: auto;
+}
+.additional-services .service-box:hover {
+  transform: scale(1.05);
+}
+.additional-services .service-box .service-img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+.additional-services .service-box .service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+.additional-services .service-box .service-overlay h4 {
+  margin-top: 40%;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.faq-section {
+  padding: 60px 0;
+  text-align: center;
+}
+.faq-section h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.faq-section .accordion {
+  max-width: 700px;
+  margin: auto;
+}
+.faq-section .accordion .accordion-item {
+  border: none;
+  margin-bottom: 10px;
+  background: transparent;
+}
+.faq-section .accordion .accordion-item .accordion-header {
+  margin-bottom: 0;
+}
+.faq-section .accordion .accordion-item .accordion-header .accordion-button {
+  background: transparent;
+  font-size: 24px;
+  font-weight: 400;
+  color: #121212;
+  padding: 15px 20px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+.faq-section .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  color: #d48951;
+}
+.faq-section .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+  filter: hue-rotate(171deg);
+}
+.faq-section .accordion .accordion-item .accordion-header .accordion-button:hover {
+  color: #d48951;
+}
+.faq-section .accordion .accordion-item .accordion-collapse .accordion-body {
+  font-size: 18px;
+  text-align: left;
+  padding: 0px 20px 15px 20px;
+  color: #333;
+}
+
+.purity-info-section {
+  padding: 60px 0;
+  background: #f8f8f8;
+  text-align: center;
+}
+.purity-info-section h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.purity-info-section .nav-tabs {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .purity-info-section .nav-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+.purity-info-section .nav-tabs .nav-link {
+  color: #555;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #e0e0e0;
+  transition: 0.3s ease;
+  margin: 0 5px;
+  min-width: 150px;
+}
+.purity-info-section .nav-tabs .nav-link.active {
+  background: #c49b48;
+  color: white;
+}
+.purity-info-section .nav-tabs .nav-link:hover {
+  background: #b68c4a;
+  color: white;
+}
+.purity-info-section .table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+  min-width: 650px;
+  width: auto;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .purity-info-section .table {
+    min-width: auto;
+  }
+}
+.purity-info-section th {
+  background: #c49b48;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+.purity-info-section td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px !important;
+}
+
+.price-card {
+  background: #c49b48;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  background: linear-gradient(to right, #c49b48, #f0e3c3);
+  color: white;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=scrap_calculator.css.map*/

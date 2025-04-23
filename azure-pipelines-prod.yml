@@ -1,0 +1,33 @@
+trigger:
+  - "prod"
+
+jobs:
+  - job: BuildAndDeploy
+    pool:
+      vmImage: "ubuntu-latest"
+    steps:
+      - checkout: self
+
+      - script: |
+          mkdir dist
+          mv $(ls -A --ignore=dist --ignore=.git --ignore=.git --ignore=.vscode) dist
+        displayName: "Move"
+
+      - script: |
+          echo -e "$(SSH_PRIVATE_KEY)" > ~/ssh_key
+          chmod 600 ~/ssh_key
+        displayName: "Create SSH"
+
+      - script: |
+          rsync -rptDhv -e "ssh -o StrictHostKeyChecking=no -i ~/ssh_key" ./dist/* root@$(SERVER_HOST):$(SERVER_TARGET)
+        displayName: "Deploy"
+
+      - script: |
+          ssh -i ~/ssh_key root@$(SERVER_HOST) /root/deploy.sh gsc
+        displayName: "Run Server Scripts"
+        condition: succeeded()
+
+      - script: |
+          rm -f ~/ssh_key
+        displayName: "Cleanup SSH Key"
+        condition: always()

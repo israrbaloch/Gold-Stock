@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Setup Hooks",
+            "type": "shell",
+            "command": "cp hooks/* .git/hooks/",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "php artisan serve -vvv",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+        },
+        {
+            "label": "Watch",
+            "type": "shell",
+            "command": "npm run watch",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+        },
+        {
+            "label": "WebSocket Server",
+            "type": "shell",
+            "command": "php artisan websockets:serve",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+        },
+        {
+            "label": "Historical Listen",
+            "type": "shell",
+            "command": "php artisan historical:listen",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+        },
+    ]
+}

@@ -1,0 +1,92 @@
+@extends('header.index')
+
+@section('extratitle')
+    Support
+@endsection
+
+@push('styles')
+    <link href="{{ URL::to('/') }}/css/support.css?ver=1.2.0" rel="stylesheet">
+@endpush
+
+@section('content')
+    <div class="page-container container">
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <a href="{{ URL::to('/') }}/faq"><img class="supp-img"
+                        src="{{ URL::to('/') }}/img/support/how-it-works-card.jpg" alt="how it works"></a>
+                <a href="{{ URL::to('/') }}/faq"><img class="supp-img" src="{{ URL::to('/') }}/img/support/faq-cards.jpg"
+                        alt="how it works"></a>
+                <a href="#"><img class="supp-img" src="{{ URL::to('/') }}/img/support/customer-support-card.jpg"
+                        alt="how it works"></a>
+            </div>
+            <div class="col-12 col-md-6 supp-form">
+                @include('components.flash_alerts')
+                <div class="label">
+                    How can we help?
+                </div>
+                <form method="post" action="{{ route('contact.store') }}">
+                    {{ csrf_field() }}
+                    <select class="form-group supp-input" name="option" id="option">
+                        <option value="Sales">Sales</option>
+                        <option value="Spot Trading Issues">Spot Trading Issues</option>
+                        <option value="Deposit Issues">Deposit Issues</option>
+                        <option value="Withdrawal Issues">Withdrawal Issues</option>
+                        <option value="Help With Account">Help With Account</option>
+                        <option value="Security Issue">Security Issue</option>
+                    </select>
+
+                    <div class="form-group label">
+                        First Name
+                        <input class=" supp-input" type="text" id="fname" name="fname">
+                    </div>
+
+
+                    <div class="form-group label">
+                        Last Name
+                        <input class="supp-input" type="text" id="lname" name="lname">
+                    </div>
+
+
+                    <div class="form-group label">
+                        Email
+                        <input class="supp-input" type="email" id="email" name="email">
+                    </div>
+
+
+                    <div class="form-group label">
+                        Message
+                        <textarea class="supp-input" id="message" name="message" rows="4" cols="50"></textarea>
+                    </div>
+
+                    <div class="cf-turnstile" data-sitekey="{{ config('services.cloudflare.turnstile_site_key') }}"></div>
+
+                    <div class="form-group">
+                        <button type="submit" class="send-message" id="send-message">
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <br class="d-md-none">
+        <br class="d-md-none">
+
+    </div>
+    @if (Session::has('success'))
+        <script type="text/javascript">
+            function massge() {
+                Swal.fire(
+                    'Good job!',
+                    'Successfully Saved!',
+                    'success'
+                );
+            }
+
+            window.onload = massge;
+        </script>
+    @endif
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
+
+@endsection

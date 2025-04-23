@@ -1,0 +1,26 @@
+.funds-container {
+    h2 {
+        margin-bottom: 1rem;
+        color: var(--black-1-e-2026, #1E2026);
+        text-align: left;
+
+        font-family: SFPro;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    a.btn {
+        color: var(--grey-7-c-7-e-85, #7C7E85);
+
+        font-family: SFPro;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    table{
+        margin-bottom: 4rem;
+    }
+}

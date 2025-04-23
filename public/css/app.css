@@ -1,0 +1,13 @@
+.custom-action {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.voyager .pagination .active>a, .voyager .pagination .active>a:focus, .voyager .pagination .active>a:hover, .voyager .pagination .active>span:focus, .voyager .pagination .active>span:hover, .voyager .pagination .active span {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #f3a30c;
+    border-color: #f3a30c;
+    outline: none;
+}

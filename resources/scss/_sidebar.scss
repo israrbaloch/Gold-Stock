@@ -1,0 +1,125 @@
+#sidebar {
+  width: 100%;
+  height: 100vh;
+  margin-left: -250px;
+  transition: 0.5s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100000;
+  background: white;
+
+  .sub-menu{
+    list-style: disc;
+  }
+
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    background: #232323;
+    height: 65px;
+    img {
+      width: 150px;
+    }
+    .cart{
+      font-size: 1.3rem;
+    }
+    .close {
+      cursor: pointer;
+      border: none;
+      box-shadow: none;
+      background: none !important;
+      i{
+        color: white;
+        font-size: 2rem;
+        font-weight: 100;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .sidebar-btn{
+    border-radius: 7px !important;
+    border: 1px solid #232323;
+    padding: 11px 20px;
+    text-align: center;
+    flex: 1;
+    &.btn-dark{
+      background: #232323;
+      color: white;
+    }
+    &.btn-yellow{
+      background: #ffd805;
+      color: #232323 !important;
+    }
+  }
+
+  .menu-item i, .nav-link i, .th i {
+    margin-right: 4px;
+  }
+
+  @media (max-width: 767px) {
+    .gray-line {
+      margin-left: 20px;
+      width: 84%;
+    }
+  }
+
+  .text-transform-none {
+    text-transform: none;
+  }
+
+  .contact {
+    margin-bottom: 20px;
+  }
+
+  .contact i{
+    background-color: #232323;
+    font-size: 11px;
+    color: white;
+    padding: 4px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+
+  &.active {
+    margin-left: 0;
+    // overflow-y: scroll;
+  }
+
+  .overflow-nav {
+    overflow-y: auto;
+    height: calc(100vh - 65px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 25px;
+    width: max-content;
+  }
+
+  li {
+    padding: 10px 0;
+    a {
+      font-family: SFPro;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    @media (max-width: 767px) {
+      color: #464646;
+      text-transform: uppercase;
+      padding-right: 20px;
+    }
+
+    &:hover {
+      color: #93928b;
+    }
+  }
+}

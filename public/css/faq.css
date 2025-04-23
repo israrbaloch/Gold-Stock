@@ -1,0 +1,174 @@
+body {
+  background-color: #FAFAFA;
+  font-family: SFPro !important;
+}
+
+.main-div{
+  background-color: #FAFAFA;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1E2026;
+  font-family: SFPro !important;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #4F4F4F;
+  font-family: SFPro !important;
+}
+
+.accordion{
+  width: 100%;
+}
+
+.accordion-item {
+  border-radius: 10px !important;
+  margin-bottom: 20px;
+  border: none !important;
+  background: #FFFFFF;
+  padding: 30px;
+}
+
+.accordion-button {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #4F4F4F;
+  font-family: SFPro !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  text-align: left !important;
+  padding: 0;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ffffff;
+  color: #4F4F4F;
+}
+
+.accordion-button::after {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 500;
+  content: "\f067";
+  font-size: 18px;
+  color: #4F4F4F;
+  transition: transform 0.3s ease, color 0.3s ease;
+  background-image: none !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: "\f068";
+}
+
+.accordion-body {
+  font-size: 16px;
+  font-family: 500;
+  line-height: 25px;
+  color: #7C7E85;
+  font-family: SFPro !important;
+  padding-top: 15px !important;
+  padding: 0;
+}
+
+.accordion-body a {
+  color: #7C7E85;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  color: #1E2026;
+  font-family: SFPro !important;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+
+.accordion ol, .accordion ul {
+  padding-left: 20px !important;
+}
+
+.accordion ol li, .accordion ul li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #7C7E85;
+  font-family: SFPro !important;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #1E2026;
+    font-family: SFPro !important;
+  }
+  .accordion-item {
+    border-radius: 10px !important;
+    margin-bottom: 20px;
+    border: none !important;
+    background: #FFFFFF;
+    padding: 20px;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #4F4F4F;
+    font-family: SFPro !important;
+  }
+
+  .accordion-button {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #4F4F4F;
+    font-family: SFPro !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    text-align: left !important;
+    padding: 0;
+  }
+
+  .accordion-body {
+    font-size: 16px;
+    font-family: 500;
+    line-height: 25px;
+    color: #7C7E85;
+    font-family: SFPro !important;
+    padding-top: 15px !important;
+    padding: 0;
+  }
+
+  h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    color: #1E2026;
+    font-family: SFPro !important;
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
+
+  .accordion ol, .accordion ul {
+    padding-left: 20px !important;
+  }
+
+  .accordion ol li, .accordion ul li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #7C7E85;
+    font-family: SFPro !important;
+    margin-bottom: 15px;
+  }
+}
