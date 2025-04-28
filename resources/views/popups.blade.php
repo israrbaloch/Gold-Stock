@@ -13,6 +13,7 @@
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Tienne:wght@400;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tienne:wght@400;700;900&display=swap');
 
     .modal-content {
         border-radius: 0px !important
@@ -134,7 +135,7 @@
         width: 160%;
         height: 350px;
         border-radius: 10px;
-        padding: 30px;
+        padding: 0px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
@@ -161,7 +162,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 20px;
+        padding: 0 50px;
         text-align: center;
     }
 
@@ -176,6 +177,77 @@
         width: 70%;
         background-color: #28a745;
         border-radius: 10px;
+    }
+
+    .product-section {
+        padding: 0px 100px;
+        text-align: center;
+        margin-bottom: 30px
+    }
+
+    .cookie-setting {
+        background: #f5f5f5;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cookie-label {
+        font-weight: 600;
+    }
+
+    .cookie-subtext {
+        color: gray;
+        font-size: 0.85rem;
+        font-weight: normal;
+    }
+
+    .toggle-switch {
+        position: relative;
+        width: 40px;
+        height: 22px;
+    }
+
+    .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        background-color: #ccc;
+        border-radius: 34px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+    input:checked+.slider {
+        background-color: #333;
+    }
+
+    input:checked+.slider:before {
+        transform: translateX(18px);
     }
 </style>
 
@@ -209,8 +281,6 @@
                         Product Review
                     </button>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-md-3">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#ExampleModal5">
@@ -275,6 +345,42 @@
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#ExampleModal15">
                         Get Gold Rewards
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#ExampleModal16">
+                        First Time User
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#ExampleModal17">
+                        Might Like This
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#ExampleModal18">
+                        Newsletter
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#ExampleModal19">
+                        Cookies Preferences
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#ExampleModal20">
+                        Recently Viewed
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#ExampleModal21">
+                        Perfect Product
                     </button>
                 </div>
             </div>
@@ -557,12 +663,13 @@
                         </div>
                         <div class="col-md-4 modal-right">
                             <p class="modal-title">🎉 Give $10, Get $10!</p>
-                            <p class="modal-sub-title">Get an exclusive 10% OFF your order now. Use code: SAVE10</p>
+                            <p class="modal-sub-title">Invite your friends & both of you get a **$10 discount**!</p>
                             <form action="" class="feedback-form">
-                                <input type="text" placeholder="Enter your email">
+                                <input type="text" placeholder="Enter your email"
+                                    value="https://www.site.com/ref?user=123" disabled>
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-base">Unlock Early Access</button>
-                                    <button type="button" class="btn btn-base">No Thanks, I’ll wait</button>
+                                    <button type="button" class="btn btn-base">Copy Referral Link</button>
+                                    <button type="button" class="btn btn-base">No, Thanks I'll Miss Out</button>
                                 </div>
                             </form>
                         </div>
@@ -609,15 +716,15 @@
                         <p class="modal-sub-title">Order Progress:<strong> Shipped</strong>  </p>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 55%; background-color: #1570F0;">
+                                aria-valuemax="100" style="width: 55%; background-color: #1570F0;">
+                            </div>
+                            <p class="modal-sub-title">Expected Delivery: <strong>2 Days</strong>  </p>
                         </div>
-                        <p class="modal-sub-title">Expected Delivery: <strong>2 Days</strong>  </p>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-base">Track Order</button>
-                        <button type="button" class="btn btn-base">Close</button>
-                    </div>
-                    {{-- <hr> --}}
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-base">Track Order</button>
+                            <button type="button" class="btn btn-base">Close</button>
+                        </div>
+                        {{-- <hr> --}}
                         {{-- <img src="{{asset('img/popus/seasonal.png')}}" alt="seasonal sale image" class="img-fluid" style="width: 100%; height: auto;"> --}}
 
                     </div>
@@ -633,23 +740,255 @@
                         <p class="modal-title-image"><img src="{{ asset('img/popus/earn.png') }}"
                                 alt="modal title image" width="200px"></p>
                         <p class="modal-title">🏆 Earn Gold with Every Purchase!</p>
-                        <p class="modal-sub-title">Buy gold and get bonus rewards! 
+                        <p class="modal-sub-title">Buy gold and get bonus rewards!
                             The more you invest, the more you earn</p>
                         <p class="modal-sub-title"><strong>For every $100 spent → Earn 0.5g Gold</strong>  </p>
                         <p class="modal-sub-title"><strong>Spend $500 → Get 3g Gold!</strong>  </p>
                         <p class="modal-sub-title">You're close to earning your next reward! 🌟</p>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 55%; background-color: #1570F0;">
+                                aria-valuemax="100" style="width: 55%; background-color: #1570F0;">
+                            </div>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-base">Track Order</button>
-                        <button type="button" class="btn btn-base">Close</button>
-                    </div>
-                    {{-- <hr> --}}
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-base">Track Order</button>
+                            <button type="button" class="btn btn-base">Close</button>
+                        </div>
+                        {{-- <hr> --}}
                         {{-- <img src="{{asset('img/popus/seasonal.png')}}" alt="seasonal sale image" class="img-fluid" style="width: 100%; height: auto;"> --}}
 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="ExampleModal16" tabindex="-1" aria-labelledby="ExampleModal16Label"
+            aria-hidden="true">
+            <div class="modal-dialog horizontal-modal">
+                <div class="modal-content">
+                    <div class="main-body">
+                        <div class="col-md-4 modal-left"
+                            style="background: url('img/popus/newuser.png') no-repeat center center; background-size: cover;background-position: center;">
+
+                        </div>
+                        <div class="col-md-4 modal-right">
+                            <p class="modal-title">Welcome! Here’s 10% Off Just for You</p>
+                            <p class="modal-sub-title">Use code: WELCOME10 at checkout and enjoy your discount.</p>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-base">Claim My Discount</button>
+                                <button type="button" class="btn btn-base">No, Thanks</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="ExampleModal17" tabindex="-1" aria-labelledby="ExampleModal17Label"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="modal-title">🛍️ You Might Like This!</p>
+                        <p class="modal-sub-title">Based on your browsing, we think you’ll love this:</p>
+                        <div class="product-section">
+                            <p class="modal-title-image"><img src="{{ asset('img/popus/product.png') }}"
+                                    alt="modal title image" width="100px"></p>
+                            <span>2024 1oz Gold Maple Leaf
+                                Coin (King Charles)</span>
+                            <p class="modal-title">
+                                <strong>
+                                    ⭐ 4.8 | $49.99
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-base">Login</button>
+                            <button type="button" class="btn btn-base">Sign Up </button>
+                            <button type="button" class="btn btn-base">Maybe Later</button>
+                        </div>
+                        {{-- <hr> --}}
+                        {{-- <img src="{{asset('img/popus/seasonal.png')}}" alt="seasonal sale image" class="img-fluid" style="width: 100%; height: auto;"> --}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="ExampleModal18" tabindex="-1" aria-labelledby="ExampleModal18Label"
+            aria-hidden="true">
+            <div class="modal-dialog horizontal-modal">
+                <div class="modal-content">
+                    <div class="main-body">
+                        <div class="col-md-4 modal-right">
+                            <p class="modal-title">Join Our Newsletter</p>
+                            <p class="modal-sub-title">Subscribe and get exclusive updates & offers straight to your
+                                inbox!</p>
+                            <form action="" class="feedback-form">
+                                <input type="text" placeholder="Enter your email">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-base">Subscribe Now</button>
+                                    <button type="button" class="btn btn-base">No, Thanks</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4 modal-left"
+                            style="background: url('img/popus/newsletter.png') no-repeat center center; background-size: auto;background-position: right;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="ExampleModal19" tabindex="-1" aria-labelledby="ExampleModal19Label"
+            aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 700px">
+                <div class="modal-content" style="max-width: 700px;">
+                    <div class="modal-body cookies-preferences" style="place-items: baseline;">
+                        <p class="modal-title" style="text-align: left; font-family: 'Inter', sans-serif;">
+                            <strong>About Your Privacy</strong>
+                        </p>
+                        <p class="modal-sub-title" style="text-align: left; font-family: 'Inter', sans-serif;">We and
+                            our partners are using technologies like cookies and process
+                            We process your data to deliver content or advertisements and measure the
+                            delivery of such content or advertisements to extract insights about our website.
+                            We share this information with our partners on the basis of consent and legitimate
+                            interest. You may exercise your right to consent or object to a legitimate interest,
+                            based on a specific purpose below or at a partner level in the link under each
+                            purpose. These choices will be signaled to our vendors.
+                        </p>
+
+                        <button type="button" class="btn btn-base" style="margin: 0px;">Allow All</button>
+                        <br>
+                        <p class="modal-title" style="text-align: left; font-family: 'Inter', sans-serif;">
+                            <strong>Manage Consent Preferences</strong>
+                        </p>
+                        <br>
+                        <div class="cookie-setting">
+                            <div class="cookie-label">Strictly Necessary Cookies</div>
+                            <div class="cookie-subtext">Always Active</div>
+                        </div>
+
+                        <div class="cookie-setting">
+                            <div class="cookie-label">Functional Cookies</div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="cookie-setting">
+                            <div class="cookie-label">Performance Cookies</div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="cookie-setting">
+                            <div class="cookie-label">
+                                Personalised ads and content<br>
+                                measurement, audience insights and product development.
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-base">Reject All</button>
+                            <button type="button" class="btn btn-base">Submit My choice</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="ExampleModal20" tabindex="-1" aria-labelledby="ExampleModal20Label"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="modal-title">🔄 Recently Viewed Items</p>
+                        <p class="modal-sub-title">Don't forget about these items you recently checked out!</p>
+                        <div class="product-section">
+                            <p class="modal-title-image"><img src="{{ asset('img/popus/product.png') }}"
+                                    alt="modal title image" width="100px"></p>
+                            <span>2024 1oz Gold Maple Leaf
+                                Coin (King Charles)</span>
+                            <p class="modal-title">
+                                <strong>
+                                    ⭐ 4.8 | $49.99
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-base">Add to Cart</button>
+                            <button type="button" class="btn btn-base">View Detail </button>
+                            <button type="button" class="btn btn-base">Not Now</button>
+                        </div>
+                        {{-- <hr> --}}
+                        {{-- <img src="{{asset('img/popus/seasonal.png')}}" alt="seasonal sale image" class="img-fluid" style="width: 100%; height: auto;"> --}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="ExampleModal21" tabindex="-1" aria-labelledby="ExampleModal21Label"
+            aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 700px">
+                <div class="modal-content" style="max-width: 700px;">
+                    <div class="modal-body">
+                        <p class="modal-title">
+                            🎯 Find Your Perfect Product!
+                        </p>
+                        <p class="modal-sub-title">Answer a few quick questions to get a personalized recommendation.
+                        </p>
+                        <p class="modal-sub-title">What are you looking for?
+                        </p>
+                        <div class="products d-flex">
+                            <div class="product-section py-4 mx-2" style="padding: 0px 30px; box-shadow: 4px 5px 14px rgb(0 0 0 / 21%);">
+                                <p class="modal-title-image"><img src="{{ asset('img/popus/product.png') }}"
+                                        alt="modal title image" width="100px"></p>
+                                <span>2024 1oz Gold Maple Leaf
+                                    Coin (King Charles)</span>
+                                <p class="modal-title">
+                                    <strong>
+                                        ⭐ 4.8 | $49.99
+                                    </strong>
+                                </p>
+                                <button type="button" class="btn btn-base w-100">View</button>
+                            </div>
+                            <div class="product-section py-4 mx-2" style="padding: 0px 30px; box-shadow: 4px 5px 14px rgb(0 0 0 / 21%);">
+                                <p class="modal-title-image"><img src="{{ asset('img/popus/product.png') }}"
+                                        alt="modal title image" width="100px"></p>
+                                <span>2024 1oz Gold Maple Leaf
+                                    Coin (King Charles)</span>
+                                <p class="modal-title">
+                                    <strong>
+                                        ⭐ 4.8 | $49.99
+                                    </strong>
+                                </p>
+                                <button type="button" class="btn btn-base w-100">View</button>
+                            </div>
+
+                            <div class="product-section py-4 mx-2" style="padding: 0px 30px; box-shadow: 4px 5px 14px rgb(0 0 0 / 21%);">
+                                <p class="modal-title-image"><img src="{{ asset('img/popus/product.png') }}"
+                                        alt="modal title image" width="100px"></p>
+                                <span>2024 1oz Gold Maple Leaf
+                                    Coin (King Charles)</span>
+                                <p class="modal-title">
+                                    <strong>
+                                        ⭐ 4.8 | $49.99
+                                    </strong>
+                                </p>
+                                <button type="button" class="btn btn-base w-100">View</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

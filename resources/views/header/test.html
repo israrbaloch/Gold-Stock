@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webcam Recorder</title>
+
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/8.9.0/video-js.css" rel="stylesheet" />
+
+    <!-- Video.js Record Plugin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/videojs-record@latest/dist/css/videojs.record.min.css" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #000;
+        }
+        #myVideo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<video id="myVideo" class="video-js vjs-default-skin"></video>
+
+<!-- Video.js -->
+<script src="https://vjs.zencdn.net/8.9.0/video.min.js"></script>
+
+<!-- RecordRTC -->
+<script src="https://cdn.jsdelivr.net/npm/recordrtc@5.6.2/RecordRTC.js"></script>
+
+<!-- Video.js Record Plugin -->
+<script src="https://cdn.jsdelivr.net/npm/videojs-record@latest/dist/videojs.record.min.js"></script>
+
+<script>
+// Init Video.js
+const player = videojs('myVideo', {
+    controls: true,
+    fill: true, 
+    plugins: {
+        record: {
+            audio: true,
+            video: true,
+            maxLength: 300,
+            debug: true
+        }
+    }
+});
+
+
+// Handling events
+player.on('startRecord', function() {
+    console.log('Recording started');
+});
+player.on('finishRecord', function() {
+    console.log('Recording finished, file available: ', player.recordedData);
+});
+player.on('deviceReady', function() {
+    console.log('Device ready!');
+});
+player.on('error', function(error) {
+    console.error('Error:', error);
+});
+player.on('deviceError', function() {
+    console.error('Device error:', player.deviceErrorCode);
+});
+</script>
+
+</body>
+</html>
