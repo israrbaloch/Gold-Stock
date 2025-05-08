@@ -374,8 +374,10 @@
                     <button type="button" class="btn btn-base">Complete My Purchase</button>
                     <button type="button" class="btn btn-base">No, i’ll Risk Losing My items</button>
                 </div>
-                {{-- <hr> --}}
-                {{-- <img src="{{asset('img/popus/seasonal.png')}}" alt="seasonal sale image" class="img-fluid" style="width: 100%; height: auto;"> --}}
+                {{--
+                <hr> --}}
+                {{-- <img src="{{asset('img/popus/seasonal.png')}}" alt="seasonal sale image" class="img-fluid"
+                    style="width: 100%; height: auto;"> --}}
 
             </div>
         </div>
@@ -404,11 +406,108 @@
     </div>
 </div>
 
+<!--Complete Verification Modal -->
+<div class="modal fade" id="CompleteVerification" tabindex="-1" aria-labelledby="CompleteVerificationLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="modal-title-image"><img src="{{ asset('img/popus/verification.png') }}"
+                        alt="modal title image" width="200px"></p>
+                <p class="modal-title">🔒 Complete Your Verification</p>
+                <p class="modal-sub-title">For security reasons, you need to verify your
+                    identity before trading gold.
+                </p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-base">Complete Verification</button>
+                    <button type="button" class="btn btn-base">Maybe Later</button>
+                </div>
+                {{--
+                <hr> --}}
+                {{-- <img src="{{asset('img/popus/seasonal.png')}}" alt="seasonal sale image" class="img-fluid"
+                    style="width: 100%; height: auto;"> --}}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Login/Register Modal -->
+<div class="modal fade" id="Login-Register" tabindex="-1" aria-labelledby="Login-RegisterLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="modal-title-image"><img src="{{ asset('img/popus/login.png') }}" alt="modal title image"
+                        width="200px"></p>
+                <p class="modal-title">Unlock Your Best Experience!</p>
+                <p class="modal-sub-title">Sign in to save your progress, get personalized recommendations,
+                    and enjoy exclusive features.</p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-base">Login</button>
+                    <button type="button" class="btn btn-base">Sign Up </button>
+                    <button type="button" class="btn btn-base">Maybe Later</button>
+                </div>
+                {{--
+                <hr> --}}
+                {{-- <img src="{{asset('img/popus/seasonal.png')}}" alt="seasonal sale image" class="img-fluid"
+                    style="width: 100%; height: auto;"> --}}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Order Status Modal -->
+<div class="modal fade" id="OrderStatus" tabindex="-1" aria-labelledby="OrderStatusLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="modal-title-image"><img src="{{ asset('img/popus/shipping.png') }}" alt="modal title image"
+                        width="200px"></p>
+                <p class="modal-title">📦 Order Status Update</p>
+                <p class="modal-sub-title"><strong>Order #<span id="OrderId"></span></strong>  has been Confirmed! 🚚
+                </p>
+                <p class="modal-sub-title">Order Progress:<strong>In Progress</strong>  </p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 15%; background-color: #1570F0;">
+                    </div>
+                    <p class="modal-sub-title">Expected Delivery: <strong>2 Days</strong>  </p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-base">Track Order</button>
+                    <button type="button" class="btn btn-base">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Cart About Close Modal -->
+<div class="modal fade" id="CartClosing" tabindex="-1" aria-labelledby="CartClosingLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="modal-title-image"><img src="{{ asset('img/popus/cart-abandonment.png') }}"
+                        alt="modal title image" width="200px"></p>
+                <p class="modal-title">Wait! Your Cart is Almost Gone!</p>
+                <p class="modal-sub-title">Complete your purchase now and get 10% OFF! Use code:
+                    <strong>SAVE10</strong>
+                </p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-base">Complete My Purchase</button>
+                    <button type="button" class="btn btn-base">No, i’ll Risk Losing My items</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     // Timer countdown - 2 hours from now
     var countdownDate = new Date().getTime() + 2 * 60 * 60 * 1000;
 
-    var x = setInterval(function() {
+    var x = setInterval(function () {
         var now = new Date().getTime();
         var distance = countdownDate - now;
 
@@ -425,17 +524,17 @@
     }, 1000);
 
     // Show Black Friday modal after 8 seconds
-    $(document).ready(function() {
-        setTimeout(function() {
+    $(document).ready(function () {
+        setTimeout(function () {
             // $('#BlackFriday').modal('show');
         }, 8000);
     });
 
     // Exit Intent Modal (homepage or blog only)
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         let shown = false;
         if (window.location.pathname === '/' || window.location.pathname.includes('/blog')) {
-            document.addEventListener("mouseout", function(e) {
+            document.addEventListener("mouseout", function (e) {
                 if (!shown && e.clientY < 10) {
                     shown = true;
                     $('#ExitIntent').modal('show');
@@ -445,7 +544,7 @@
     });
 
     // New Visitor Modal (homepage or product pages)
-    $(document).ready(function() {
+    $(document).ready(function () {
         const modalShownKey = 'modal_shown_once';
         const currentPath = window.location.pathname;
 
@@ -453,7 +552,7 @@
         console.log('[NewVisitor] Modal already shown?', !!localStorage.getItem(modalShownKey));
 
         if ((currentPath === '/' || currentPath.startsWith('/product')) && !localStorage.getItem(
-                modalShownKey)) {
+            modalShownKey)) {
             function showModal(source) {
                 if (!localStorage.getItem(modalShownKey)) {
                     console.log(`[NewVisitor] Showing modal via ${source}`);
@@ -481,7 +580,7 @@
     });
 
     // ProductSuggestion Modal (inactivity + multi-view logic with logs)
-    $(document).ready(function() {
+    $(document).ready(function () {
         const modalKey = 'product_suggestion_shown';
         const viewCountKey = 'product_page_views';
         const currentPath = window.location.pathname;
@@ -538,7 +637,7 @@
     });
 
     // Newsletter Modal (any page except homepage/shop, 10–15s or 50% scroll)
-    $(document).ready(function() {
+    $(document).ready(function () {
         const modalKey = 'newsletter_modal_shown';
         const currentPath = window.location.pathname;
         const isContentPage = currentPath !== '/' && !currentPath.startsWith('/shop') && !currentPath
@@ -578,7 +677,7 @@
     });
 
     // --- Product Page Survey Modal ---
-    $(document).ready(function() {
+    $(document).ready(function () {
         const modalKey = 'survey_shown';
         const viewCountKey = 'survey_product_views';
         const currentPath = window.location.pathname;
@@ -630,4 +729,90 @@
 
         resetInactivityTimer(); // Start timer
     });
+
+
 </script>
+@if (auth()->check() && is_null(auth()->user()->email_verified_at))
+    <script>
+        $(document).ready(function () {
+            const modalKey = 'verification_modal_shown';
+            const currentPath = window.location.pathname;
+            const isTargetPage = ['/dashboard', '/account'].some(p => currentPath.startsWith(p));
+
+            console.log('[VerificationModal] Path:', currentPath);
+            console.log('[VerificationModal] Is target page?', isTargetPage);
+            console.log('[VerificationModal] Already shown?', !!sessionStorage.getItem(modalKey));
+
+            if (!isTargetPage || sessionStorage.getItem(modalKey)) return;
+
+            console.log('[VerificationModal] Showing modal');
+            $('#CompleteVerification').modal('show');
+            sessionStorage.setItem(modalKey, 'true');
+        });
+    </script>
+@endif
+@guest
+    <script>
+        $(document).ready(function () {
+            const currentPath = window.location.pathname;
+            const isTargetPage = ['/checkout', '/dashboard', '/account'].some(p => currentPath.startsWith(p));
+
+            console.log('[LoginModal] Path:', currentPath);
+            console.log('[LoginModal] Is target page?', isTargetPage);
+
+            if (isTargetPage) {
+                console.log('[LoginModal] Triggering login/register modal');
+                $('#Login-Register').modal('show');
+            }
+        });
+    </script>
+@endguest
+@php
+    $orderId = request()->segment(3); 
+@endphp
+
+@if ($orderId && is_numeric($orderId))
+    <script>
+        $(document).ready(function () {
+            const modalKey = 'order_shown_{{ $orderId }}';
+            const orderSelector = '#OrderId';
+            const orderLabel = 'PR{{ $orderId }}';
+
+            console.log('[OrderStatus] Order ID:', '{{ $orderId }}');
+            console.log('[OrderStatus] Modal key exists?', !!sessionStorage.getItem(modalKey));
+
+            if (!sessionStorage.getItem(modalKey)) {
+                $(orderSelector).text(orderLabel);
+                $('#OrderStatus').modal('show');
+                sessionStorage.setItem(modalKey, 'true');
+                console.log('[OrderStatus] Modal shown and key set');
+            }
+        });
+    </script>
+@endif
+
+@php
+    $cartId = Cookie::get('_cartid');
+@endphp
+
+@if ($cartId)
+<script>
+    $(document).ready(function () {
+        const modalKey = 'cart_closing_shown_{{ $cartId }}';
+        console.log('[CartClosing] Cart ID:', '{{ $cartId }}');
+        console.log('[CartClosing] Already shown?', !!sessionStorage.getItem(modalKey));
+
+        if (sessionStorage.getItem(modalKey)) return;
+
+        const delay = 90000; // 90s fixed
+        console.log('[CartClosing] Inactivity timer started for', delay / 1000, 'seconds');
+
+        const inactivityTimer = setTimeout(() => {
+            console.log('[CartClosing] Inactivity timeout – showing modal');
+            $('#CartClosing').modal('show');
+            sessionStorage.setItem(modalKey, 'true');
+        }, delay);
+    });
+</script>
+
+@endif

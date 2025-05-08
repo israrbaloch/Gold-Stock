@@ -134,7 +134,7 @@
                     Proceed to Checkout
                 </button>
             @else
-                <button id="" class="button medium" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <button id="" class="button medium" data-bs-toggle="modal" data-bs-target="#Login-Register">
                     Proceed to Checkout
                 </button>
             @endauth
