@@ -1,3 +1,6 @@
+@php
+    dd(Hash::make('12345678'));
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 

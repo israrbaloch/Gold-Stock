@@ -1,7 +1,5 @@
-import Echo from "laravel-echo";
 import Pusher from "pusher-js";
 import { setupAlert } from "./alert";
-import { HistoricalSubscription } from "./exchange/classes/historicalSubscription";
 
 window.Pusher = Pusher;
 
@@ -174,20 +172,20 @@ $(function () {
   setupAlert();
 });
 
-window.Echo = new Echo({
-  broadcaster: "pusher",
-  key: process.env.MIX_PUSHER_APP_KEY || "local",
-  cluster: process.env.MIX_PUSHER_APP_CLUSTER || "mt1",
-  forceTLS: false,
-  wsHost: window.location.hostname,
-  wsPort: window.app.wsPort,
-  disableStats: true,
-  enabledTransports: ["ws", "wss"],
-  reconnect: {
-    maxAttempts: 5,
-    delay: 1000,
-    maxDelay: 5000,
-  },
-});
+// window.Echo = new Echo({
+//   broadcaster: "pusher",
+//   key: process.env.MIX_PUSHER_APP_KEY || "local",
+//   cluster: process.env.MIX_PUSHER_APP_CLUSTER || "mt1",
+//   forceTLS: window.location.protocol === 'https:', // Automatically use wss:// when https:// is used.
+//   wsHost: window.location.hostname,
+//   wsPort: window.app.wsPort,
+//   wssPort: 6001,  // Ensure this is the correct port for wss://
+//   enabledTransports: ["ws", "wss"],
+//   reconnect: {
+//     maxAttempts: 5,
+//     delay: 1000,
+//     maxDelay: 5000,
+//   },
+// });
 
-window.app.historicalData = new HistoricalSubscription();
+

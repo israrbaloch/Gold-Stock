@@ -170,6 +170,48 @@
         text-align: center;
         margin-bottom: 30px
     }
+
+    @media only screen and (max-width: 768px) {
+        .horizontal-modal {
+            width: 100%;
+            margin: 0;
+            top: 50px;
+        }
+
+        .horizontal-modal .modal-content {
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+        }
+
+        .main-body {
+            flex-direction: column;
+        }
+
+        .modal-left,
+        .modal-right {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .modal-right {
+            padding: 20px;
+        }
+
+        .product-section {
+            padding: 0 20px;
+        }
+
+        .feedback-form textarea,
+        .feedback-form input {
+            width: 100%;
+        }
+
+        .btn-group {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
 </style>
 
 
@@ -796,23 +838,23 @@
 @endphp
 
 @if ($cartId)
-<script>
-    $(document).ready(function () {
-        const modalKey = 'cart_closing_shown_{{ $cartId }}';
-        console.log('[CartClosing] Cart ID:', '{{ $cartId }}');
-        console.log('[CartClosing] Already shown?', !!sessionStorage.getItem(modalKey));
+    <script>
+        $(document).ready(function () {
+            const modalKey = 'cart_closing_shown_{{ $cartId }}';
+            console.log('[CartClosing] Cart ID:', '{{ $cartId }}');
+            console.log('[CartClosing] Already shown?', !!sessionStorage.getItem(modalKey));
 
-        if (sessionStorage.getItem(modalKey)) return;
+            if (sessionStorage.getItem(modalKey)) return;
 
-        const delay = 90000; // 90s fixed
-        console.log('[CartClosing] Inactivity timer started for', delay / 1000, 'seconds');
+            const delay = 90000; // 90s fixed
+            console.log('[CartClosing] Inactivity timer started for', delay / 1000, 'seconds');
 
-        const inactivityTimer = setTimeout(() => {
-            console.log('[CartClosing] Inactivity timeout – showing modal');
-            $('#CartClosing').modal('show');
-            sessionStorage.setItem(modalKey, 'true');
-        }, delay);
-    });
-</script>
+            const inactivityTimer = setTimeout(() => {
+                console.log('[CartClosing] Inactivity timeout – showing modal');
+                $('#CartClosing').modal('show');
+                sessionStorage.setItem(modalKey, 'true');
+            }, delay);
+        });
+    </script>
 
 @endif

@@ -27,7 +27,8 @@
         <meta name="description" content="{{ $metaDescription }}">
         {{-- @else
         <meta name="description"
-            content="Gold Stock Canada is a leading bullion dealer and refiner. We buy & sell,  gold bars, gold coins, silver bars, silver coins. Order today!"> --}}
+            content="Gold Stock Canada is a leading bullion dealer and refiner. We buy & sell,  gold bars, gold coins, silver bars, silver coins. Order today!">
+        --}}
     @endif
 
     @if (isset($metaKeywords) && $metaKeywords != null)
@@ -65,14 +66,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     {{-- JS --}}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
+    {{--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.15.10/sweetalert2.min.js"
         integrity="sha512-M60HsJC4M4A8pgBOj7oC/lvJXuOc9CraWXdD4PF+KNmKl8/Mnz6AH9FANgi4SJM6D9rqPvgQt4KRFR1rPN+EUw=="
@@ -82,7 +81,7 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+        </script>
 
     {{-- Google Analytics --}}
 
@@ -100,16 +99,17 @@
             gtag('config', 'G-P7VSBBD9H0');
         </script>
 
-        {{-- <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="29f87a0c-3385-47a3-b013-4bb54807ee34"
+        {{--
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="29f87a0c-3385-47a3-b013-4bb54807ee34"
             data-blockingmode="auto" type="text/javascript"></script> --}}
 
         <script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
 
         <script>
-            window.renderBadge = function() {
+            window.renderBadge = function () {
                 var ratingBadgeContainer = document.createElement("div");
                 document.body.appendChild(ratingBadgeContainer);
-                window.gapi.load('ratingbadge', function() {
+                window.gapi.load('ratingbadge', function () {
                     window.gapi.ratingbadge.render(ratingBadgeContainer, {
                         "merchant_id": 5335797916
                     });
@@ -124,7 +124,9 @@
     {{-- Google Merchant --}}
 
 
-    {{-- <script src="https://js.sentry-cdn.com/b71ca6da88eedead750559359b29f786.min.js" crossorigin="anonymous"></script> --}}
+    {{--
+    <script src="https://js.sentry-cdn.com/b71ca6da88eedead750559359b29f786.min.js" crossorigin="anonymous"></script>
+    --}}
 
     @php
         $env = app()->environment();
@@ -171,11 +173,13 @@
     </script>
 
     <script src="{{ asset('/js/global.js') }}"></script>
-    {{-- <script src="{{ asset('/js/login.js') }}"></script> --}}
+    {{--
+    <script src="{{ asset('/js/login.js') }}"></script> --}}
     <script src="{{ asset('/js/prices/index.js') }}"></script>
     <script type="text/javascript" src="{{ URL::to('/') }}/js/jquery-dateformat.min.js?ver=1.2.0"></script>
 
-    {{-- <script>
+    {{--
+    <script>
         // on ready
         // $(document).ready(function() {
         //     $('#language-selector').on('change', function () {
@@ -194,7 +198,7 @@
 
         // googleTranslateElementInit();
     </script>
-    
+
     <!-- Google Translate API -->
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> --}}
     @stack('styles')
@@ -213,7 +217,7 @@
 
                 @if (\Session::has('cart-success'))
                     <script>
-                        $(function() {
+                        $(function () {
                             var msg = '{{ Session::get('cart-success') }}';
                             alert(msg);
                         });
@@ -249,17 +253,17 @@
 
                     // .search-lg toggle #search
 
-                    $('.search-lg').on('click', function() {
+                    $('.search-lg').on('click', function () {
                         $('.input-div-lg').toggle();
 
                     });
 
-                    $('.search-md').on('click', function() {
+                    $('.search-md').on('click', function () {
                         $('.search-md-input').toggle();
                     });
 
                     // search-lg-input key up search ajax
-                    $('.search-lg-input').on('keyup', function() {
+                    $('.search-lg-input').on('keyup', function () {
                         var search = $(this).val();
                         if (search.length > 2) {
                             $.ajax({
@@ -268,7 +272,7 @@
                                 data: {
                                     search: search
                                 },
-                                success: function(data) {
+                                success: function (data) {
                                     $('.search-results-lg').html(data.html);
                                 }
                             });
@@ -278,7 +282,7 @@
                     });
 
                     // .search-md-input
-                    $('.search-md-input').on('keyup', function() {
+                    $('.search-md-input').on('keyup', function () {
                         var search = $(this).val();
                         if (search.length > 2) {
                             $.ajax({
@@ -287,7 +291,7 @@
                                 data: {
                                     search: search
                                 },
-                                success: function(data) {
+                                success: function (data) {
                                     $('.search-results-md').html(data.html);
                                 }
                             });
@@ -297,13 +301,13 @@
                     });
 
                     // on #loginModal show hide the #sidebar
-                    $('#loginModal').on('show.bs.modal', function() {
+                    $('#loginModal').on('show.bs.modal', function () {
                         $('#sidebar').hide();
                     });
                 </script>
 
                 <script>
-                    $(document).ready(function() {
+                    $(document).ready(function () {
                         @if (session()->has('login-modal'))
                             $('#loginModal').modal('show');
                         @endif
@@ -331,49 +335,52 @@
                     integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
                     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-                <script>
-                    $(document).ready(function() {
-                        $('.slider-product').slick({
-                            dots: false,
-                            slidesToShow: 4,
-                            slidesToScroll: 1,
-                            arrows: true,
-                            autoplay: true,
-                            autoplaySpeed: 3000,
-                            infinite: true,
-                            // speed: 400,
-                            fade: false, // Use "false" for multi-slide layouts
-                            // cssEase: 'linear',
-                            lazyLoad: 'ondemand',
-                            prevArrow: '<button class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
-                            nextArrow: '<button class="slick-next"><i class="fas fa-chevron-right"></i></button>',
-                            responsive: [{
-                                breakpoint: 600, // For screens 768px or smaller
-                                settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1,
-                                    arrows: true,
-                                    dots: false
-                                }
-                            }]
-                        });
-                    });
-
-                    // notificationsDropdownMobile, notificationsDropdown click ajax call
-                    $('#notificationsDropdownMobile, #notificationsDropdown').on('click', function() {
-                        $.ajax({
-                            url: '/notifications/mark-all-read',
-                            type: 'GET',
-                            success: function(data) {
-                                // none
-                            }
-                        });
-                    });
-                </script>
                 @stack('scripts')
             </div>
         </div>
     </div>
     @include('components.popups')
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @stack('scripts')
+    <script>
+        $(document).ready(function () {
+            $('.slider-product').slick({
+                dots: false,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                infinite: true,
+                // speed: 400,
+                fade: false, // Use "false" for multi-slide layouts
+                // cssEase: 'linear',
+                lazyLoad: 'ondemand',
+                prevArrow: '<button class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+                responsive: [{
+                    breakpoint: 600, // For screens 768px or smaller
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: false
+                    }
+                }]
+            });
+        });
+
+        // notificationsDropdownMobile, notificationsDropdown click ajax call
+        $('#notificationsDropdownMobile, #notificationsDropdown').on('click', function () {
+            $.ajax({
+                url: '/notifications/mark-all-read',
+                type: 'GET',
+                success: function (data) {
+                    // none
+                }
+            });
+        });
+    </script>
+    @push('scripts')
+
+    @endpush
 </body>
