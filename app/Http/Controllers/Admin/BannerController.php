@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Banner;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class BannerController extends Controller
 {
@@ -32,11 +33,11 @@ class BannerController extends Controller
         if (!auth()->user()->hasPermission('add_banners')) {
             abort(403, 'You do not have permission to create banners.');
         }
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'type' => 'required|in:image,text,both',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif',
-            'mobile_image' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+            'mobile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
             'button_text' => 'nullable|string|max:100',
             'button_link' => 'nullable|url',
             'start_date' => 'nullable|date',
@@ -44,6 +45,16 @@ class BannerController extends Controller
             'status' => 'nullable',
             'position' => 'required|integer',
         ]);
+
+        $validator->after(function ($validator) use ($request) {
+            if (!$request->hasFile('image') && !$request->hasFile('mobile_image')) {
+                $validator->errors()->add('image', 'Either Banner Image or Mobile Banner Image is required.');
+                $validator->errors()->add('mobile_image', 'Either Banner Image or Mobile Banner Image is required.');
+            }
+        });
+
+        $validator->validate();
+
 
         // Upload image
         $imagePath = $request->file('image')->store('banners', 'public');

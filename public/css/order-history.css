@@ -332,3 +332,68 @@ table {
 .simple-order-details {
     background-color: #ffffff;
 }
+
+
+
+.order-history-body {
+  background-color: #f9f9fc;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.order-history-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.order-history-search {
+  border-radius: 12px;
+  padding: 10px 16px;
+}
+
+.order-history-filter {
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.order-history-table {
+  font-size: 14px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.order-history-table th {
+  background-color: #f1f3f5;
+  font-weight: 600;
+  text-align: left;
+}
+
+.order-history-table td,
+.order-history-table th {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.status-completed {
+  background-color: #207c61;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 400;
+}
+
+.status-pending {
+  background-color: #ffdc82;
+  color: #000;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 400;
+}
+
+.status-cancelled {
+  background-color: #f62b34;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 400;
+}

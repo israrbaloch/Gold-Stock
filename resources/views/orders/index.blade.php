@@ -56,8 +56,7 @@
                             @php
                                 $date = Carbon\Carbon::parse($desposit['date']);
                             @endphp
-                            <tr class="toogle-details display-row-{{ $content_counter }}"
-                                data-deposit-id="{{ $content_counter }}">
+                            <tr class="toogle-details display-row-{{ $content_counter }}" data-deposit-id="{{ $content_counter }}">
                                 {{-- Order Type --}}
                                 <td class="order-type">
                                     @if (!$desposit['order_type'] == null)
@@ -112,205 +111,45 @@
         </div>
 
         <div class="d-block d-md-none only-mobile" style="margin-top: 20px;">
-            <div class="row tab-link">
-                <div class="col-12 text-center active actions mobile-back-to-history">
-                    <a class="color-dark-green text-bold" href="#">Order History</a>
+            <div class="px-3 py-3">
+                <h2 class="order-history-title mb-3">Order History</h2>
+
+                <div class="mb-3 position-relative">
+                    <input type="text" class="form-control ps-5 order-history-search" placeholder="Search" />
+                    <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"></i>
                 </div>
-                <div class="col-6 text-center actions mobile-details-title d-none">
-                    <a class="color-dark-green text-bold" href="#">Order Details</a>
-                </div>
-            </div>
-            <div class="metals-container mobile-hide-for-tab">
-                <table class="mobile-metal-table no-style" cellspacing="0" cellpadding="0">
-                    <thead>
-                        <tr>
-                            <th>Metal</th>
-                            <th>Price</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @php
-                            $content_counter = 0;
-                        @endphp
-                        @foreach ($deposits as $desposit)
-                            @php
-                                $date = Carbon\Carbon::parse($desposit['date']);
-                            @endphp
-                            <tr class="mobile-toogle-details toogle-details display-row-{{ $content_counter }}"
-                                data-deposit-id="{{ $content_counter }}">
-                                {{-- <div> --}}
-                                <td class="order-type">
-                                    @if (
-                                        $desposit['product'] == 'Gold' ||
-                                            $desposit['product'] == 'Silver' ||
-                                            $desposit['product'] == 'Palladium' ||
-                                            $desposit['product'] == 'Platinum')
-                                        <span>{{ $desposit['product'] }}</span> /
-                                        {{ $desposit['currency'] }}
-                                    @else
-                                        <span>Product</span> / {{ $desposit['currency'] }}
-                                    @endif
-                                    {{-- </div> --}}
-                                    <div class="order-date">
-                                        @if (!$desposit['order_type'] == null)
-                                            @if ($desposit['order_type'] == 'Buy')
-                                                <span style="color:green">{{ $desposit['order_type'] }}</span>
-                                            @elseif ($desposit['order_type'] == 'Sell')
-                                                <span style="color:red">{{ $desposit['order_type'] }}</span>
-                                            @else
-                                                <span
-                                                    style="color:black; font-weight:600;">{{ $desposit['order_type'] }}</span>
-                                            @endif
-                                        @endif
-                                        <br>
-                                        {{ date_format($date, 'g:i A\, Y-m-d') }}
-                                    </div>
-                                </td>
-                                <td>
-                                    ${{ number_format($desposit['priceproduct'], 2) }}
-                                </td>
-                                <td class="text-right">
-                                    @if (
-                                        $desposit['product'] == 'Gold' ||
-                                            $desposit['product'] == 'Silver' ||
-                                            $desposit['product'] == 'Palladium' ||
-                                            $desposit['product'] == 'Platinum')
-                                        <div>Q:{{ $desposit['quantity'] }} /OZ</div>
-                                    @else
-                                        <div>Q:{{ $desposit['quantity'] }}</div>
-                                    @endif
-                                    <div><br></div>
-                                    <div>T:${{ number_format($desposit['priceproduct'] * $desposit['quantity'], 2) }}</div>
-                                </td>
+
+                <button class="btn text-decoration-none order-history-filter">
+                    <i class="bi bi-filter"></i> Filter
+                </button>
+
+                <div class="table-responsive order-history-responsive">
+                    <table class="table order-history-table">
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th>Date</th>
+                                <th>Product</th>
+                                <th>Amount</th>
+                                <th>Status</th>
                             </tr>
-
-                            @php
-                                $content_counter++;
-                            @endphp
-                        @endforeach
-
-                    </tbody>
-                </table>
-            </div>
-            <div id="tab-mobile-order-details" class="tab-mobile-order-details d-none">
-                <div class="simple-order-details order">
-                    <div class="row g-0 px-1 title">
-                        <div class="col-6 text-cap text-bold color-dark-green">
-                            <!-- Your Order --> Order <span class="order-number"></span>
-                        </div>
-                        <div class="col-6 text-cap text-bold color-dark-green">
-                            <span class="order-date"></span>
-                        </div>
-                        <br><br>
-                        <div class="col-6 text-bold color-yellow">
-                            <span class="status-pay"></span>
-                        </div>
-
-                        <div class="col-6 text-bold color-yellow">
-                            <span class="status-shipping"></span>
-                        </div>
-
-                    </div>
-                    <div class="content-title text-bold row g-0 px-1">
-                        <div class="text-cap col-5">
-                            Product:
-                        </div>
-                        <div class="text-cap col-2">
-                            Qty
-                        </div>
-                        <div class="text-cap col-5">
-                            Price
-                        </div>
-                    </div>
-                    <div class="content row">
-                        <div class="content row g-0 px-2 product-rows">
-                        </div>
-                    </div>
-                    <div class="total row g-0 px-1">
-                        <div class="col-6 text-cap">
-                            Total:
-                        </div>
-                        <div class="col-6 color-yellow">
-                            $<span class="total-order"></span> / <span class="currency"></span>
-                        </div>
-                    </div>
-                    <div class="shipping-opt row g-0 px-1">
-                        <div class="text-cap col-6 text-cap">
-                            Shipping Option:
-                        </div>
-                        <div class="col-6 color-yellow text-cap">
-                            <span class="shipping-option"></span>
-                        </div>
-                    </div>
-                    <div class="shipping-track row">
-                        <div class="text-cap col-6 text-cap">
-                            Tracking Number
-                        </div>
-                        <div class="col-6 color-yellow text-cap">
-                            #<span class="tracking-number"></span>
-                        </div>
-                    </div>
-                    <div class="shipping-opt row g-0 px-1">
-                        <div class="col-6 text-cap">
-                            <span class="fedex-name"></span>
-                        </div>
-                        <div class="col-6 color-yellow text-cap">
-                            <span class="fedex-price"></span>
-                        </div>
-                    </div>
-                    <div class="subtotal row g-0 px-1">
-                        <div class="text-cap col-6">
-                            Subtotal:
-                        </div>
-                        <div class="col-6 color-yellow">
-                            $<span class="sub-total"></span>/<span class="currency"></span>
-                        </div>
-                    </div>
-
-                    <div class="percent row g-0 px-1">
-                        <div class="text-cap col-6">
-                            Paid:
-                        </div>
-                        <div class="col-6 color-yellow">
-                            $<span class="total-paid"></span>/<span class="currency"></span>
-                        </div>
-                    </div>
-                    <div class="percent row g-0 px-1 payments-title">
-                        <div class="text-cap col-12 text-bold">
-                            PAYMENTS:
-                        </div>
-                    </div>
-                    <div class="content-title text-bold row g-0 px-1 payments-order">
-
-                    </div>
-                    <div class="pending payment-complete row g-0 px-1">
-                        <div class="text-cap col-7">
-                            PAYMENT COMPLETE
-                        </div>
-                        <div class="col-5 color-yellow">
-
-                        </div>
-                    </div>
-                    <div class="payment row d-none" id="payment-method">
-                        <div class="text-cap col-7">
-                            PAYMENT METHOD:
-                        </div>
-                        <div class="col-5 color-yellow">
-                            <span class="method-pay">FROM BALANCE ACCOUNT</span>
-                        </div>
-                    </div>
-                    <div class="pending row payment-pending">
-                        <div class="text-cap col-7">
-                            PENDING BALANCE:
-                        </div>
-                        <div class="col-5 color-yellow">
-                            <span class="pending-pay"></span>
-                        </div>
-                    </div>
+                        </thead>
+                        <tbody>
+                            @foreach ($deposits as $deposit)
+                                <tr>
+                                    <td>PL{{ $deposit['id'] }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($deposit['created_at'])->format('M d, Y') }}</td>
+                                    <td>{{ $deposit['product'][0]['name'] ?? '-' }}</td>
+                                    <td>{{ number_format($deposit['total'], 2) }}</td>
+                                    <td><span class="badge status-completed">{{ $deposit['shipping_status'] }}</span></td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+
     </div>
 
     <div id="modal" class="modal-container orders-modal">
