@@ -135,13 +135,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($deposits as $deposit)
-                                <tr>
+                            @foreach ($deposits as $index => $deposit)
+                                @php
+                                    // dd($deposit);
+                                @endphp
+                                @foreach ($deposit['product'] as $key => $product)
+                                    @php
+                                        $productData = App\Helper\Helper::getProductData($product['product_id']);
+                                        $deposits[$loop->parent->index]['product'][$key]['images'] = json_decode($productData->images) ?? [];
+                                    @endphp
+                                @endforeach
+                                <tr data-bs-toggle="modal" data-bs-target="#orderDetailsModal" data-index="{{ $index }}">
                                     <td>PL{{ $deposit['id'] }}</td>
                                     <td>{{ \Carbon\Carbon::parse($deposit['created_at'])->format('M d, Y') }}</td>
                                     <td>{{ $deposit['product'][0]['name'] ?? '-' }}</td>
                                     <td>{{ number_format($deposit['total'], 2) }}</td>
-                                    <td><span class="badge status-completed">{{ $deposit['shipping_status'] }}</span></td>
+                                    <td><span class="badge {{$deposit['shipping_status']  === 'Pending' ? 'bg-warning' : 'bg-success'}}">{{ $deposit['shipping_status']  }}</span></td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -151,6 +160,126 @@
         </div>
 
     </div>
+    {{-- Mobile Version Details --}}
+    <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3 rounded-4">
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const STORAGE_PATH = "{{ asset('storage') }}";
+        const BASE_URL = "{{ url('/') }}"; // example: http://localhost:3000
+
+    </script>
+
+    <script>
+        window.depositData = @json($deposits);
+        console.log(window.depositData);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('orderDetailsModal');
+
+            modal.addEventListener('show.bs.modal', function (event) {
+                const trigger = event.relatedTarget;
+                const index = trigger.getAttribute('data-index');
+                const deposit = window.depositData[index];
+
+                const product = Array.isArray(deposit.products) && deposit.products[0] ? deposit.products[0] : {};
+                const payment = Array.isArray(deposit.payments) && deposit.payments[0] ? deposit.payments[0] : {};
+
+                const date = new Date(deposit.created_at);
+                const options = {
+                    timeZone: 'America/Toronto',
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false,
+                };
+
+                const formatter = new Intl.DateTimeFormat('en-US', options);
+                const parts = formatter.formatToParts(date);
+
+                const get = (type) => parts.find(p => p.type === type)?.value;
+
+                const formatted = `${get('month')} ${get('day')}, ${get('year')} - ${get('hour')}:${get('minute')}`;
+
+                const paymentIcons = {
+                    1: ['/img/payments/store.png'],                          // Cash drop off
+                    2: ['/img/payments/ibtf.png'],                 // Bank transfer
+                    3: ['/img/payments/visa.png', '/img/payments/master.png', '/img/payments/amx.png', '/img/payments/discover.png'], // Credit card
+                    4: ['/img/payments/paypal.png'],                        // PayPal
+                    5: ['/img/payments/wallet.png'],                        // From Balance Account
+                    6: ['/img/payments/etrans.png'],                     // E-Transfer
+                    7: ['/img/payments/debit.png']                          // Debit in store
+                };
+
+                const getPaymentIconsHtml = (id) => {
+                    const icons = paymentIcons[id] || [];
+                    return icons.map(src => `<img src="${src}" width="32" class="me-2">`).join('');
+                };
+
+                modal.querySelector('.modal-body').innerHTML = `
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h5 class="mb-0 fw-bold">#PL${deposit.id}</h5>
+                            <div class="text-muted small">BUY</div>
+                            <div class="text-secondary small">${formatted}</div>
+                        </div>
+                        <span class="badge ${deposit.shipping_status === 'Pending' ? 'bg-warning' : 'bg-success'}">
+                            ${deposit.shipping_status}
+                        </span>
+                    </div>
+
+                    ${Array.isArray(deposit.product) ? deposit.product.map(product => `
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="${product.images?.[0] ? BASE_URL + '/storage/' + product.images[0] : BASE_URL + '/gold-coin.png'}" class="me-3" width="40">
+                            <div>
+                                <div class="fw-semibold">${product.name ?? 'N/A'}</div>
+                                <div class="text-muted small">Qty: ${product.quantity ?? 1} • $${product.price ?? 0}</div>
+                            </div>
+                            <div class="ms-auto fw-bold">$${((product.price || 0) * (product.quantity || 1)).toFixed(2)}</div>
+                        </div>
+                    `).join('') : ''}
+
+                    <ul class="list-unstyled small mb-3">
+                        <li class="d-flex justify-content-between"><span>Subtotal</span><span>$${deposit.subtotal ?? 0}</span></li>
+                        <li class="d-flex justify-content-between text-success"><span>Discount</span><span>–$${deposit.promo_code_discount ?? 0}</span></li>
+                        <li class="d-flex justify-content-between"><span>Shipping</span><span>$${deposit.shipping_option.price ?? 0}</span></li>
+                        <li class="d-flex justify-content-between"><span>Tax</span><span>$${deposit.paid_fee ?? 0}</span></li>
+                    </ul>
+
+                    <div class="d-flex justify-content-between fw-bold border-top pt-2 mb-3">
+                        <span>Total Paid</span>
+                        <span>$${deposit.total ?? 0}</span>
+                    </div>
+
+                    <div class="mb-2 fw-medium">Payment</div>
+                    <div class="border rounded p-2 mb-2">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                            ${getPaymentIconsHtml(payment.payment_method_id)}
+                            ${payment.method ?? 'Payment'}
+                        </div>
+                                <span class="badge ${deposit.payment_status === 'Pending' ? 'bg-warning' : 'bg-success'}">
+                            ${deposit.payment_status}
+                        </span>
+                        </div>
+                        <div class="small text-muted">${payment.method ?? ''} – $${deposit.total ?? 0}</div>
+                        <div class="text-muted small">Paid on ${deposit.created_at ?? ''}</div>
+                    </div>
+                `;
+
+            });
+        });
+    </script>
+
+    {{-- Desktop Version Details --}}
 
     <div id="modal" class="modal-container orders-modal">
         <div id="tab-desk-details" class="tab-conversion-details">

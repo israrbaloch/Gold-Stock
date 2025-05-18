@@ -6,19 +6,20 @@ table {
     font-size: 0.9em;
 }
 
-.back-to-history{
+.back-to-history {
     cursor: pointer;
 }
 
-.back-to-history a{
+.back-to-history a {
     text-decoration: none;
 }
+
 .only-mobile table {
     font-size: 1em;
 }
 
 .metals-container .metal-container,
-.currencies-container .currency-container{
+.currencies-container .currency-container {
     border-bottom: 1px solid gray;
     padding: 10px 0;
 }
@@ -95,12 +96,13 @@ table {
 }
 
 .tab-mobile-order-details,
-.tab-order-details{
+.tab-order-details {
     border: solid 1px #AD954B;
     padding: 0 0.8rem !important;
     color: #34461f !important;
     background-color: #ffffff;
 }
+
 .tab-mobile-order-details .row,
 .tab-order-details .row {
     padding-top: 0.5rem !important;
@@ -109,32 +111,40 @@ table {
     margin-left: 0px;
     margin-right: 0px;
 }
-.tab-order-details .total{
+
+.tab-order-details .total {
     border-top: solid 1px #AD954B;
 }
+
 .tab-mobile-order-details .title,
 .tab-order-details .title {
     border-bottom: solid 1px #AD954B;
     padding: 1.2rem 0.5rem !important;
 }
+
 .simple-order-details .row {
     padding-top: 0.8rem !important;
     padding-bottom: 0.8rem !important;
 }
-.product-rows{
+
+.product-rows {
     border: none !important;
 }
+
 .payments-title,
-.product-rows{
+.product-rows {
     border-bottom: solid 1px #AD954B;
 }
-.content.row .row{
+
+.content.row .row {
     padding: 0 !important;
 }
-.payments-order .row{
+
+.payments-order .row {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
 .desktop-version .order-type.sell {
     color: red;
 }
@@ -142,6 +152,7 @@ table {
 .desktop-version .order-type.buy {
     color: darkgreen;
 }
+
 .page-container {
     padding-top: 0px;
 }
@@ -170,7 +181,8 @@ table {
     font-weight: bold;
 }
 
-.table .toogle-details th, .table .toogle-details td {
+.table .toogle-details th,
+.table .toogle-details td {
     padding: 20px 0;
     vertical-align: top;
     border-top: none !important;
@@ -214,20 +226,20 @@ table {
 }
 
 
-.toogle-details:nth-of-type(odd) *{
-    background-color:#EDF5F8 !important;
+.toogle-details:nth-of-type(odd) * {
+    background-color: #EDF5F8 !important;
 }
 
-.toogle-details:nth-of-type(even) *{
-    background-color:#fff !important;
+.toogle-details:nth-of-type(even) * {
+    background-color: #fff !important;
 }
 
-.mobile-toogle-details:nth-of-type(odd) *{
-    background-color:#EDF5F8 !important;
+.mobile-toogle-details:nth-of-type(odd) * {
+    background-color: #EDF5F8 !important;
 }
 
-.mobile-toogle-details:nth-of-type(even) *{
-    background-color:#fff !important;
+.mobile-toogle-details:nth-of-type(even) * {
+    background-color: #fff !important;
 }
 
 @media (max-width: 767px) {
@@ -244,7 +256,7 @@ table {
     .mobile-metal-table {
         border: none !important;
     }
-    
+
     .mobile-metal-table td {
         padding: 10px;
         border-bottom: none;
@@ -306,7 +318,7 @@ table {
     text-decoration: none !important;
 }
 
-.tab-link .active{
+.tab-link .active {
     border-bottom: none;
     color: white !important;
     background-image: url(/img/gold-texture.jpg);
@@ -314,10 +326,11 @@ table {
     background-size: 100% 100%;
 }
 
-.tab-link a{
+.tab-link a {
     text-decoration: none !important;
 }
-.tab-link .active a{
+
+.tab-link .active a {
     color: white !important;
 }
 
@@ -336,64 +349,89 @@ table {
 
 
 .order-history-body {
-  background-color: #f9f9fc;
-  font-family: "Segoe UI", sans-serif;
+    background-color: #f9f9fc;
+    font-family: "Segoe UI", sans-serif;
 }
 
 .order-history-title {
-  font-weight: 700;
-  font-size: 24px;
+    font-weight: 700;
+    font-size: 24px;
 }
 
 .order-history-search {
-  border-radius: 12px;
-  padding: 10px 16px;
+    border-radius: 12px;
+    padding: 10px 16px;
 }
 
 .order-history-filter {
-  font-size: 14px;
-  border-radius: 12px;
+    font-size: 14px;
+    border-radius: 12px;
 }
 
 .order-history-table {
-  font-size: 14px;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
+    font-size: 14px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .order-history-table th {
-  background-color: #f1f3f5;
-  font-weight: 600;
-  text-align: left;
+    background-color: #f1f3f5;
+    font-weight: 600;
+    text-align: left;
 }
 
 .order-history-table td,
 .order-history-table th {
-  padding: 12px;
-  vertical-align: middle;
+    padding: 7px;
+    vertical-align: middle;
 }
 
 .status-completed {
-  background-color: #207c61;
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-weight: 400;
+    background-color: #207c61;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 400;
 }
 
 .status-pending {
-  background-color: #ffdc82;
-  color: #000;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-weight: 400;
+    background-color: #ffdc82;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 400;
 }
 
 .status-cancelled {
-  background-color: #f62b34;
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-weight: 400;
+    background-color: #f62b34;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 400;
+}
+
+table:not(.no-style):not(.price-table) tbody td,
+.table:not(.no-style):not(.price-table) tbody td {
+    font-size: 11px !important;
+    padding: 9px !important;
+}
+
+table:not(.no-style):not(.price-table) thead th,
+.table:not(.no-style):not(.price-table) thead th {
+    padding: 7px !important;
+    font-size: 13px !important;
+}
+
+.modal-body {
+    padding: 1rem !important;
+    place-items: normal !important;
+}
+.bg-success {
+    background-color: rgb(237 247 242) !important;
+    color: #01411e !important; 
+}
+.bg-warning {
+    background-color: rgb(250 244 225) !important;
+    color: #aa681b !important;
 }

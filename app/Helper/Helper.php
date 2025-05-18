@@ -2,31 +2,32 @@
 
 namespace App\Helper;
 
-use App\Mail\OrderCancelledMail;
-use App\Mail\OrderCompletedMail;
-use App\Mail\OrderFeedbackMail;
-use App\Mail\OrderPendingPaymentMail;
-use App\Mail\OrderShippedMail;
-use App\Mail\OrderStatusChangeMail;
+use Cart;
+use Exception;
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Metal;
 use App\Models\Account;
-use App\Models\MetalOrder;
-use App\Models\ProductOrder;
-use App\Models\DepositOrder;
-use App\Models\DepositOrderPayment;
-use App\Models\CashDeposit;
-use App\Models\CashWithdrawal;
-use App\Models\MetalDeposit;
-use App\Models\MetalWithdrawal;
+use App\Models\Product;
 use App\Models\PromoCode;
+use App\Models\MetalOrder;
+use App\Models\CashDeposit;
+use App\Models\DepositOrder;
+use App\Models\MetalDeposit;
+use App\Models\ProductOrder;
+use App\Mail\OrderShippedMail;
+use App\Models\CashWithdrawal;
 use App\Models\ShippingOption;
+use App\Mail\OrderFeedbackMail;
+use App\Models\MetalWithdrawal;
+use App\Mail\OrderCancelledMail;
+use App\Mail\OrderCompletedMail;
 use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
-use Cart;
-use Exception;
+use App\Mail\OrderStatusChangeMail;
+use App\Models\DepositOrderPayment;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderPendingPaymentMail;
 
 class Helper
 {
@@ -1129,5 +1130,34 @@ class Helper
             return '4';
         }
     }
-    
+
+    // Get Product data by id
+    static function getProductData($id)
+    {
+        $product = DB::table('products')->where('id', $id)->first();
+        if ($product) {
+            return $product;
+        } else {
+            return null;
+        }
+    }
+
+    // Get Card Type 
+    function getCardType($number) {
+    $number = preg_replace('/\D/', '', $number); // Remove non-digits
+
+    if (preg_match('/^4[0-9]{12}(?:[0-9]{3})?$/', $number)) {
+        return 'Visa';
+    } elseif (preg_match('/^5[1-5][0-9]{14}$/', $number)) {
+        return 'MasterCard';
+    } elseif (preg_match('/^3[47][0-9]{13}$/', $number)) {
+        return 'American Express';
+    } elseif (preg_match('/^6(?:011|5[0-9]{2})[0-9]{12}$/', $number)) {
+        return 'Discover';
+    }
+
+    return 'Unknown';
+}
+
+
 }
